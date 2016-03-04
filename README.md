@@ -16,6 +16,7 @@ Table of Contents
      - [Installation](https://github.com/empathic-code/peter#installation)
      - [Configuration](https://github.com/empathic-code/peter#configure-secret-keys)
      - [Start](https://github.com/empathic-code/peter#starting-the-local-server)
+ - [User Manual](https://github.com/empathic-code/peter#running-the-application)
  - [Notes](https://github.com/empathic-code/peter#notes)
  - [Trivia](https://github.com/empathic-code/peter#trivia)
 
