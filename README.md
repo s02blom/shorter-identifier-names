@@ -7,13 +7,26 @@ This repository contains the source code for the web app I used to obtain the da
 
 The software was written in Python 2.7 using the Tornado web framework and stores all data in a MongoDB. To setup you can either run everything from bare metal or use the provided Dockerfiles to create custom images.
 
+Table of Contents
+-----------------
+
+ - https://github.com/empathic-code/peter#setup
+ - https://github.com/empathic-code/peter#using-docker
+ - https://github.com/empathic-code/peter#bare-metal
+   - https://github.com/empathic-code/peter#installation
+   - https://github.com/empathic-code/peter#configure-secret-keys
+   - https://github.com/empathic-code/peter#configure-mongodb-if-necessary
+   - https://github.com/empathic-code/peter#starting-the-local-server
+ - https://github.com/empathic-code/peter#notes
+ - https://github.com/empathic-code/peter#trivia
+
 Setup
 =====
 
 Using Docker
 ------------
 
-The simplest way to get the software to run, is to use the provided docker files to build an image. I provided one for mongodb and one for the application itself. To build & run the mongodb image, use the script ```<repository>/run_mongo.sh``` and ```<repository>/run.sh``` or manually run the following commands from the root of the checked out repository:
+The simplest way to get the software to run is to use the provided docker file to build an image and run it containers. I provided one for mongodb and one for the application itself. To build & run the mongodb image, use the script ```<repository>/run_mongo.sh``` and ```<repository>/run.sh``` or manually run the following commands from the root of the checked out repository:
 
 Build the mongodb image:
 
@@ -23,7 +36,7 @@ Build the web application's image:
 
     $ docker build -t cessor/peter -f Dockerfile .
 
-Please watch the build. During the build, docker creates a random password for the admin interface. Write it down, as you will need it later.*
+Please watch the build. During the build, docker creates a random password for the admin interface. Write it down, as you will need it later. If you miss this step or forget the password, you can [retrieve it](https://github.com/empathic-code/peter#notes).
 
 Fire up the mongdb container:
 
