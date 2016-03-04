@@ -1,11 +1,11 @@
 Peter *
 =====
 
-Psychologische Erhebung Total Erheblicher Reaktionszeiten
+\* *Psychologische Erhebung Total Erheblicher Reaktionszeiten*
 
-This repository contains the source code for the web app I used to obtain the data for my Bachelor thesis. I tested the influence of identifier lenght and semantics on source code comprehension.
+This repository contains the source code for the web app I used to obtain the data for my Bachelor thesis. I tested the influence of identifier length and semantics on source code comprehension.
 
-The software was written in Python 2.7 using the Tornado Web Framework and stores all data in a MongoDB. To setup you can either run everything from bare metal or use the provided Dockerfiles to create custom images.
+The software was written in Python 2.7 using the Tornado web framework and stores all data in a MongoDB. To setup you can either run everything from bare metal or use the provided Dockerfiles to create custom images.
 
 Setup
 =====
@@ -15,23 +15,23 @@ Using Docker
 
 The simplest way to get the software to run, is to use the provided docker files to build an image. I provided one for mongodb and one for the application itself. To build & run the mongodb image, use the script ```<repository>/run_mongo.sh``` and ```<repository>/run.sh``` or manually run the following commands from the root of the checked out repository:
 
-1. Build the mongodb image:
+Build the mongodb image:
 
     $ docker build -t cessor/mongodb -f mongodb.Dockerfile .
 
-2. Build the web application's image:
+Build the web application's image:
 
     $ docker build -t cessor/peter -f Dockerfile .
 
 Please watch the build. During the build, docker creates a random password for the admin interface. Write it down, as you will need it later.*
 
-3. Fire up the mongdb container:
+Fire up the mongdb container:
 
     $ docker run --name mongodb -d -v $(pwd)/data:/data/db cessor/mongodb
 
 I am using the empty data folder provided with this repository to store the mongodb files. You can, of course, use any other folder you like.
 
-4. Fire up the mongdb container:
+Fire up the mongdb container:
 
     $ docker run --name peter -d -p 5000:5000 --link mongodb:mongodb cessor/peter
 
@@ -74,15 +74,15 @@ It should suffice to install 'tornado' and 'motor'. Both packages build some ext
 
 Before you can run the application, you will need to set a cookie session key, and a password for the admin interface.
 
-1. Generate a random string, for example using:
+Generate a random string, for example using:
 
     $ python2 -c 'import os; print os.urandom(32).encode("hex")'
 
-2. Add the following line to the file ```<repository>/config/local.cfg```
+Add the following line to the file ```<repository>/config/local.cfg```
 
     cookie_secret='<your random key>'
 
-3. Generate another random key, or think up a password, and place it in the .key file found in ```<repository>/.key```
+Generate another random key, or think up a password, and place it in the .key file found in ```<repository>/.key```
 
 ### Configure mongodb if necessary
 
@@ -102,7 +102,7 @@ Running the application
 
 You will first need to seed the data from the admin interface. To access the admin interface, go to:
 
-    [http://localhost:5000/admin/login](http://localhost:5000/admin/login)
+[http://localhost:5000/admin/login](http://localhost:5000/admin/login)
 
 The password is the password you thought and placed in the ```<repository>/.key``` file.
 
@@ -115,7 +115,7 @@ From the left, choose ```Setup```. Then, ```Seed Trials```. The other items on t
 
 To access the client view of the study, go to:
 
-    [http://localhost:5000](http://localhost:5000)
+[http://localhost:5000](http://localhost:5000)
 
 Here, you can simply click your way to the study. Make sure to return to the backend, to view your data. Note: A session starts, as soon as you view a questionnaire. In the admin interface, only completed sessions are shown. The "With Data" field indicates that people have provided some data, but the record does not show up until the complete study was finished.
 
