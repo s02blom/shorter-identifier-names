@@ -10,15 +10,14 @@ The software was written in Python 2.7 using the Tornado web framework and store
 Table of Contents
 -----------------
 
- - https://github.com/empathic-code/peter#setup
- - https://github.com/empathic-code/peter#using-docker
- - https://github.com/empathic-code/peter#bare-metal
-   - https://github.com/empathic-code/peter#installation
-   - https://github.com/empathic-code/peter#configure-secret-keys
-   - https://github.com/empathic-code/peter#configure-mongodb-if-necessary
-   - https://github.com/empathic-code/peter#starting-the-local-server
- - https://github.com/empathic-code/peter#notes
- - https://github.com/empathic-code/peter#trivia
+ - [Setup](https://github.com/empathic-code/peter#setup)
+   - [Docker](https://github.com/empathic-code/peter#using-docker)
+   - [Bare Metal](https://github.com/empathic-code/peter#bare-metal)
+     - [Installation](https://github.com/empathic-code/peter#installation)
+     - [Configuration](https://github.com/empathic-code/peter#configure-secret-keys)
+     - [Start](https://github.com/empathic-code/peter#starting-the-local-server)
+ - [Notes](https://github.com/empathic-code/peter#notes)
+ - [Trivia](https://github.com/empathic-code/peter#trivia)
 
 Setup
 =====
