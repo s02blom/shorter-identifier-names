@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="/static/css/components/letterbox.css">
+<script type="text/javascript" src="/static/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/components/letterbox.js"></script>
+<script type="text/javascript">
+
+  var letterbox = new Letterbox();
+
+  function updateCurrentLine () {
+    $('input[type=text]').val(letterbox.currentLine());
+  }
+  $
+  .get('/static/templates/components/letterbox.template.html')
+  .success(function (page) {
+    $('#container').html(page);
+    $.get('/static/snippets/sample.normal.html')
+    .success(function (data) {
+
+      $('#code').html(data);
+
+      $('.up').click (function () {
+        letterbox.scrollUp();
+        updateCurrentLine();
+      });
+
+      $('.down').click (function () {
+        letterbox.scrollDown();
+        updateCurrentLine();
+      });
+
+      $('.reset').click (function () {
+        letterbox.reset();
+        updateCurrentLine();
+      });
+
+      $('.enable').change (function () {
+        if(this.checked) {
+          letterbox.cover();
+        } else {
+          letterbox.uncover();
+        }
+      });
+
+      letterbox.reset();
+    });
+  });
+</script>
+<div>
+  <h1>HELLO</h1>
+</div>
+<div id="container"></div>
+<input type="text"></input>
+<button type="button" class="up">Up</button>
+<button type="button" class="down">Down</button>
+<button type="button" class="reset">Reset</button>
+<input type="checkbox" class="enable" checked>Letterbox</input>

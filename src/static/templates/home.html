@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studie - Wie lesen wir Quellcode?</title>
+    <link href="/static/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/lib/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/fix.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/static/js/lib/jquery.min.js"></script>
+    <script src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+    <script src="/static/js/lib/angular-sanitize.min.js"></script>
+
+    <script src="/static/js/wh-directives.js"></script>
+    <script src="/static/js/wh-app-welcome.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h2><img class="uni-logo" src="/static/images/uni-logo.png" height="100"> </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="jumbotron">
+          <div class="col-lg-8 col-lg-offset-2" ng-view>
+          <noscript>Please enable JavaScript!</noscript>
+          <!-- Content -->
+          </div>
+          <div class="clearfix visible-lg-block"></div>
+        </div>
+      </div>
+
+        <!-- Spacer -->
+      <div class="page-header"></div>
+
+      <!-- Footer -->
+      <div class="row" ng-controller="footerController as footerCtrl">
+        <div class="col-md-3">
+          <h4 class="muted">Contact</h4>
+          <p>
+            <a href="mailto:j.hofmeister # stud.uni-heidelberg.de">M.Sc. Johannes Hofmeister</a><br>
+            <a href="http://www.psychologie.uni-heidelberg.de/ae/allg/mitarb/dh/" target="_blank">Dr. Daniel Holt</a>
+          <p>
+          <h4 class="muted">Impressum</h4>
+          <p>
+            Dr. Daniel Holt<br>
+            Psychologisches Institut der Universität Heidelberg<br>
+            Hauptstraße 47-51<br>
+            69117 Heidelberg <br>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="muted">Privacy</h4>
+          <p>
+            <a target="_new" href="" ng-click="footerCtrl.datenschutz()">Privacy Statement</a>
+          </p>
+
+          <h4 class="muted">About</h4>
+          <p>
+            <a href="" ng-click="footerCtrl.about()">About the author</a>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="muted">Sources</h4>
+          <p>
+            <a target="_blank" href="http://www.uni-heidelberg.de/">Universität Heidelberg</a><br>
+            <a target="_blank" href="http://www.psychologie.uni-heidelberg.de/">Psychology Universität Heidelberg</a><br>
+            <a target="_blank" href="http://f20.blog.uni-heidelberg.de/">Blog of the Institute of Psychology</a><br>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+         <h4 class="muted">CC Attributions</h4>
+          <p>
+            Brain designed by Max Hancock,
+            Checkered-Flag designed by Nate Eul,
+            Computer designed by Claudine Rodriguez,
+            Fly designed by James Keuning,
+            Stopwatch designed by Scott Lewis,
+            Thumbs Up designed by Parmelyn
+            - <a href="http://thenounproject.com/" target="_new">The Noun Project</a> <br>
+            Keyboard by <a href="http://codepen.io/P233/pen/qEagi">Peiwen Lu</a>
+          </p>
+        </div>
+      </div> <!-- row -->
+    </div>
+
+    <message-box></message-box>
+  </body>
+</html>

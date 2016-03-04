@@ -1,0 +1,16 @@
+body#experiment {
+    background-color: #eee;
+}
+
+#presentation, #editor, #dialog {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 2px;
+    margin: 2em 2em 0 2em;
+}
+
+#time {
+    text-align: right;
+    padding: 0.5em;
+    margin: 0em 2em;
+}

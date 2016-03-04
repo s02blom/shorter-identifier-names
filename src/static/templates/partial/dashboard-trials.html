@@ -1,0 +1,76 @@
+<h1 class="page-header">Trials</h1>
+<div class="row placeholders">
+  <!-- Piechart -->
+  <div class="col-md-3 placeholder">
+    <border>
+      <pie-chart url="/api/admin/trials/?finished=true"></pie-chart>
+      <h4>Finished</h4>
+      <span class="text-muted">Trials with all data collected</span>
+    </border>
+  </div>
+
+  <!-- Barchart -->
+  <div class="col-md-9 placeholder">
+    <border>
+      <bar-chart url="/api/admin/trials/?issued=true"></bar-chart>
+      <h4>Distribution of trials conditions</h4>
+      <span class="text-muted">Unequal frequencies mean you're a shitty programmer...</span>
+    </border>
+  </div>
+</div>
+
+<h1>Overview</h1>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-condensed table-responsive table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Id</th>
+          <th>Snippets</th>
+          <th>Issued</th>
+          <th>Finished</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="trial in trials" ng-class="{'success': trial.finished > 0,'info': trial.issued > 0 && trial.finished == 0}">
+          <td>{{ $index + 1 }}.</td>
+          <td><code>{{ trial._id }}</code></td>
+          <td><code>{{ trial.snippets }}</code></td>
+          <td>{{ trial.issued }} x</td>
+          <td>{{ trial.finished }}</td>
+          <td>
+            <!-- Open -->
+            <button ng-show="!isRunning(trial)" class="btn btn-default btn-xs" ng-click="open(trial)">
+              <span class="glyphicon glyphicon-play"></span>
+            </button>
+            <!-- Close -->
+            <button ng-show="isRunning(trial)" class="btn btn-default btn-xs" ng-click="close(trial)">
+              <span class="glyphicon glyphicon-stop"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h1>Missing</h1>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-condensed table-responsive table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Key</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="trial in missing">
+          <td>{{ $index + 1 }}.</td>
+          <td><code>{{ trial }}</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

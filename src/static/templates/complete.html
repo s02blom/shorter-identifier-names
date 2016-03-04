@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kurze Pause!</title>
+    <link href="/static/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/lib/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/fix.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/static/js/lib/jquery.min.js"></script>
+    <script src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+    <script src="/static/js/lib/angular-sanitize.min.js"></script>
+
+    <script src="/static/js/wh-directives.js"></script>
+    <script src="/static/js/wh-app-welcome.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h2><img class="uni-logo" src="/static/images/uni-logo.png" height="100"> </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" ng-controller="finishController as finishCtrl">
+        <div class="jumbotron">
+          <div class="col-lg-8 col-lg-offset-2">
+
+            <h1>Wir sind gleich wieder da!</h1>
+            <p>
+              Wir werten die erste Daten-Welle aus und sind bald wieder mit weiteren Snippets zurück!
+            </p>
+            <p>
+              Die Ergebnisse der Studie werden auf dieser Website präsentiert.
+            </p>
+            <p>
+              <a href="http://code.psychologie.uni-heidelberg.de/">http://code.psychologie.uni-heidelberg.de/</a><br>
+            </p>
+            <p>
+              Wenn Sie eine Nachricht über die Ergebnisse oder über zukünftige Studien erhalten möchten, hinterlassen Sie bitte hier Ihre E-Mail-Adresse
+            </p>
+            <section ng-hide="email_submitted">
+              <form name="emailform" ng-submit="emailform.$valid && finishCtrl.submit(formdata)">
+                <div class="form-group">
+                  <legend for="email_address">E-Mail Adresse</legend>
+                  <div class="form-control-wrapper">
+                    <input ng-model="formdata.email" type="email" class="form-control" name="email_address" placeholder="Email" required="">
+                  </div>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="notify_results" ng-model="formdata.notify_results"> Informieren Sie mich über die Ergebnisse der Studie.
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="late_participant" ng-model="formdata.late_participant"> Ich war zu spät und möchte an einer Nacherhebung teilnehmen!
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="invite_again" ng-model="formdata.invite_again"> Ich möchte zu zukünftigen Experimenten eingeladen werden.
+                  </label>
+                </div>
+
+                <button class="btn btn-primary">Abschicken</button>
+              </form>
+            </section>
+            <hr>
+            <p>Folgen Sie mir auf Twitter: <a href="https://twitter.com/pro_cessor" target="_new">@pro_cessor</a> oder besuchen Sie meine Website.: <a href="http://cessor.de/about" target="_new">http://cessor.de</a>.</p>
+            <div class="alert alert-success" role="alert" ng-show="email_submitted">Vielen Dank!</div>
+
+          </div>
+          <div class="clearfix visible-lg-block"></div>
+        </div>
+      </div>
+
+        <!-- Spacer -->
+      <div class="page-header"></div>
+
+      <!-- Footer -->
+      <div class="row" ng-controller="footerController as footerCtrl">
+        <div class="col-md-3">
+          <h4 class="muted">Contact</h4>
+          <p>
+            <a href="mailto:j.hofmeister # stud.uni-heidelberg.de">M.Sc. Johannes Hofmeister</a><br>
+            <a href="http://www.psychologie.uni-heidelberg.de/ae/allg/mitarb/dh/" target="_blank">Dr. Daniel Holt</a>
+          <p>
+          <h4 class="muted">Impressum</h4>
+          <p>
+            Dr. Daniel Holt<br>
+            Psychologisches Institut der Universität Heidelberg<br>
+            Hauptstraße 47-51<br>
+            69117 Heidelberg <br>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="muted">Privacy</h4>
+          <p>
+            <a target="_new" href="" ng-click="footerCtrl.datenschutz()">Privacy Statement</a>
+          </p>
+
+          <h4 class="muted">About</h4>
+          <p>
+            <a href="" ng-click="footerCtrl.about()">About the author</a>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="muted">Sources</h4>
+          <p>
+            <a target="_blank" href="http://www.uni-heidelberg.de/">Universität Heidelberg</a><br>
+            <a target="_blank" href="http://www.psychologie.uni-heidelberg.de/">Psychology Universität Heidelberg</a><br>
+            <a target="_blank" href="http://f20.blog.uni-heidelberg.de/">Blog of the Institute of Psychology</a><br>
+          </p>
+        </div>
+
+        <div class="col-md-3">
+         <h4 class="muted">CC Attributions</h4>
+          <p>
+            Computer designed by Claudine Rodriguez,
+            Brain designed by Max Hancock
+            Stopwatch designed by Scott Lewis
+            - <a href="http://thenounproject.com/" target="_new">The Noun Project</a> <br>
+            Keyboard by <a href="http://codepen.io/P233/pen/qEagi">Peiwen Lu</a>
+          </p>
+        </div>
+      </div> <!-- row -->
+    </div>
+
+    <message-box></message-box>
+  </body>
+</html>

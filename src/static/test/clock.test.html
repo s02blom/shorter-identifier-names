@@ -1,0 +1,18 @@
+<script type="text/javascript" src="/static/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/components/timer.js"></script>
+<script type="text/javascript" src="/static/js/components/timelimit.js"></script>
+<script type="text/javascript" src="/static/js/components/clockface.js"></script>
+<script type="text/javascript" src="/static/js/components/clock.js"></script>
+
+<div id="clock"></div>
+<button>Start</button>
+<script type="text/javascript">
+var clock = new Clock({
+  element: '#clock',
+  onStart: function (date) {console.log('START: ' + date.toString());},
+  onTick: function (timer) {console.log('Timer: ' + timer.elapsed());},
+  onWarn: function (timer) {console.log('Waring: ' + timer.elapsed());},
+  onStop: function (date) {console.log('END: ' + date.toString());}
+});
+$('button').click (clock.start);
+</script>

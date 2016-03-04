@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/static/css/components/keyboard.css">
+<script src="/static/js/lib/jquery.min.js"></script>
+<div class="arrows"></div>
+<div class="spacebar"></div>
+<script type="text/javascript">
+  $.get('/static/templates/components/arrowkeys.template.html')
+  .success(function (data) {
+    $('div[class=arrows]').html(data);
+  });
+
+  $.get('/static/templates/components/spacebar.template.html')
+  .success(function (data) {
+    $('div[class=spacebar]').html(data);
+  });
+</script>

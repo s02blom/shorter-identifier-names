@@ -1,0 +1,87 @@
+span.comment          { color: #008000; }
+span.keyword          { color: #0030ff; }
+span.linenumber:after { content: ':'; }
+span.literal          { color: #a31515; }
+span.typename         { color: #2b91af; }
+div.line              {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.line.active {
+  background-color: #ff0;
+}
+
+* { margin: 0;}
+#mount {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+pre, pre > code {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: none;
+}
+.shield {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.shield > div {
+    height: 20px;
+    position: relative;
+}
+div.cover {
+    background-color: #eee;
+    height: 100%;
+    position: relative;
+}
+div.cover:first-child {
+  border-bottom: 1px solid #ccc;
+}
+div.cover:last-child {
+  border-top: 1px solid #ccc;
+}
+div.clear {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    border-top: 1px solid #ccc;
+    box-sizing: content-box;
+    height: 140px;
+    z-index: -1;
+}
+
+.veil {
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+
+div.veil > #mount > div.shield > div:first-child {
+  background-image: url(../../images/lock.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+}
+
+div.veil > #mount > div.shield > div:last-child {
+  background-image: url(../../images/lock.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+}
+
+#correction {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

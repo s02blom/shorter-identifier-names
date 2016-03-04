@@ -1,0 +1,32 @@
+<h1 class="page-header">Setup</h1>
+<div class="row">
+    <div class="col-md-12">
+
+        <h2>Trials</h2>
+        <hr></hr>
+        <button class="btn btn-lg btn-primary" ng-click="seed()">
+          <span class="glyphicon glyphicon-random" aria-hidden="true"></span>&nbsp; Seed Trials
+        </button>
+        <button ng-click="resetIssuedTrials()" type="button" class="btn btn-lg btn-warning">
+          <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>&nbsp; Reset Issued Trials
+        </button>
+
+        <button ng-click="stopAllTrials()" type="button" class="btn btn-lg btn-default">
+          <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;Stop all Trials
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Sessions</h2>
+        <hr></hr>
+        <button ng-click="deleteEmptySessions()" type="button" class="btn btn-lg btn-danger">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp; Drop Empty Sessions
+        </button>
+
+        <button ng-click="deleteAllSessions()" type="button" class="btn btn-lg btn-danger">
+          <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>&nbsp; Drop All Sessions
+        </button>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<script type="text/javascript" src="/static/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/components/timer.js"></script>
+<script type="text/javascript" src="/static/js/components/clock.js"></script>
+<script type="text/javascript" src="/static/js/components/timelimit.js"></script>
+
+<body></body>
+<script type="text/javascript">
+
+(function (window) {
+  function text (message) {
+    $('body').text(message);
+  }
+
+  function background (color) {
+    $('body').attr('bgcolor', color);
+  }
+
+  function step (color) {
+    return function (elapsed) {
+      background(color);
+      text('Elapsed: ' + (elapsed / 1000).toString());
+    };
+  }
+
+  var steps = [
+    after(seconds(0), step('blue')),
+    after(seconds(1), step('green')),
+    after(seconds(2), step('red')),
+    after(seconds(3), step('lime')),
+    after(seconds(10), function () { text('Done');})
+  ];
+
+  var timer = new Timer();
+  var limit = new TimeLimit(steps, timer);
+  limit.start();
+})(window);
+</script>

@@ -1,0 +1,46 @@
+<div id="dialog" ng-show="showDialog">
+  <!-- Dialog -->
+  <form name="errorForm" ng-submit="errorForm.$valid && found(report)">
+    <div class="row">
+
+      <!-- Linenumber -->
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label for="linenumber">{{ labels.line_number }}</label>
+          <input type="number" class="form-control" name="linenumber" id="linenumber" min="1" max="30" placeholder="#" ng-model="report.linenumber" tabindex="1" required>
+        </div>
+      </div>
+
+      <!-- Correction -->
+      <div class="col-xs-5">
+        <div class="form-group">
+          <label for="correction">{{ labels.correction }}</label>
+          <input type="text" class="form-control" name="correction" id="correction" placeholder="{{ labels.correction }}" ng-model="report.correction" tabindex="2" required>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="col-xs-5">
+        <div class="form-group">
+          <label for="description">{{ labels.description }}</label>
+          <input type="text" class="form-control" name="description" id="description" placeholder="{{ labels.description }}" ng-model="report.description" tabindex="3">
+        </div>
+      </div>
+
+    </div> <!-- row -->
+
+    <div class="row">
+
+    <!-- Cancel -->
+    <div class="col-xs-6 col-md-6 text-center">
+      <button id="cancel" type="button" class="btn btn-primary" ng-disabled="buttonDisabled" ng-click="cancel()" tabindex="5">{{ labels.button_cancel }}</button>
+    </div>
+
+    <!-- Found -->
+    <div class="col-xs-6 col-md-6 text-center">
+      <button id="found" type="submit" class="btn btn-success" ng-disabled="buttonDisabled" tabindex="4">{{ labels.button_found }}</button>
+    </div>
+  </div>
+
+  </form>
+</div>

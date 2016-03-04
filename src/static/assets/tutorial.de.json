@@ -1,0 +1,241 @@
+﻿{
+    "data": [
+        {
+            "text": [
+                "Bitte lesen Sie die folgenden Anweisungen in Ruhe durch. Während der eigentlichen Erhebung werden die Hinweise nicht eingeblendet."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 1, 
+            "condition": "intro", 
+            "caption": "Einführung"
+        }, 
+        {
+            "text": [
+                "Ein Kollege bittet Sie, ihm mit einem Problem im Quellcode eines anderen Projekts zu helfen.", 
+                "Der Code funktioniert, verhält sich aber unerwartet. Ihr Kollege braucht Ihre Hilfe bei der Fehleranalyse, um die Implementierung später ändern zu können."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 2, 
+            "condition": "situation", 
+            "caption": "Situation"
+        }, 
+        {
+            "text": [
+                "Hier sehen Sie ein Snippet mit einer in C# geschriebenen Funktion.", 
+                "Der Code ist kommentiert. Der Zweck der Funktion steht in der ersten Kommentarzeile. Die restlichen Kommentare beinhalten eine Übersicht der im Code verwendeten Variablen."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 3, 
+            "condition": "code", 
+            "caption": "Erhebung"
+        }, 
+        {
+            "text": [
+                "Ihre Aufgabe ist es, einen Fehler im Code zu finden.", 
+                "Der Code kompiliert korrekt, aber er weist zur Laufzeit ein fehlerhaftes Verhalten auf. Die Funktion hat nur einen Fehler."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 4, 
+            "condition": "task", 
+            "caption": "Ihre Aufgabe"
+        }, 
+        {
+            "text": [
+                "Während der Studie sind vom Code nur einige Zeilen sichtbar, die restlichen sind ausgeblendet."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 5, 
+            "condition": "letterbox", 
+            "caption": "Sichtbarer Bereich"
+        }, 
+        {
+            "text": [
+                "Sie können den sichtbaren Bereich mit den Pfeiltasten auf Ihrer Tastatur verschieben. Verschieben Sie nun den sichtbaren Bereich bis zum Ende (durch Drücken der Nach-Unten Taste)!"
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "arrows"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 6, 
+            "condition": "control", 
+            "caption": "Steuerung"
+        }, 
+        {
+            "text": [
+                "Sobald Sie sich sicher sind, dass Sie den Fehler gefunden haben, drücken Sie die Leertaste. Es erscheint ein Dialog.", 
+                "(Drücken Sie jetzt die Leertaste.)"
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 7, 
+            "condition": "founddialog", 
+            "caption": "Fehler gefunden"
+        }, 
+        {
+            "text": [
+                "Wenn Sie den Fehler gefunden haben, dann geben Sie bitte die Zeilennummer an, in der sich der Fehler befindet. Die ausgewählte Zeile wird hervorgehoben."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "fillin"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 8, 
+            "condition": "linenumber", 
+            "caption": "Zeilennummer"
+        }, 
+        {
+            "text": [
+                "Geben Sie bitte im Feld \"Korrektur\" an, wie der Code korrekter Weise lauten müsste. Das Feld wird mit der ausgewählten Zeile vorgefüllt, sodass Sie den Code korrigieren können."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "fillin"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 9, 
+            "condition": "correction", 
+            "caption": "Korrektur"
+        }, 
+        {
+            "text": [
+                "Geben Sie bitte auch eine kurze Beschreibung des Fehlers an und erklären Sie, was genau falsch ist."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 10, 
+            "condition": "description", 
+            "caption": "Beschreibung"
+        }, 
+        {
+            "text": [
+                "Durch den \"Zurück zum Code\" Button kehren Sie zum Code zurück, falls Sie sich bezüglich des Fehlers unsicher sind."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 11, 
+            "condition": "cancel", 
+            "caption": "Abbruch"
+        }, 
+        {
+            "text": [
+                "Zum Abschluss eines Durchgangs klicken Sie auf den \"Fertig\"-Button."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 13, 
+            "condition": "completion", 
+            "caption": "Abschluss"
+        }, 
+        {
+            "text": [
+                "Sie haben maximal 3 Versuche, um den Fehler in einem Snippet zu finden.", 
+                "Bitte versuchen Sie den Fehler zu finden, ohne zu raten und drücken Sie die Leertaste erst, wenn Sie sich sicher sind."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 14, 
+            "condition": "attempts", 
+            "caption": "Versuche"
+        }, 
+        {
+            "text": [
+                "Sie haben für das Auffinden des Fehlers bis zu 10 Minuten Zeit. Versuchen Sie, den Fehler so schnell wie möglich zu finden. Allerdings ist Genauigkeit wichtiger als Geschwindigkeit.", 
+                "Kurz vor dem Ende wird eine Warnung eingeblendet. Nach Ablauf der Zeit wird automatisch das nächste Snippet angezeigt."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 15, 
+            "condition": "timelimit", 
+            "caption": "Zeitbegrenzung"
+        }, 
+        {
+            "text": [
+                "Zusammenfassend ist Ihre Aufgabe also:", 
+                "- Finden Sie den Fehler, der das defekte Verhalten des Codes verursacht", 
+                "- Verschieben Sie den sichtbaren Bereich mit den Pfeiltasten", 
+                "- Drücken Sie die Leertaste, wenn Sie den Fehler gefunden haben", 
+                "- Sie haben pro Snippet bis zu 10 Minuten Zeit", 
+                "- Sie haben maximal 3 Versuche pro Snippet, um den Fehler zu finden"
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 16, 
+            "condition": "summary", 
+            "caption": "Zusammenfassung"
+        }
+    ]
+}

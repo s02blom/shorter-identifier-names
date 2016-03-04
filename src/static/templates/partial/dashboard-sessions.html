@@ -1,0 +1,177 @@
+<style type="text/css">
+  .text-error {
+    color: white;
+    background-color: red;
+    font-weight: bolder;
+    padding: 0.25em 0.5em;
+    margin: 0;
+  }
+
+  .text-warning {
+    color: white;
+    background-color: yellow;
+    font-weight: bolder;
+    padding: 0.25em 0.5em;
+    margin: 0;
+  }
+</style>
+<section ng-show="showSessions">
+<h1 class="page-header">Sessions</h1>
+<div class="row">
+
+  <div class="col-md-2 text-center">
+    <number value="number_of_sessions">Sessions</number>
+  </div>
+  <div class="col-md-2 text-center">
+    <number value="sessions_with_data">With Data</number>
+  </div>
+  <div class="col-md-2 text-center">
+    <number value="empty">Empty</number>
+  </div>
+  <div class="col-md-3">
+    <ul>
+      <li>Empty sessions equal pageviews</li>
+      <li>There should be more empty sessions than with data</li>
+      <li>"With data means any data.</li>
+      <li>The list only shows ones with Forms + Trials</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <pre><code>csharp < 3
+english_level < 4
+german_level < 4
+years_experience_csharp < 1
+trials < 6
+failed_trials >= 1
+elapsed_trials >= 1
+are_you_serious == 'no'
+boomerang_participant == 'yes'
+legacy_participant == '2015'
+encountered_distraction == 'yes' && elapsed_trials
+</code></pre>
+
+  </div>
+
+</div>
+
+<h1>Running Sessions</h1>
+<div class="row">
+    <div class="col-md-12">
+      <p>
+        <input type="checkbox" ng-model="filterInvalid"> Filter Invalid
+        <input type="checkbox" ng-model="filterValid"> Filter Valid
+      </p>
+      <table class="table table-condensed table-responsive table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Session</th>
+            <th>Date</th>
+            <th>Age</th>
+
+            <th>Job</th>
+            <th>Forms</th>
+            <th>Trials</th>
+            <th>Success</th>
+            <th>Failed</th>
+            <th>Elapsed</th>
+            <th>Dist?</th>
+            <th>Srs?</th>
+            <th>
+              <a href="" title="Boomerang">
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+              </a>
+            </th>
+            <th>Legacy</th>
+            <th>C#</th>
+            <th>C# Years</th>
+            <th>Muttersprache</th>
+            <th>DE</th>
+            <th>EN</th>
+            <th>Duplicate</th>
+            <th>Valid?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="session in sessions"
+            ng-class="{
+              'warning': flag(session.value),
+              'success': session.value.valid,
+              'danger': session.value.valid === false,
+              'hidden': filterInvalid && (session.value.valid === false) || filterValid && (session.value.valid === true),
+            }">
+
+            <td>{{ $index + 1 }}.</td>
+            <td>{{ session.value.USER_SESSION_ID }}</td>
+            <td>{{ dateOf(session.value) }}</td>
+            <td>{{ ageOf(session.value) }}</td>
+
+            <td>{{ session.value.jobtype }}</td>
+            <td>{{ session.value.forms }}</td>
+            <td>{{ session.value.trials }}</td>
+            <td>{{ session.value.successful_trials }}</td>
+            <td><span ng-class="{'text-error': session.value.failed_trials > 0 }">{{ session.value.failed_trials }}</span></td>
+            <td><span ng-class="{'text-error': session.value.elapsed_trials > 0 }">{{ session.value.elapsed_trials }}</span></td>
+            <td><span ng-class="{'text-warning': session.value.encountered_distraction == 'yes' && (session.value.elapsed_trials == 0 && session.value.failed_trials == 0),
+              'text-error': session.value.encountered_distraction == 'yes' && (session.value.elapsed_trials > 0 || session.value.failed_trials > 0) }">{{ session.value.encountered_distraction }}</span></td>
+            <td><span ng-class="{'text-error': session.value.are_you_serious == 'no' }">{{ session.value.are_you_serious }}</span></td>
+            <td><span ng-class="{'text-error': session.value.boomerang_participant == 'yes' }">{{ session.value.boomerang_participant }}</span></td>
+            <td><span ng-class="{'text-error': session.value.legacy_participant == '2015' }">{{ session.value.legacy_participant }}</span></td>
+            <td><span ng-class="{'text-error': session.value.csharp < 3 }">{{ session.value.csharp }}</span></td>
+            <td><span ng-class="{'text-error': session.value.years_experience_csharp < 1 }">{{ session.value.years_experience_csharp }}</span></td>
+            <td>{{ session.value.mother_tounge }}</td>
+            <td><span ng-class="{'text-error': session.value.german_level < 4 }">{{ session.value.german_level }}</span></td>
+            <td><span ng-class="{'text-error': session.value.english_level < 4 }">{{ session.value.english_level }}</span></td>
+            <td>{{ session.value.duplicate }}</td>
+            <td>{{ session.value.valid }}</td>
+
+            <td>
+              <a class="button" ng-click="setValid(session.value)">
+                <span ng-class="{'glyphicon glyphicon-thumbs-down': session.value.valid, 'glyphicon glyphicon-thumbs-up': !session.value.valid}"></span>
+              </a>
+            </td>
+
+            <td>
+              <a class="button" ng-click="showData(session.value)">
+                <span ng-class="{'glyphicon glyphicon-eye-open': !session.loading, 'glyphicon glyphicon-hourglass': session.loading}"></span>
+              </a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+</section>
+
+
+<section ng-show="showSessions && duplicates.length > 0">
+<h1 class="page-header">Duplicate Sessions</h1>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-condensed table-responsive table-striped">
+      <tr ng-repeat="duplicate in duplicates">
+        <td>
+          <h3>Key</h3>
+          <code>{{ duplicate[0] }}</code><br>
+          <h3>Sessions</h3>
+          <ul>
+            <li ng-repeat="session_id in duplicate[1]">
+              <code>{{ session_id }}</code>
+              <a class="button" ng-click="setDuplicate(session_id)">
+                <span class="glyphicon glyphicon-piggy-bank"></span>
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</section>
+
+<div ng-hide="showSessions">
+  <button class="btn btn-sm btn-default" ng-click="hideData()">Close</button>
+  <pre><code class="session-data">{{ sessionData }}</code></pre>
+  <button class="btn btn-sm btn-default" ng-click="hideData()">Close</button>
+</div>
