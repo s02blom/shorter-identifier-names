@@ -1,0 +1,13 @@
+<script type="text/javascript" src="/static/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/components/clockface.js"></script>
+
+<div id="clock"></div>
+<button class="next">Next</button>
+<button class="reset">Reset</button>
+<script type="text/javascript">
+
+var clockFace = new ClockFace();
+$('.next').click (function () { clockFace.next (); });
+$('.reset').click (clockFace.reset);
+
+</script>

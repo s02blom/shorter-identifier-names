@@ -1,0 +1,38 @@
+@media (max-height: 650px) {
+    #presentation {
+      padding: 0.5em;
+    }
+
+    #presentation, #editor, #dialog {
+      margin: 0.5em  0.5em 0 0.5em;
+    }
+
+    #presentation h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    #presentation p.lead {
+        font-size: 14px;
+    }
+    #presentation .btn-lg {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .interactions {
+      margin: 0;
+      padding: 0;
+    }
+
+    .keyboard {
+      margin: 0;
+      padding: 0;
+    }
+}
+
+img.feedback-image {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 20%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/png">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
+    <title>Peter Admin</title>
+    <link href="/static/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+    <link href="/static/css/fix.css" rel="stylesheet">
+    <link href="/static/css/components/letterbox.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script src="/static/js/lib/jquery.min.js"></script>
+    <script src="/static/js/lib/bootstrap.min.js"></script>
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+    <script src="/static/js/lib/angular-sanitize.min.js"></script>
+    <script src="/static/js/lib/d3.min.js"></script>
+
+    <script src="/static/js/components/keyboard.js"></script>
+    <script src="/static/js/wh-charts.js"></script>
+    <script src="/static/js/wh-directives.js"></script>
+    <script src="/static/js/wh-experiment-controls.js"></script>
+    <script src="/static/js/wh-app-admin.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Peter Admin</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="">Psychologische Erhebung Total Erheblicher Reaktionszeiten</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" ng-controller="navController as navCtrl">
+            <li><a href="" ng-click="navCtrl.clearUserCookie()">Clear User Cookie</a></li>
+            <li><a href="/admin/logout">Logout</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="container-fluid" ng-controller="mainController">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-sm-1 col-md-1 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="text-center">
+              <img src="/static/images/favicon.png" class="img-responsive">
+            </li>
+            <li ng-class="{active:isActive('/sessions')}"><a href="#/sessions">Sessions <span class="sr-only">(current)</span></a></li>
+            <li ng-class="{active:isActive('/trials')}"><a href="#/trials">Trials</a></li>
+            <li ng-class="{active:isActive('/emails')}"><a href="#/emails">Emails</a></li>
+            <li ng-class="{active:isActive('/snippets')}"><a href="#/snippets">Snippets</a></li>
+            <li ng-class="{active:isActive('/setup')}"><a href="#/setup">Setup</a></li>
+            <li><hr></li>
+            <li><a class="btn-lg" href="/api/admin/db.json"><span class="glyphicon glyphicon-cloud-download"></span> Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main" >
+          <flash></flash>
+          <section ng-view></section>
+        </div> <!-- Main Content -->
+      </div>
+
+      <!-- Footer -->
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 text-center">
+            <footer class="text-muted small">
+              <hr>
+              Peter Bernd Logo mit freundlicher Genehmigung von Florian Stangl, <a target="_new" href="http://www.metal-fotos.de/">http://www.metal-fotos.de/</a>
+              <br>&nbsp;
+            </footer>
+          </div>
+      </div>
+
+    </div> <!-- Container -->
+    <objectview></objectview>
+
+  </body>
+</html>

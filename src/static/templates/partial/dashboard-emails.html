@@ -1,0 +1,23 @@
+<h1 class="page-header">Emails</h1>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-condensed table-responsive table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Email</th>
+          <th>Wants results</th>
+          <th>Wants Invite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="email in emails">
+          <td>{{ $index + 1 }}.</td>
+          <td>{{ email.email }}</td>
+          <td>{{ email.notify_results ? 'Yes' : 'No' }}</td>
+          <td>{{ email.invite_again ? 'Yes' : 'No' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

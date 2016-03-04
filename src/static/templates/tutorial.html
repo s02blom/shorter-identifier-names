@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="tutorial">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/tutorial.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/components/keyboard.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/components/letterbox.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/screenfix.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/static/js/lib/jquery.min.js"></script>
+    <script src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script src="/static/js/components/keyboard.js"></script>
+    <script src="/static/js/components/letterbox.js"></script>
+    <script src="/static/js/components/clockface.js"></script>
+
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+    <script src="/static/js/lib/angular-sanitize.min.js"></script>
+
+    <script src="/static/js/wh-experiment-controls.js"></script>
+    <script src="/static/js/wh-app-tutorial.js"></script>
+
+  </head>
+  <body id="experiment">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div ng-controller="tutorialPageController as tutorialPageCtrl">
+
+            <!-- Presentation -->
+            <div id="presentation" ng-show="showHint">
+                <progress-bar></progress-bar>
+                <h1 ng-show="showText" ng-html-compile="page.caption"></h1>
+                <p class="lead" ng-show="showText" ng-repeat="text in page.text" ng-html-compile="text"></p>
+                <p class="lead" ng-show="showNotice">{{ notice }}</p>
+                <p class="text-center interactions" ng-repeat="interaction in page.interactions" compile="interaction"></p>
+            </div>
+
+            <!-- View Port for the Code Snippet -->
+            <div id="editor" ng-show="showCode" ng-class="{veil: showVeil}">
+                <div id="veil"></div>
+                <letterbox></letterbox>
+            </div>
+
+            <!-- Clock -->
+            <div id="time" ng-show="showTime">
+              <div class="row">
+                <div class="col-md-12">
+                  <clockface></clockface>
+                </div>
+              </div>
+            </div>
+
+            <error-found-dialog></error-found-dialog>
+
+          </div> <!-- Controller, Scope -->
+      <div>
+    <div>
+
+  </body>
+</html>

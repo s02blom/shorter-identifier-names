@@ -1,0 +1,15 @@
+<div id="modal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="lead" ng-bind-html="message"></p>
+        <div class="cleafix">&nbsp;</div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeFeedback" type="button" class="btn btn-default" ng-click="feedbackCtrl.close()">
+          {{ dismissButtonLabel }}
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

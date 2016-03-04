@@ -1,0 +1,29 @@
+<div id="modal" class="modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span></button>
+        <h1 class="modal-title">
+          {{ title }}
+        </h1>
+      </div>
+      <div class="objectview">
+        <section ng-show="objects.length > 0">
+          <div ng-repeat="obj in objects">
+            <propertygrid properties="obj"></propertygrid>
+          </div>
+        </section>
+        <section ng-show="objects.length == 0">
+          <propertygrid properties="properties"></propertygrid>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> {{ dismissButtonLabel }}
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

@@ -1,0 +1,19 @@
+<h1 class="page-header">Snippets</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="snippets">
+      <li class="snippet-name" ng-repeat="name in names"><a href="" ng-click="showSnippet(name)">{{ name }}</a></li>
+    </ul>
+  </div>
+</div>
+<hr>
+  <label>
+    <input type="checkbox" ng-model="letterboxing" ng-init="false"> <span class="glyphicon glyphicon-envelope"></span> Letterboxing
+  </label>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <!-- View Port for the Code Snippet -->
+    <div id="editor" ng-bind-html="code"></div>
+  </div>
+</div>

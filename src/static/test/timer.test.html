@@ -1,0 +1,26 @@
+<script type="text/javascript" src="/static/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/components/timer.js"></script>
+
+<input type="text"></input>
+<button class="start">Start</button>
+<button class="stop">Stop</button>
+
+<script type="text/javascript">
+
+  function display() {
+    var ms = timer.elapsed();
+    var s = Math.round(ms / 1000);
+    $('input[type=text]').val(s);
+  }
+  var timer = new Timer({
+    onTick: display
+  });
+
+  $('.start').click(function () {
+    timer.start();
+  });
+
+  $('.stop').click(function () {
+    timer.stop();
+  });
+</script>
