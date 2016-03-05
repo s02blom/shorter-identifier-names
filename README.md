@@ -44,7 +44,7 @@ Fire up the mongdb container:
 
 I am using the empty data folder provided with this repository to store the mongodb files. You can, of course, use any other folder you like.
 
-Fire up the mongdb container:
+Fire up the web application's container:
 
     $ docker run --name peter -d -p 5000:5000 --link mongodb:mongodb cessor/peter
 
