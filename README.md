@@ -1,9 +1,7 @@
-Peter *
+Shorter Identifier Names Take Longer to Comprehend - Replication Package
 =====
 
-\* *Psychologische Erhebung Total Erheblicher Reaktionszeiten*
-
-This repository contains the source code for the web app I used to obtain the data for my Bachelor thesis. I tested the influence of identifier length and semantics on source code comprehension.
+This repository contains the source code for the web app we used to obtain the data for the experiment described in the paper "Shorter Identifier Names Take Longer to Comprehend", which we submitted to [SANER 2017](http://saner.aau.at/). We tested the influence of identifier length and semantics on program comprehension.
 
 The software was written in Python 2.7 using the Tornado web framework and stores all data in a MongoDB. To setup you can either run everything from bare metal or use the provided Dockerfiles to create custom images.
 
@@ -26,7 +24,7 @@ Setup
 Using Docker
 ------------
 
-The simplest way to get the software to run is to use the provided docker file to build an image and run it containers. I provided one for mongodb and one for the application itself. To build & run the mongodb image, use the script ```<repository>/run_mongo.sh``` and ```<repository>/run.sh``` or manually run the following commands from the root of the checked out repository:
+The simplest way to get the software to run is to use the provided docker file to build an image and run it containers. We provide one for mongodb and one for the application itself. To build & run the mongodb image, use the script ```<repository>/run_mongo.sh``` and ```<repository>/run.sh``` or manually run the following commands from the root of the checked out repository:
 
 Build the mongodb image:
 
@@ -133,16 +131,14 @@ To access the client view of the study, go to:
 Here, you can simply click your way to the study. Make sure to return to the backend, to view your data. Note: A session starts, as soon as you view a questionnaire. In the admin interface, only completed sessions are shown. The "With Data" field indicates that people have provided some data, but the record does not show up until the complete study was finished.
 
 
-Notes
-=====
+Admin Password
+==============
 In case you lose the admin password or forgot to write it down during build, you can retrieve it by checking inside the container:
 
     $ docker exec -it peter cat /var/peter/.key
 
 Trivia
 ======
-The software is called Peter, which is kind of a backronym for 'Psychologische Erhebung Total Erheblicher Reaktionszeiten' (Psychological Evaluation of Totally Relevant Reaction Times). When discussing my thesis with my my supervisor, I kept calling my software the "data client", which we both didn't like very much. He asked me to come up with a name. Jokingly I responded: Ok, so I'll call it Peter.
+The software is called "Peter", which is kind of a backronym for 'Psychologische Erhebung Total Erheblicher Reaktionszeiten' (Psychological Evaluation of Totally Relevant Reaction Times). I kept calling my software the "data client", which my supervisor didn't like very much. He asked me to come up with a name. Jokingly I responded: Ok, so I'll call it Peter.
 
-I renamed the solution to Peter and sticked with it but I didn't stop there. As you might have noticed, in the top left corner of the admin interface, there is a picture of jumping man around. His name is Peter and he is the singer of a band I like. The picture was taken by Florian Stangl @ [http://www.metal-fotos.de/](http://www.metal-fotos.de/), who nicely allowed me to republish it (as I am using it in a non commercial context).
-
- This might not tickle your sense of humor as much as it tickles mine. I had a good time writing this.
+Peter logo is courtesy of Florian Stangl @ [http://www.metal-fotos.de/](http://www.metal-fotos.de/), who nicely allowed me to republish it (as I am using it in a non commercial context). This might not tickle your sense of humor as much as it tickles mine, but I had a good time writing this. - JH, 2016
