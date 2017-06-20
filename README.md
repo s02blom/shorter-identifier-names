@@ -16,12 +16,11 @@ In this repository you will find everything to reason about our results.
 
 # Results
 
-| File               | Contains                                         |
-|--------------------|--------------------------------------------------|
-| events.csv         | Keypresses during the experiment                 |
-| questionnaires.csv | Submitted formdata, without the free text fields |
-| text.csv           | Data from all free text fields                   |
-| trials.csv         | Participant answers to each trial                |
+| File               | Contains                           |
+|--------------------|------------------------------------|
+| events.csv         | Keypresses during the experiment   |
+| forms.csv          | Submitted formdata,                |
+| trials.csv         | Participant answers to each trial  |
 
 
 # Note
