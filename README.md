@@ -12,7 +12,7 @@ In this repository you will find everything to reason about our results.
  - ```instructions``` contains all pages with information for participants, including instructions for the upcoming tasks. They are in JSON format to be loaded in JavaScript, because we had used a custom built web application available [here](https://github.com/brains-on-code/peter) to display these pages.
  - ```questionnaires``` contains all the questions we asked the participants. Questionnaire 3 was shown AFTER the experiment. The files are written in a custom markdown dialect and can be viewed with any text editor. They can be automatically translated to HTML using [Antwort](https://github.com/empathic-code/antwort).
  - ```snippets``` contains the original stimulus material. The original codes were automatically generated from unit-tested, working codes, and the errors were placed in the snippets automatically. The html files were transformed and displayed with basic Visual Studio Syntax Highlighting using CSS in the final app.
- - ```results``` contains all raw data, as well as preprocessed data frames. These data are pretty raw and were cleaned before our analysis. I recommend that you consider the preprocessed data frames.
+ - ```results``` Contains our raw data.
 
 # Results
 
