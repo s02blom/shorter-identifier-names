@@ -1,0 +1,37 @@
+<h1>Thank you for your participation.</h1>
+<p>
+  The results of the study will be published on this website.
+</p>
+<p>
+  <a href="http://code.psychologie.uni-heidelberg.de/">http://code.psychologie.uni-heidelberg.de/</a><br>
+</p>
+<p>
+  If you would like to receive an email about the results of the study or future experiments, please leave your email address here:
+</p>
+<section ng-hide="email_submitted">
+  <form name="emailform" ng-submit="emailform.$valid && finishCtrl.submit(formdata)">
+    <div class="form-group">
+      <legend for="email_address">E-Mail Address</legend>
+      <div class="form-control-wrapper">
+        <input ng-model="formdata.email" type="email" class="form-control" name="email_address" placeholder="Email" required="">
+      </div>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="notify_results" ng-model="formdata.notify_results"> Notify me about the results of this experiment!
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="invite_again" ng-model="formdata.invite_again"> Invite me to the next experiment!
+      </label>
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</section>
+<hr>
+<p>You can also follow me on Twitter: <a href="https://twitter.com/pro_cessor" target="_new">@pro_cessor</a> or find more details on my website: <a href="http://cessor.de/about" target="_new">http://cessor.de</a>.</p>
+<div class="alert alert-success" role="alert" ng-show="email_submitted">Thank you!</div>

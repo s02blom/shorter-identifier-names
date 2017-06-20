@@ -1,0 +1,64 @@
+﻿{
+    "data": [
+        {
+            "text": [
+                "The introduction is now finished. You will now see {{ number }} snippets.", 
+                "Please make sure that you are working in a distraction-free environment. Distractions can impair the quality of the recorded data. Please Turn off your mobile phone, close all messengers and ask your colleagues not to disturb you."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Start"
+                }
+            ], 
+            "id": 13, 
+            "condition": "start", 
+            "caption": "Start"
+        }, 
+        {
+            "text": [
+                "Press the space bar when you are certain that you found the error.", 
+                "Press the space bar to begin."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 14, 
+            "condition": "first", 
+            "caption": "You will now see snippet {{ current }} of {{ number }}."
+        }, 
+        {
+            "text": [
+                "You can take a short break if you want.", 
+                "Press the space bar when you are certain that you found the error.", 
+                "Press the space bar to begin."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 15, 
+            "condition": "next", 
+            "caption": "You will now see snippet {{ current }} of {{ number }}."
+        }, 
+        {
+            "text": [
+                "Please answer the following questions."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 16, 
+            "condition": "almostdone", 
+            "caption": "Almost done!"
+        }
+    ]
+}

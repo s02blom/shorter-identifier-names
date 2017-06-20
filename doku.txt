@@ -1,0 +1,49 @@
+# MongoDB UUID die den Datensatz eindeutig identifiziert, Pro Participant
+participant: 00b7d4aba419442ba0f98b006d885575
+
+# Welcher Trial war das (1 - 6)
+trial: 0
+
+# Welches Bedingung in dem Trial (single, abbrev, normal)
+condition: normal
+
+# Daten für dieses Event (Hier, Zeile 2 und 8)
+data: [2, 8]
+
+# Welcher Event Typ? (Up, Down)
+event: down
+
+# Wer hat das Event ausgelöst (Key, Clock, System)
+sender: key
+
+# Welcher Code wurde gesehen?
+snippet: readini
+
+# Semantische oder Syntaktische Bedingung
+task: semantic
+
+# Welcher Task innerhalb des Blocks? (0 - 2), entspricht trial % 3
+task_order: 0
+
+# Wann trat das Event auf? Hinweis: Das sind absolute Werte
+time: 2015-05-20 13:00:11.951000+00:00
+
+# Erste sichtbare Zeile
+top: 2.0
+
+# Letzte sichtbare Zeile
+bottom: 8.0
+
+# Errechnetes Zentrum
+center: 5.0
+
+# Hoch oder Runter? (-1 ist runter)
+direction: -1.0
+
+# In Welcher Zeile in diesem Snippet saß der Fehler?
+error_location: 21
+
+# Zwischen dem Kommentar und dem Code war eine Leerzeile.
+
+# Dadurch können wir den Kommentarblock sauber identifizieren. (AOI)
+blank_line: 9

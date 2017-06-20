@@ -1,0 +1,433 @@
+participant;trial;task_order;snippet;task;condition;state;linenumber;expected_linenumber;correction;description;duration_s;dialog_s;first_impression_s;thinking_time_s;distance_traveled;average_position;moves
+411cb6f890f74876bba08fb8a7d59b82;0;0;codestructure;semantic;single;success;18;18;"d.Add(f);";entweder c zurückliefern oder d die werte hinzufügen, benennung der variablen sind ein grauß;143.621;54.855;88.765;54.855;136.0;12.830882352941176;136
+411cb6f890f74876bba08fb8a7d59b82;1;1;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";anzahl kinder als index verwendet;148.911;40.464;108.447;40.464;83.0;13.975903614457831;83
+411cb6f890f74876bba08fb8a7d59b82;2;2;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";lne statt prp als value verwendet, vermutlich der fehler ... die kommentare nerven, so wie die variablennamen;185.005;43.326;141.679;43.326;113.0;13.424778761061948;113
+411cb6f890f74876bba08fb8a7d59b82;3;0;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";klammer falsch ...;44.531;12.18;32.351;12.18;15.0;11.0;15
+411cb6f890f74876bba08fb8a7d59b82;4;1;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";semicolon fehlt ...;33.261;9.229;24.031;9.229;22.0;13.863636363636363;22
+411cb6f890f74876bba08fb8a7d59b82;5;2;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";was zum teufel;29.622;11.205;18.417;11.205;15.0;11.0;15
+a1f5b052bf2540dcaf5693aec331ed01;0;0;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Es wurde nicht die Laufvariable der Schleife als Index für das aktuell auszuwertende Alter verwendet, sondern die Variable, die die Kinder zählt.;159.33;80.341;75.953;83.377;108.0;12.13888888888889;108
+a1f5b052bf2540dcaf5693aec331ed01;1;1;codestructure;semantic;single;success;18;18;"d.Add(f);";"Eine gefundene Klammer wird der Definitionsliste für ""Block-Marker"" hinzugefügt, nicht der Ergebnis-Liste. Mit F# wäre das nicht passiert. :D";173.821;113.025;60.796;113.025;91.0;12.076923076923077;91
+a1f5b052bf2540dcaf5693aec331ed01;2;2;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";"Statt der ""property"" wird die gesamte Zeile als Wert für das ""setting"" abgelegt.";133.311;35.8;97.511;35.8;223.0;12.349775784753364;223
+a1f5b052bf2540dcaf5693aec331ed01;3;0;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";Geschweifte statt eckiger Index-Klammer;82.116;30.332;51.784;30.332;46.0;14.152173913043478;46
+a1f5b052bf2540dcaf5693aec331ed01;4;1;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";Fehlendes Semikolon;82.816;14.85;67.966;14.85;64.0;15.65625;64
+a1f5b052bf2540dcaf5693aec331ed01;5;2;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";- statt = im Operator +=;56.916;24.459;32.457;24.459;37.0;9.54054054054054;37
+7140e75721074680a24636577baa4c2c;0;0;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";Zugriff auf das erste Element der gesamten Liste und nicht des Arrays mit zwei Elementen, die aus dem Split('=') hervorgegangen sind.;126.758;55.654;71.104;55.654;46.0;12.23913043478261;46
+7140e75721074680a24636577baa4c2c;1;1;concatlists;semantic;single;success;21;21;"e[f + 10] = h;";Ohne Korrektur wird immer nur ein Feld weiter gesprungen für das c-Array. Mit Korrektur wird das c-Array angehängt.;527.081;95.429;272.602;254.479;352.0;12.235795454545455;352
+7140e75721074680a24636577baa4c2c;2;2;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Nicht den Index addieren, sondern bei einem vorhandenen Zeichen eins addieren.;127.002;51.159;75.843;51.159;59.0;11.271186440677965;59
+7140e75721074680a24636577baa4c2c;3;0;readini;syntactic;single;success;21;21;"c.Add(g, h);";Eckige Klammer [ statt runder Klammer (.;42.977;20.305;22.672;20.305;17.0;12.0;17
+7140e75721074680a24636577baa4c2c;4;1;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";Subtraktion anstatt Zuweisung.;96.419;12.35;84.069;12.35;78.0;14.128205128205128;78
+7140e75721074680a24636577baa4c2c;5;2;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";Semikolon fehlte am Ende.;181.77;12.686;169.084;12.686;128.0;12.421875;128
+0ba6d88b74f04445941144bfc0fa222d;0;0;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[e]);";"int h = int.Parse(f[g]);";115.988;15.516;100.471;15.516;184.0;9.83695652173913;184
+0ba6d88b74f04445941144bfc0fa222d;1;1;readini;semantic;normal;success;21;21;"settings.Add(identifier, line);";"settings.Add(identifier, property);";49.485;14.62;34.865;14.62;17.0;11.882352941176471;17
+0ba6d88b74f04445941144bfc0fa222d;2;2;codestructure;semantic;abbrev;success;18;18;"blc.Add(chr);";"str.Add(chr);";77.06;8.34;68.72;8.34;97.0;10.814432989690722;97
+0ba6d88b74f04445941144bfc0fa222d;3;0;histogram;syntactic;abbrev;success;18;18;"frq[chr] +- 1;";"frq[chr] += 1;";40.004;12.755;27.249;12.755;12.0;9.5;12
+0ba6d88b74f04445941144bfc0fa222d;4;1;parsequerystring;syntactic;single;success;19;19;"string h = f{1];";"string h = f[1];";32.308;8.052;24.256;8.052;13.0;10.0;13
+0ba6d88b74f04445941144bfc0fa222d;5;2;concatlists;syntactic;normal;success;21;21;result[index + length] = second;"result[index + length] = second;";36.683;7.276;29.407;7.276;16.0;11.5;16
+b9d7ece73f8e4586959c39a74934d284;0;0;codestructure;semantic;single;success;18;18;"d.Add(f);";die Rückgabeliste wurde nie gefüllt;130.931;31.759;99.172;31.759;87.0;12.03448275862069;87
+b9d7ece73f8e4586959c39a74934d284;1;1;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";variable prp wurde nicht in das Rückhabe Dictionary gelegt;133.002;29.687;103.315;29.687;95.0;13.357894736842105;95
+b9d7ece73f8e4586959c39a74934d284;2;2;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";children wurde statt Index verwendet. Da alle durchlaufen werden sollen ist hier die Zählervariable falsch;82.242;34.736;47.506;34.736;30.0;15.1;30
+b9d7ece73f8e4586959c39a74934d284;3;0;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";Lol :) Strichpunkt hat gefehlt;248.174;14.785;233.389;14.785;79.0;15.189873417721518;79
+b9d7ece73f8e4586959c39a74934d284;4;1;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";+- gibt es nicht. Es ist entweder +=1 oder -=1 gemeint;76.4;27.1;49.3;27.1;35.0;12.142857142857142;35
+b9d7ece73f8e4586959c39a74934d284;5;2;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";Klammerung ist falsch;42.442;17.843;24.599;17.843;13.0;10.0;13
+00b7d4aba419442ba0f98b006d885575;0;0;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;95.883;19.107;76.776;19.107;36.0;14.38888888888889;36
+00b7d4aba419442ba0f98b006d885575;1;1;codestructure;semantic;single;success;18;18;"d.Add(f);";;69.059;7.675;61.384;7.675;59.0;12.23728813559322;59
+00b7d4aba419442ba0f98b006d885575;2;2;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;64.515;11.067;53.448;11.067;38.0;9.263157894736842;38
+00b7d4aba419442ba0f98b006d885575;3;0;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;154.444;6.979;147.465;6.979;173.0;14.404624277456648;173
+00b7d4aba419442ba0f98b006d885575;4;1;histogram;syntactic;single;success;18;18;"c[e] += 1;";;63.131;9.779;53.352;9.779;41.0;11.878048780487806;41
+00b7d4aba419442ba0f98b006d885575;5;2;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;35.156;9.37;25.785;9.37;16.0;9.75;16
+e3d36e7a919a42d4859dae9722239bda;0;0;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";"Der Wert aus dem Array ""ages"" soll anhand der iterators der Schleife genommen werden und nicht e.";125.62;57.271;68.349;57.271;140.0;13.471428571428572;140
+e3d36e7a919a42d4859dae9722239bda;1;1;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";Der Wert und nicht die ganze Zeile kommt hier rein.;63.649;19.169;44.48;19.169;107.0;12.242990654205608;107
+e3d36e7a919a42d4859dae9722239bda;2;2;codestructure;semantic;normal;success;18;18;"structure.Add(character);";Die Ausgabe soll gefüllt werden und nicht die Blockzeichen;77.781;22.638;55.143;22.638;96.0;13.083333333333334;96
+e3d36e7a919a42d4859dae9722239bda;3;0;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";Falsche Klammer;22.883;14.178;8.704;14.178;15.0;11.0;15
+e3d36e7a919a42d4859dae9722239bda;4;1;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";+- gibts nciht;25.85;13.905;11.945;13.905;34.0;11.970588235294118;34
+e3d36e7a919a42d4859dae9722239bda;5;2;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";Semikolon fehlte;39.927;9.294;30.632;9.294;61.0;14.639344262295081;61
+be1b3b6aa0f2481cb47a38d935c9d5f0;0;0;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;118.687;16.841;101.845;16.841;71.0;10.859154929577464;71
+be1b3b6aa0f2481cb47a38d935c9d5f0;1;1;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;277.406;10.783;266.623;10.783;351.0;11.327635327635328;351
+be1b3b6aa0f2481cb47a38d935c9d5f0;2;2;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";;87.675;11.828;75.847;11.828;57.0;11.228070175438596;57
+be1b3b6aa0f2481cb47a38d935c9d5f0;3;0;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;35.463;14.463;21.0;14.463;15.0;11.0;15
+be1b3b6aa0f2481cb47a38d935c9d5f0;4;1;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;36.503;7.199;29.304;7.199;31.0;14.419354838709678;31
+be1b3b6aa0f2481cb47a38d935c9d5f0;5;2;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;20.366;6.286;14.08;6.286;21.0;12.380952380952381;21
+42efb260aa64492d9423adcbc860eafe;0;0;readini;semantic;single;success;21;21;"c.Add(g, h);";;116.296;19.347;88.865;27.43;138.0;12.5;138
+42efb260aa64492d9423adcbc860eafe;1;1;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;129.507;12.104;117.403;12.104;161.0;11.962732919254659;161
+42efb260aa64492d9423adcbc860eafe;2;2;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;90.356;16.432;73.924;16.432;101.0;12.96039603960396;101
+42efb260aa64492d9423adcbc860eafe;3;0;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;29.664;9.213;20.45;9.213;21.0;13.428571428571429;21
+42efb260aa64492d9423adcbc860eafe;4;1;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;115.476;6.423;109.053;6.423;136.0;14.536764705882353;136
+42efb260aa64492d9423adcbc860eafe;5;2;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;25.46;7.115;18.345;7.115;27.0;11.666666666666666;27
+fb42e2ec502b42df9a937df5d3964d8d;0;0;readini;semantic;single;success;21;21;"c.Add(g, h);";Es sollte der Wert hinzugefügt werden, der aus der Zeile (g=h) geparst wurde;134.043;50.77;83.273;50.77;53.0;12.377358490566039;53
+fb42e2ec502b42df9a937df5d3964d8d;1;1;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";Das Zeichen sollte zur Liste hinzugefügt werden, die die Ergebnisse hält.;129.081;32.049;97.032;32.049;75.0;12.493333333333334;75
+fb42e2ec502b42df9a937df5d3964d8d;2;2;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Der Index zum Suchen im Array sollte der Laufindex sein, nicht die Anzahl der bisherigen Treffer.;131.298;45.555;85.743;45.555;36.0;13.055555555555555;36
+fb42e2ec502b42df9a937df5d3964d8d;3;0;histogram;syntactic;single;success;18;18;"c[e] += 1;";+= zum Erhöhen um 1 (oder gleich ++);78.23;46.015;32.215;46.015;14.0;10.5;14
+fb42e2ec502b42df9a937df5d3964d8d;4;1;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";Ein Semikolon fehlt;36.516;13.828;22.688;13.828;17.0;12.0;17
+fb42e2ec502b42df9a937df5d3964d8d;5;2;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";Eckige Klammer statt geschweifter;36.488;18.057;18.431;18.057;15.0;11.0;15
+f8b3fd416fa2463f867ae66631bd3ad5;0;0;codestructure;semantic;normal;success;18;18;"structure.Add(character);";Hinzufügen des Chars in falsche Liste;117.357;52.119;53.567;63.79;58.0;14.655172413793103;58
+f8b3fd416fa2463f867ae66631bd3ad5;1;1;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";Falscher Index-Zähler benutzt;106.847;29.507;77.34;29.507;59.0;13.847457627118644;59
+f8b3fd416fa2463f867ae66631bd3ad5;2;2;readini;semantic;single;success;21;21;"c.Add(g, h);";Es wird immer die Rawline geaddet, nicht der Wert des Settings;105.813;29.214;76.599;29.214;62.0;13.596774193548388;62
+f8b3fd416fa2463f867ae66631bd3ad5;3;0;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";Falsche Klammer;28.103;15.647;12.456;15.647;17.0;12.0;17
+f8b3fd416fa2463f867ae66631bd3ad5;4;1;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";Eine Taste daneben in US;30.58;21.284;9.296;21.284;17.0;11.647058823529411;17
+f8b3fd416fa2463f867ae66631bd3ad5;5;2;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";Der Klassiker;16.987;9.035;7.952;9.035;17.0;12.0;17
+5349d110076847cdac428f7e3e61e494;0;0;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";num[idx] anstatt num[chl];553.647;38.638;515.009;38.638;193.0;13.336787564766839;193
+5349d110076847cdac428f7e3e61e494;1;1;codestructure;semantic;single;success;18;18;"d.Add(f);";d.Add(f) statt c.Add(f);259.39;25.254;234.136;25.254;308.0;10.9512987012987;308
+5349d110076847cdac428f7e3e61e494;2;2;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";settings.Add(identifier, property) statt settings.Add(identifier, line);63.534;24.406;39.128;24.406;35.0;14.628571428571428;35
+5349d110076847cdac428f7e3e61e494;3;0;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";"; am Ende vergessen";70.428;25.572;44.856;25.572;28.0;13.071428571428571;28
+5349d110076847cdac428f7e3e61e494;4;1;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";[ statt {;40.682;17.746;22.936;17.746;20.0;11.5;20
+5349d110076847cdac428f7e3e61e494;5;2;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";+= statt +-;48.322;16.098;32.224;16.098;26.0;11.73076923076923;26
+87d7f6da24bf4ddc81154f0f3423c99f;0;0;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;49.259;10.554;38.704;10.554;24.0;13.083333333333334;24
+87d7f6da24bf4ddc81154f0f3423c99f;1;1;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;70.381;16.026;54.355;16.026;29.0;15.03448275862069;29
+87d7f6da24bf4ddc81154f0f3423c99f;2;2;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;48.92;8.582;40.338;8.582;33.0;13.333333333333334;33
+87d7f6da24bf4ddc81154f0f3423c99f;3;0;histogram;syntactic;single;success;18;18;"c[e] += 1;";;31.877;6.476;25.401;6.476;17.0;11.176470588235293;17
+87d7f6da24bf4ddc81154f0f3423c99f;4;1;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;32.788;5.817;26.971;5.817;27.0;13.296296296296296;27
+87d7f6da24bf4ddc81154f0f3423c99f;5;2;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;25.634;6.226;19.408;6.226;25.0;12.88;25
+724b59f61e234fc6ac01dcac8458f280;0;0;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";Store property value and not whole line;80.729;23.898;56.83;23.898;76.0;13.802631578947368;76
+724b59f61e234fc6ac01dcac8458f280;1;1;codestructure;semantic;single;success;18;18;"d.Add(f);";Add characters to block not to terminating characters to e found;117.583;51.48;66.103;51.48;91.0;10.648351648351648;91
+724b59f61e234fc6ac01dcac8458f280;2;2;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Use list index and not result;162.803;34.46;128.342;34.46;164.0;11.817073170731707;164
+724b59f61e234fc6ac01dcac8458f280;3;0;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";{ instead of [;54.432;18.242;36.19;18.242;39.0;11.35897435897436;39
+724b59f61e234fc6ac01dcac8458f280;4;1;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;48.386;11.297;37.089;11.297;28.0;11.892857142857142;28
+724b59f61e234fc6ac01dcac8458f280;5;2;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;107.574;6.071;101.503;6.071;86.0;13.023255813953488;86
+6c63ccd6bf4140ec9e6eacef7759eec3;0;0;readini;semantic;single;success;21;21;"c.Add(g, h);";;107.52;13.585;93.934;13.585;116.0;12.275862068965518;116
+6c63ccd6bf4140ec9e6eacef7759eec3;1;1;codestructure;semantic;normal;success;18;18;structure.Add(character);;102.039;25.017;77.022;25.017;102.0;11.892156862745098;102
+6c63ccd6bf4140ec9e6eacef7759eec3;2;2;countchildren;semantic;abbrev;success;17;17;"int.Parse(num[idx]);";;107.116;22.437;84.679;22.437;70.0;13.371428571428572;70
+6c63ccd6bf4140ec9e6eacef7759eec3;3;0;parsequerystring;syntactic;abbrev;success;19;19;string pmt = stt[1];;357.839;18.068;339.771;18.068;438.0;12.317351598173516;438
+6c63ccd6bf4140ec9e6eacef7759eec3;4;1;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;150.734;12.184;138.55;12.184;115.0;14.643478260869566;115
+6c63ccd6bf4140ec9e6eacef7759eec3;5;2;histogram;syntactic;single;success;18;18;"c[e] += 1;";;50.808;13.552;37.256;13.552;16.0;11.4375;16
+999abf76a2b5463496b9e6b66ba152a0;0;0;readini;semantic;single;success;21;21;"c.Add(g, h);";;93.354;9.131;84.223;9.131;202.0;11.702970297029703;202
+999abf76a2b5463496b9e6b66ba152a0;1;1;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;149.154;13.049;136.105;13.049;131.0;11.091603053435115;131
+999abf76a2b5463496b9e6b66ba152a0;2;2;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;68.579;7.884;60.695;7.884;96.0;10.802083333333334;96
+999abf76a2b5463496b9e6b66ba152a0;3;0;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;36.473;6.483;29.99;6.483;36.0;13.0;36
+999abf76a2b5463496b9e6b66ba152a0;4;1;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;29.781;8.156;21.625;8.156;30.0;12.833333333333334;30
+999abf76a2b5463496b9e6b66ba152a0;5;2;histogram;syntactic;single;success;18;18;"c[e] += 1;";;34.54;5.843;28.697;5.843;38.0;12.18421052631579;38
+99e6e65f2e884c2797149661e60a53b3;0;0;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;162.793;22.727;140.066;22.727;111.0;13.225225225225225;111
+99e6e65f2e884c2797149661e60a53b3;1;1;readini;semantic;single;success;21;21;"c.Add(g, h);";"Reminds me on ""26 names for lazy developers"" tweet";138.841;33.918;104.923;33.918;86.0;13.651162790697674;86
+99e6e65f2e884c2797149661e60a53b3;2;2;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;65.442;12.188;53.254;12.188;84.0;11.488095238095237;84
+99e6e65f2e884c2797149661e60a53b3;3;0;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;44.878;6.048;38.83;6.048;107.0;11.672897196261681;107
+99e6e65f2e884c2797149661e60a53b3;4;1;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;118.149;9.505;108.644;9.505;109.0;15.211009174311927;109
+99e6e65f2e884c2797149661e60a53b3;5;2;histogram;syntactic;single;success;18;18;"c[e] += 1;";;49.133;8.478;40.655;8.478;48.0;12.208333333333334;48
+dfc5e16eab524e5a974516e180e91b70;0;0;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";Es wird die falsche Liste befüllt. str wäre immer leer.;165.624;37.947;127.676;37.947;174.0;11.201149425287356;174
+dfc5e16eab524e5a974516e180e91b70;1;1;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";Es wird die komplette Zeile zum Ergebnis-Dictionary hinzugefügt, anstatt die eigentlich gesuchte Eigenschaft (property).;228.808;46.235;182.573;46.235;139.0;11.899280575539569;139
+dfc5e16eab524e5a974516e180e91b70;2;2;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";"e wird nur hochgezählt, wenn die ""Range-Condition"" erfüllt ist. Eine Endlose Ausführung der Routine ist möglich.";218.378;49.509;168.869;49.509;224.0;13.008928571428571;224
+dfc5e16eab524e5a974516e180e91b70;3;0;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";Semikolon fehlt leider. :-(;47.107;16.066;31.041;16.066;20.0;11.7;20
+dfc5e16eab524e5a974516e180e91b70;4;1;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";Operator +- gibt es nicht standardmäßig.;54.429;26.036;28.393;26.036;12.0;9.5;12
+dfc5e16eab524e5a974516e180e91b70;5;2;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";Für die Angabe eines Indexes sind eckige Klammern erforderlich.;59.887;33.478;26.409;33.478;13.0;10.0;13
+28085f503a364fecbacf220dc34c8de7;0;0;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;125.21;14.758;110.452;14.758;137.0;11.781021897810218;137
+28085f503a364fecbacf220dc34c8de7;1;1;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;107.966;10.505;97.461;10.505;109.0;11.431192660550458;109
+28085f503a364fecbacf220dc34c8de7;2;2;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;51.743;8.584;43.159;8.584;25.0;13.04;25
+28085f503a364fecbacf220dc34c8de7;3;0;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";;121.672;16.668;60.174;61.498;82.0;12.097560975609756;82
+28085f503a364fecbacf220dc34c8de7;4;1;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;26.503;5.304;21.199;5.304;21.0;13.571428571428571;21
+28085f503a364fecbacf220dc34c8de7;5;2;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;34.563;7.26;27.303;7.26;36.0;10.88888888888889;36
+b2e601f093aa4719afc310cb84cbeda1;0;0;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;99.012;20.801;78.21;20.801;110.0;11.418181818181818;110
+b2e601f093aa4719afc310cb84cbeda1;1;1;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;126.883;26.153;97.473;29.409;89.0;12.786516853932584;89
+b2e601f093aa4719afc310cb84cbeda1;2;2;readini;semantic;single;success;21;21;"c.Add(g, h);";;57.249;7.517;49.732;7.517;65.0;13.553846153846154;65
+b2e601f093aa4719afc310cb84cbeda1;3;0;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;28.004;6.624;21.38;6.624;25.0;14.0;25
+b2e601f093aa4719afc310cb84cbeda1;4;1;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;25.556;6.772;18.784;6.772;20.0;12.3;20
+b2e601f093aa4719afc310cb84cbeda1;5;2;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;32.942;6.985;25.957;6.985;48.0;13.25;48
+dee3062e14dd4b4096c8818c2c4e43b3;0;0;parsequerystring;semantic;single;success;19;19;"string h = f[1];";Second part of f is the actual value;160.922;43.636;117.286;43.636;58.0;12.189655172413794;58
+dee3062e14dd4b4096c8818c2c4e43b3;1;1;concatlists;semantic;normal;success;21;21;"result[index + 1 + (length - 1)] = second;";The error is that values of the end array are overriden.;523.818;258.395;265.423;258.395;66.0;15.257575757575758;66
+dee3062e14dd4b4096c8818c2c4e43b3;2;2;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";Increment by one not by index;216.54;25.528;191.012;25.528;79.0;12.708860759493671;79
+dee3062e14dd4b4096c8818c2c4e43b3;3;0;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";Assign h;132.762;18.609;114.153;18.609;16.0;10.5625;16
+dee3062e14dd4b4096c8818c2c4e43b3;4;1;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";Wrong type of brace;119.632;60.113;59.519;60.113;22.0;12.863636363636363;22
+dee3062e14dd4b4096c8818c2c4e43b3;5;2;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";Missing semicolon;91.398;31.693;59.705;31.693;28.0;12.785714285714286;28
+53ab11ca61944adb8dda003934e9f48f;0;0;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;83.621;25.63;57.991;25.63;44.0;10.386363636363637;44
+53ab11ca61944adb8dda003934e9f48f;1;1;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;201.463;14.498;186.965;14.498;117.0;13.153846153846153;117
+53ab11ca61944adb8dda003934e9f48f;2;2;codestructure;semantic;single;success;18;18;"d.Add(f);";;111.419;8.582;102.837;8.582;82.0;11.670731707317072;82
+53ab11ca61944adb8dda003934e9f48f;3;0;histogram;syntactic;abbrev;success;18;18;"frq[chr] +?= 1;";;44.911;6.819;38.092;6.819;15.0;11.0;15
+53ab11ca61944adb8dda003934e9f48f;4;1;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;39.43;8.402;31.028;8.402;15.0;11.0;15
+53ab11ca61944adb8dda003934e9f48f;5;2;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;216.836;19.944;159.223;57.613;201.0;14.09452736318408;201
+2810c173dba347bc93c326ec21d35a53;0;0;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";der Value steht im setting-Array, nicht im parts-Array;78.044;26.454;51.59;26.454;71.0;13.098591549295774;71
+2810c173dba347bc93c326ec21d35a53;1;1;concatlists;semantic;single;success;21;21;"e[f++] = h;";;150.945;24.699;99.244;51.701;127.0;15.118110236220472;127
+2810c173dba347bc93c326ec21d35a53;2;2;histogram;semantic;abbrev;success;18;18;"frq[chr]++;";;93.034;18.902;74.132;18.902;69.0;11.18840579710145;69
+2810c173dba347bc93c326ec21d35a53;3;0;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;32.14;6.693;25.447;6.693;21.0;11.714285714285714;21
+2810c173dba347bc93c326ec21d35a53;4;1;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;104.996;22.309;30.223;74.773;104.0;14.115384615384615;104
+2810c173dba347bc93c326ec21d35a53;5;2;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;23.651;5.012;18.639;5.012;36.0;13.222222222222221;36
+d2c8b05698e9407fb61794470e36d026;0;0;concatlists;semantic;normal;success;21;21;"result[2*index + 1] = second;";;225.719;38.707;180.883;44.836;32.0;14.6875;32
+d2c8b05698e9407fb61794470e36d026;1;1;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";;126.322;29.213;97.109;29.213;48.0;12.833333333333334;48
+d2c8b05698e9407fb61794470e36d026;2;2;histogram;semantic;single;success;18;18;"c[e] += 1;";;76.2;8.62;67.579;8.62;30.0;11.966666666666667;30
+d2c8b05698e9407fb61794470e36d026;3;0;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;96.477;7.112;89.365;7.112;49.0;13.285714285714286;49
+d2c8b05698e9407fb61794470e36d026;4;1;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;25.709;7.493;18.216;7.493;13.0;10.0;13
+d2c8b05698e9407fb61794470e36d026;5;2;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;42.079;7.964;34.114;7.964;16.0;11.5;16
+b163ccefdf5a480f88fa102653cd5d3f;0;0;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Bei jedem Vorkommen wird die Frequenz eines chars um dessen Index im string inkrementiert, Histogramm ist was anderes... ^^;188.399;111.841;76.558;111.841;20.0;11.25;20
+b163ccefdf5a480f88fa102653cd5d3f;1;1;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";Am Ende würden nur len(ght)+1 Einträge im res(ult) stehen, statt 2*len.;281.141;143.02;130.44;150.701;97.0;11.278350515463918;97
+b163ccefdf5a480f88fa102653cd5d3f;2;2;parsequerystring;semantic;single;success;19;19;"string h = f[1];";Da gehört der Wert des aktuellen Parameter-Wert-Paares rein, und nicht das zweite Parameter-Wert-Paar des Queries.;321.825;117.74;204.085;117.74;138.0;11.53623188405797;138
+b163ccefdf5a480f88fa102653cd5d3f;3;0;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;86.585;18.973;67.612;18.973;47.0;11.51063829787234;47
+b163ccefdf5a480f88fa102653cd5d3f;4;1;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;122.49;13.87;108.62;13.87;92.0;16.815217391304348;92
+b163ccefdf5a480f88fa102653cd5d3f;5;2;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;117.965;11.206;106.759;11.206;28.0;12.928571428571429;28
+95992f0bc4de4027bb6926136bd0b955;0;0;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";Summe der Vorkommen des Chars, statt (sinnfreie) Summe der Positionen;104.246;54.543;49.702;54.543;19.0;9.631578947368421;19
+95992f0bc4de4027bb6926136bd0b955;1;1;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";;98.312;23.086;75.226;23.086;59.0;10.576271186440678;59
+95992f0bc4de4027bb6926136bd0b955;2;2;parsequerystring;semantic;single;success;19;19;"string h = f[1];";;95.687;8.505;87.182;8.505;37.0;10.35135135135135;37
+95992f0bc4de4027bb6926136bd0b955;3;0;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;35.79;7.022;28.768;7.022;39.0;10.435897435897436;39
+95992f0bc4de4027bb6926136bd0b955;4;1;codestructure;syntactic;single;success;18;18;"d.Add(f);";;38.737;6.075;32.662;6.075;17.0;11.941176470588236;17
+95992f0bc4de4027bb6926136bd0b955;5;2;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;31.488;5.989;25.499;5.989;25.0;14.56;25
+79ccccf38e4846acae075619a28ba44f;0;0;concatlists;semantic;normal;success;21;21;"result[length + index + 1] = second;";All end values have to be appended after the start values.;346.992;73.437;210.495;136.497;199.0;11.105527638190955;199
+79ccccf38e4846acae075619a28ba44f;1;1;parsequerystring;semantic;single;success;19;19;"string h = f[1];";wrong array;483.346;72.631;203.342;280.004;391.0;11.445012787723785;391
+79ccccf38e4846acae075619a28ba44f;2;2;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";;124.688;19.314;105.374;19.314;43.0;8.023255813953488;43
+79ccccf38e4846acae075619a28ba44f;3;0;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;40.038;10.028;30.01;10.028;15.0;8.466666666666667;15
+79ccccf38e4846acae075619a28ba44f;4;1;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;126.635;8.927;117.708;8.927;72.0;13.51388888888889;72
+79ccccf38e4846acae075619a28ba44f;5;2;readini;syntactic;single;success;21;21;"c.Add(g, h);";;95.958;21.71;37.348;58.61;70.0;10.142857142857142;70
+6184095bb30f4300bdde9900b3f62c0b;0;0;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Der Wert steht in setting[], nicht in part[];136.264;53.03;83.234;53.03;57.0;12.228070175438596;57
+6184095bb30f4300bdde9900b3f62c0b;1;1;concatlists;semantic;abbrev;success;21;21;"rsl[idx * 2 + 1] = scn;";Die neue Liste muss die doppelte Länge haben;278.64;49.342;194.964;83.676;196.0;12.010204081632653;196
+6184095bb30f4300bdde9900b3f62c0b;2;2;histogram;semantic;single;success;18;18;"c[e] += 1;";Wieso sollte der Index aufaddiert werden?;85.896;16.934;68.961;16.934;68.0;9.926470588235293;68
+6184095bb30f4300bdde9900b3f62c0b;3;0;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;124.449;25.007;45.806;78.643;69.0;12.115942028985508;69
+6184095bb30f4300bdde9900b3f62c0b;4;1;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;38.921;6.288;32.633;6.288;23.0;14.130434782608695;23
+6184095bb30f4300bdde9900b3f62c0b;5;2;readini;syntactic;single;success;21;21;"c.Add(g, h);";;34.236;6.061;28.175;6.061;24.0;14.25;24
+9c5d3cd1a4fe4b0094c5468fbc426e60;0;0;parsequerystring;semantic;single;success;19;19;"string h = f[1];";;116.656;29.002;87.654;29.002;94.0;10.5;94
+9c5d3cd1a4fe4b0094c5468fbc426e60;1;1;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";;87.368;8.197;79.171;8.197;99.0;11.565656565656566;99
+9c5d3cd1a4fe4b0094c5468fbc426e60;2;2;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";;132.011;14.095;117.916;14.095;97.0;13.402061855670103;97
+9c5d3cd1a4fe4b0094c5468fbc426e60;3;0;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;51.873;8.743;43.13;8.743;44.0;13.795454545454545;44
+9c5d3cd1a4fe4b0094c5468fbc426e60;4;1;readini;syntactic;normal;success;21;21;"settings.Add[identifier, property];";;35.084;8.523;26.561;8.523;28.0;13.857142857142858;28
+9c5d3cd1a4fe4b0094c5468fbc426e60;5;2;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;46.408;6.982;39.426;6.982;35.0;13.114285714285714;35
+04c8566f6ddf4e619b975390f556151d;0;0;parsequerystring;semantic;single;success;19;19;"string h = f[1];";Falsche Variable;56.646;17.465;39.181;17.465;122.0;9.737704918032787;122
+04c8566f6ddf4e619b975390f556151d;1;1;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";Muss am Ende eingefügt werden;280.128;21.805;258.323;21.805;608.0;13.664473684210526;608
+04c8566f6ddf4e619b975390f556151d;2;2;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Muss hochgezählt werden;74.527;24.306;50.221;24.306;80.0;12.25;80
+04c8566f6ddf4e619b975390f556151d;3;0;codestructure;syntactic;single;success;18;18;"d.Add(f);";Semikolon fehlt;28.67;10.759;17.911;10.759;19.0;12.473684210526315;19
+04c8566f6ddf4e619b975390f556151d;4;1;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";Zuweisung;22.505;9.842;12.663;9.842;18.0;11.5;18
+04c8566f6ddf4e619b975390f556151d;5;2;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";Klammer falsch;63.972;50.589;13.383;50.589;17.0;12.0;17
+ebabc82ce5ce45728c9b646e7e706ed5;0;0;parsequerystring;semantic;single;success;19;19;"string h = f[1];";Falsche Variable;39.721;12.183;27.538;12.183;41.0;15.634146341463415;41
+ebabc82ce5ce45728c9b646e7e706ed5;1;1;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";"Inkrement um eins --- Index wäre hier nicht sinnvoll ;)";65.444;21.074;44.37;21.074;53.0;12.169811320754716;53
+ebabc82ce5ce45728c9b646e7e706ed5;2;2;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";soll hinten concateniert werden;50.368;13.422;36.946;13.422;70.0;13.214285714285714;70
+ebabc82ce5ce45728c9b646e7e706ed5;3;0;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;19.89;4.421;15.469;4.421;20.0;13.2;20
+ebabc82ce5ce45728c9b646e7e706ed5;4;1;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";Meine güte ... den hab ich jetzt aber lange übersehen ...;166.216;13.798;152.418;13.798;122.0;11.540983606557377;122
+ebabc82ce5ce45728c9b646e7e706ed5;5;2;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;15.778;5.395;10.383;5.395;13.0;10.0;13
+111e089bbc894e30bcbe2ef30dc7a000;0;0;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";;137.586;43.976;93.61;43.976;50.0;13.5;50
+111e089bbc894e30bcbe2ef30dc7a000;1;1;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";;495.425;183.018;179.876;315.549;244.0;13.065573770491802;244
+111e089bbc894e30bcbe2ef30dc7a000;2;2;histogram;semantic;single;success;18;18;"c[e] += 1;";;98.714;11.29;87.424;11.29;30.0;12.366666666666667;30
+111e089bbc894e30bcbe2ef30dc7a000;3;0;readini;syntactic;single;success;21;21;"c.Add(g, h);";;34.428;11.303;23.125;11.303;22.0;13.409090909090908;22
+111e089bbc894e30bcbe2ef30dc7a000;4;1;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;34.952;7.755;27.197;7.755;12.0;9.5;12
+111e089bbc894e30bcbe2ef30dc7a000;5;2;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;61.156;6.837;54.319;6.837;36.0;12.333333333333334;36
+6ca65975dc4c4c639de22dcc264f4367;0;0;histogram;semantic;single;success;18;18;"c[e]++;";Die Häufigkeit muss um 1 erhöht werden, nicht um d;165.063;59.565;105.498;59.565;87.0;10.528735632183908;87
+6ca65975dc4c4c639de22dcc264f4367;1;1;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";[idx + 1] würde im nächsten Schleifendurchlauf durch [idx] ersetzt werden;130.338;46.17;79.167;51.171;34.0;14.0;34
+6ca65975dc4c4c639de22dcc264f4367;2;2;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Der Wert des Parameters befindet sich in setting, nicht in parts;188.019;33.177;154.842;33.177;91.0;12.593406593406593;91
+6ca65975dc4c4c639de22dcc264f4367;3;0;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;282.163;7.189;274.974;7.189;186.0;12.806451612903226;186
+6ca65975dc4c4c639de22dcc264f4367;4;1;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;34.49;7.982;26.508;7.982;18.0;12.5;18
+6ca65975dc4c4c639de22dcc264f4367;5;2;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;40.095;12.924;27.171;12.924;16.0;10.875;16
+bea6e164109b414a816351c589783277;0;0;codestructure;semantic;normal;success;18;18;"structure.Add(character);";die characters müssen zum Return-Value (structure) hinzugefügt werden, sonst ist das Ergebnis leer;123.839;67.614;56.224;67.614;30.0;12.3;30
+bea6e164109b414a816351c589783277;1;1;readini;semantic;single;success;21;21;"c.Add(g, h);";e ist die line, es sollte aber der geparste wert (h) hinzugefügt werden;122.752;47.23;75.522;47.23;130.0;10.553846153846154;130
+bea6e164109b414a816351c589783277;2;2;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";Das Ganze sollte den Iterator (idx) benutzen, sonst werden die falschen Werte geparst;138.033;50.316;87.717;50.316;93.0;10.53763440860215;93
+bea6e164109b414a816351c589783277;3;0;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";Addition wird mit + oder += gemacht;72.461;29.829;42.632;29.829;40.0;12.35;40
+bea6e164109b414a816351c589783277;4;1;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";Falsche Klammer;35.642;12.162;23.48;12.162;21.0;12.285714285714286;21
+bea6e164109b414a816351c589783277;5;2;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";Semikolon fehlt;38.373;11.42;26.953;11.42;21.0;13.428571428571429;21
+4f5dc40a386d4094a7d2cbcb5c71fa32;0;0;codestructure;semantic;single;success;18;18;"d.Add(f);";;228.875;62.981;165.894;62.981;113.0;12.991150442477876;113
+4f5dc40a386d4094a7d2cbcb5c71fa32;1;1;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;155.839;20.339;135.5;20.339;116.0;14.413793103448276;116
+4f5dc40a386d4094a7d2cbcb5c71fa32;2;2;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;202.643;14.155;188.488;14.155;218.0;12.353211009174313;218
+4f5dc40a386d4094a7d2cbcb5c71fa32;3;0;histogram;syntactic;single;success;18;18;"c[e] += 1;";;49.502;22.664;26.838;22.664;13.0;10.0;13
+4f5dc40a386d4094a7d2cbcb5c71fa32;4;1;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;57.397;10.609;46.788;10.609;35.0;14.571428571428571;35
+4f5dc40a386d4094a7d2cbcb5c71fa32;5;2;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;29.973;8.739;21.234;8.739;16.0;11.5;16
+4458c5d621cd4d28b71cc805a900fc3f;0;0;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";;133.4;30.488;102.912;30.488;111.0;11.162162162162161;111
+4458c5d621cd4d28b71cc805a900fc3f;1;1;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;116.993;25.656;83.079;33.914;65.0;11.523076923076923;65
+4458c5d621cd4d28b71cc805a900fc3f;2;2;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;234.989;37.834;124.965;110.024;294.0;11.040816326530612;294
+4458c5d621cd4d28b71cc805a900fc3f;3;0;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;46.72;8.11;38.61;8.11;34.0;14.058823529411764;34
+4458c5d621cd4d28b71cc805a900fc3f;4;1;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;58.773;6.026;52.747;6.026;35.0;13.4;35
+4458c5d621cd4d28b71cc805a900fc3f;5;2;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;68.111;8.483;59.628;8.483;16.0;11.375;16
+da43632cf8fd4944889f7aee6e10f977;0;0;readini;semantic;abbrev;success;21;21;"stt.Add(idn, lne);";;64.863;8.425;56.438;8.425;23.0;10.217391304347826;23
+da43632cf8fd4944889f7aee6e10f977;1;1;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;63.875;13.522;50.353;13.522;47.0;13.25531914893617;47
+da43632cf8fd4944889f7aee6e10f977;2;2;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;62.084;11.884;50.2;11.884;40.0;13.7;40
+da43632cf8fd4944889f7aee6e10f977;3;0;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;50.779;6.58;44.199;6.58;34.0;14.029411764705882;34
+da43632cf8fd4944889f7aee6e10f977;4;1;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;150.066;11.235;138.831;11.235;104.0;13.75;104
+da43632cf8fd4944889f7aee6e10f977;5;2;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;65.931;9.387;56.544;9.387;24.0;10.75;24
+b7fb4c0597f84a4db660bf30f47943cd;0;0;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;90.759;22.614;68.145;22.614;62.0;9.241935483870968;62
+b7fb4c0597f84a4db660bf30f47943cd;1;1;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";Value sollte der Wert der Zeile sein, nicht die komplette Zeile;103.838;25.085;78.753;25.085;127.0;10.669291338582678;127
+b7fb4c0597f84a4db660bf30f47943cd;2;2;codestructure;semantic;single;success;18;18;"d.Add(f);";;109.893;31.3;65.369;44.524;131.0;10.732824427480915;131
+b7fb4c0597f84a4db660bf30f47943cd;3;0;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;46.86;13.836;33.024;13.836;24.0;11.916666666666666;24
+b7fb4c0597f84a4db660bf30f47943cd;4;1;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";"IMHO noch besser: frequencies[character]++;";73.265;37.568;35.697;37.568;19.0;9.631578947368421;19
+b7fb4c0597f84a4db660bf30f47943cd;5;2;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";;50.7;8.644;42.056;8.644;44.0;10.522727272727273;44
+c2ae0176fa4b4f20bacf872b9795bd6f;0;0;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";Die Laufvariable ist g, nicht e.;177.832;29.199;148.633;29.199;106.0;11.69811320754717;106
+c2ae0176fa4b4f20bacf872b9795bd6f;1;1;codestructure;semantic;normal;success;18;18;"structure.Add(character);";Das Resultat muss gefüllt werden.;145.564;42.789;102.775;42.789;46.0;11.5;46
+c2ae0176fa4b4f20bacf872b9795bd6f;2;2;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";Das Value sollte zum Ergebnis hinzugefügt werden, nicht die lne-Variable;103.326;50.477;52.849;50.477;17.0;12.0;17
+c2ae0176fa4b4f20bacf872b9795bd6f;3;0;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;31.243;12.839;18.404;12.839;13.0;10.0;13
+c2ae0176fa4b4f20bacf872b9795bd6f;4;1;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;90.568;5.121;85.447;5.121;54.0;12.222222222222221;54
+c2ae0176fa4b4f20bacf872b9795bd6f;5;2;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;48.76;25.839;4.274;44.486;22.0;13.409090909090908;22
+a40661c57a2643fbb5f2ce0d59c38103;0;0;histogram;semantic;single;success;18;18;"c[e] += 1;";Anzahl eines Buchstabens wurde nicht korrekt inkrementiert;162.454;50.312;112.141;50.312;47.0;10.787234042553191;47
+a40661c57a2643fbb5f2ce0d59c38103;1;1;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";;129.792;28.201;101.591;28.201;49.0;11.755102040816327;49
+a40661c57a2643fbb5f2ce0d59c38103;2;2;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";;182.03;9.775;172.255;9.775;56.0;12.553571428571429;56
+a40661c57a2643fbb5f2ce0d59c38103;3;0;codestructure;syntactic;single;success;18;18;"d.Add(f);";;29.238;5.454;23.784;5.454;18.0;12.166666666666666;18
+a40661c57a2643fbb5f2ce0d59c38103;4;1;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;45.23;6.118;39.112;6.118;24.0;14.458333333333334;24
+a40661c57a2643fbb5f2ce0d59c38103;5;2;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;40.744;8.895;31.849;8.895;29.0;14.517241379310345;29
+494bde147af24a6eb791f5499fb5be54;0;0;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Es muss nur um 1 hochgezählt werden, nicht um den index;190.866;28.56;162.306;28.56;49.0;11.061224489795919;49
+494bde147af24a6eb791f5499fb5be54;1;1;concatlists;semantic;single;success;21;21;"e[f + d] = h;";;131.366;13.28;118.086;13.28;55.0;10.6;55
+494bde147af24a6eb791f5499fb5be54;2;2;parsequerystring;semantic;abbrev;success;19;19;"string pmt = sst[1];";;148.553;8.791;139.762;8.791;94.0;12.457446808510639;94
+494bde147af24a6eb791f5499fb5be54;3;0;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;39.59;7.993;31.597;7.993;21.0;13.428571428571429;21
+494bde147af24a6eb791f5499fb5be54;4;1;readini;syntactic;single;success;21;21;"c.Add(g, h);";;29.924;7.472;22.452;7.472;21.0;13.0;21
+494bde147af24a6eb791f5499fb5be54;5;2;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;52.505;4.791;47.714;4.791;36.0;12.5;36
+0c31c982546a457ba951c6a3f5df6660;0;0;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";Es wurde der Index addiert.;217.712;90.539;127.172;90.539;69.0;10.144927536231885;69
+0c31c982546a457ba951c6a3f5df6660;1;1;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";;147.701;17.324;130.377;17.324;127.0;10.511811023622048;127
+0c31c982546a457ba951c6a3f5df6660;2;2;concatlists;semantic;single;success;21;21;"e[f + 1] = h;";Index out of range;212.71;52.061;160.649;52.061;157.0;11.821656050955413;157
+0c31c982546a457ba951c6a3f5df6660;3;0;readini;syntactic;single;success;21;21;"c.Add(g, h);";;98.671;17.055;74.227;24.444;88.0;12.5;88
+0c31c982546a457ba951c6a3f5df6660;4;1;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";Semikolon fehlte;68.343;14.506;53.837;14.506;41.0;9.731707317073171;41
+0c31c982546a457ba951c6a3f5df6660;5;2;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Zuweisung;59.453;25.366;34.087;25.366;24.0;14.291666666666666;24
+0bcad9ad606e44359d059b9deaf9279d;0;0;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";;133.72;16.32;117.399;16.32;101.0;10.366336633663366;101
+0bcad9ad606e44359d059b9deaf9279d;1;1;histogram;semantic;single;success;18;18;"c[e] += 1;";;80.519;7.78;72.739;7.78;34.0;11.058823529411764;34
+0bcad9ad606e44359d059b9deaf9279d;2;2;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";;52.827;10.726;42.101;10.726;19.0;12.894736842105264;19
+0bcad9ad606e44359d059b9deaf9279d;3;0;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;88.987;8.602;80.385;8.602;60.0;11.916666666666666;60
+0bcad9ad606e44359d059b9deaf9279d;4;1;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;86.757;7.619;79.138;7.619;54.0;13.148148148148149;54
+0bcad9ad606e44359d059b9deaf9279d;5;2;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;118.624;8.096;110.528;8.096;121.0;10.074380165289256;121
+2e9147c100b74daab26aaedc687ae6e3;0;0;concatlists;semantic;single;success;21;21;"e[d + f + 1] = h;";;432.699;103.592;289.565;143.134;292.0;12.297945205479452;292
+2e9147c100b74daab26aaedc687ae6e3;1;1;parsequerystring;semantic;abbrev;success;19;19;"string pmt = sst[1];";;310.809;14.152;296.657;14.152;289.0;12.15916955017301;289
+2e9147c100b74daab26aaedc687ae6e3;2;2;histogram;semantic;normal;success;18;18;"frequencies[character] ++;";;168.302;18.704;149.598;18.704;104.0;11.038461538461538;104
+2e9147c100b74daab26aaedc687ae6e3;3;0;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;58.172;14.011;44.161;14.011;28.0;12.392857142857142;28
+2e9147c100b74daab26aaedc687ae6e3;4;1;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;58.127;10.601;47.526;10.601;28.0;11.428571428571429;28
+2e9147c100b74daab26aaedc687ae6e3;5;2;codestructure;syntactic;single;success;18;18;"d.Add(f);";;463.467;8.481;454.985;8.481;86.0;11.918604651162791;86
+dbe68fffb39e446ba383a2c580444872;0;0;parsequerystring;semantic;abbrev;success;19;19;"string pmt = sst[1];";Wert ist rechts vom Gleichheitszeichen im Array sst nicht im Array pts;113.761;42.998;70.763;42.998;55.0;13.709090909090909;55
+dbe68fffb39e446ba383a2c580444872;1;1;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Die Anzahl der Vorkommen eines Buchstaben sollte jedesmal um 1 erhöht werden, nicht um die Indexposition an der das Zeichen gefunden wurde.;66.187;32.577;33.61;32.577;24.0;12.625;24
+dbe68fffb39e446ba383a2c580444872;2;2;concatlists;semantic;single;success;21;21;"e[d + f] = h;";Die Elemente aus c sollen hinten angefügt werden, müssen also erst ab Index d beginnend in das Zielarray geschrieben werden.;196.321;45.762;150.558;45.762;174.0;12.149425287356323;174
+dbe68fffb39e446ba383a2c580444872;3;0;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";Add ist einen Methode, Parameter stehen in runden Klammern. Hier war die Paarung der Klammern falsch.;77.639;28.836;48.803;28.836;32.0;10.75;32
+dbe68fffb39e446ba383a2c580444872;4;1;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Mischung von Deklaration und Zuweisung - von der Variablendeklaration kann man einen Integer wert Subtrahieren.;74.188;34.466;39.721;34.466;45.0;13.977777777777778;45
+dbe68fffb39e446ba383a2c580444872;5;2;codestructure;syntactic;single;success;18;18;"d.Add(f);";"Missing ';'";221.975;73.543;82.618;139.357;110.0;11.909090909090908;110
+5cae49dda66846b79b4ac91510f146d4;0;0;histogram;semantic;single;success;18;18;"c[e]++;";Der Wert sollte um 1 erhöht werden und nicht um den Index des Characters im String.;185.877;65.766;120.111;65.766;189.0;11.296296296296296;189
+5cae49dda66846b79b4ac91510f146d4;1;1;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Der Wert des Parameters sollte aus dem setting-Array geholt werden, statt auf dem parts-Array.;126.052;59.812;66.24;59.812;78.0;9.512820512820513;78
+5cae49dda66846b79b4ac91510f146d4;2;2;concatlists;semantic;abbrev;success;21;21;"rsl[len + idx] = scn;";Die Werte des zweiten Arrays sollten beim Hinzufügen zum Zielarray die Länge der Input-Array als Offset hinzufügen.;226.987;88.768;138.219;88.768;162.0;9.450617283950617;162
+5cae49dda66846b79b4ac91510f146d4;3;0;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";Semikolon fehlt.;59.285;18.379;40.906;18.379;50.0;9.82;50
+5cae49dda66846b79b4ac91510f146d4;4;1;readini;syntactic;single;success;21;21;"c.Add(g, h);";Runde Klammer statt der eckigen.;45.347;24.335;21.012;24.335;35.0;12.6;35
+5cae49dda66846b79b4ac91510f146d4;5;2;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";Zuweisungsoperator statt dem Minus-Operator sollte verwendet werden.;84.026;36.357;47.669;36.357;92.0;14.423913043478262;92
+1f6a1160f7d941cfb72a1245810091ec;0;0;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;115.702;15.13;100.571;15.13;112.0;10.651785714285714;112
+1f6a1160f7d941cfb72a1245810091ec;1;1;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;117.629;18.004;99.625;18.004;108.0;12.425925925925926;108
+1f6a1160f7d941cfb72a1245810091ec;2;2;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;187.804;10.051;177.753;10.051;211.0;12.345971563981042;211
+1f6a1160f7d941cfb72a1245810091ec;3;0;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;26.236;8.413;17.823;8.413;17.0;12.0;17
+1f6a1160f7d941cfb72a1245810091ec;4;1;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;28.988;8.045;20.943;8.045;15.0;11.0;15
+1f6a1160f7d941cfb72a1245810091ec;5;2;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;32.794;16.171;16.623;16.171;15.0;11.0;15
+2fca3f8b6ed24867bdbb6bd798700668;0;0;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;155.612;17.051;138.56;17.051;134.0;13.298507462686567;134
+2fca3f8b6ed24867bdbb6bd798700668;1;1;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;64.617;9.012;55.605;9.012;66.0;11.727272727272727;66
+2fca3f8b6ed24867bdbb6bd798700668;2;2;codestructure;semantic;single;success;18;18;"d.Add(f);";;120.211;48.823;41.775;78.436;135.0;11.97037037037037;135
+2fca3f8b6ed24867bdbb6bd798700668;3;0;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;26.659;8.799;17.86;8.799;22.0;13.772727272727273;22
+2fca3f8b6ed24867bdbb6bd798700668;4;1;histogram;syntactic;single;success;18;18;"c[e] += 1;";;68.831;11.649;30.18;38.651;45.0;11.755555555555556;45
+2fca3f8b6ed24867bdbb6bd798700668;5;2;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;71.142;8.43;62.712;8.43;54.0;12.5;54
+a21c1635c8354afda4c1ec3355ccf1c7;0;0;codestructure;semantic;normal;success;18;18;"structure.Add(character);";;147.789;33.423;35.352;112.437;75.0;12.133333333333333;75
+a21c1635c8354afda4c1ec3355ccf1c7;1;1;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";;87.768;12.8;74.968;12.8;46.0;11.173913043478262;46
+a21c1635c8354afda4c1ec3355ccf1c7;2;2;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;81.674;9.035;72.639;9.035;53.0;10.18867924528302;53
+a21c1635c8354afda4c1ec3355ccf1c7;3;0;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;84.61;8.337;76.273;8.337;34.0;13.735294117647058;34
+a21c1635c8354afda4c1ec3355ccf1c7;4;1;histogram;syntactic;single;success;18;18;"c[e] += 1;";;46.997;9.293;37.704;9.293;13.0;10.0;13
+a21c1635c8354afda4c1ec3355ccf1c7;5;2;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;35.964;6.531;29.433;6.531;16.0;11.5;16
+d11574130185422aae71a8efd590cef8;0;0;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;197.954;18.639;179.315;18.639;118.0;11.923728813559322;118
+d11574130185422aae71a8efd590cef8;1;1;readini;semantic;single;success;21;21;"c.Add(g, h);";;500.507;14.177;486.33;14.177;232.0;11.112068965517242;232
+d11574130185422aae71a8efd590cef8;2;2;codestructure;semantic;abbrev;success;18;18;"blc.Add(str);";;114.031;12.287;101.744;12.287;85.0;9.6;85
+d11574130185422aae71a8efd590cef8;3;0;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;116.13;9.242;106.888;9.242;110.0;12.945454545454545;110
+d11574130185422aae71a8efd590cef8;4;1;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;48.612;9.453;39.159;9.453;15.0;9.266666666666667;15
+d11574130185422aae71a8efd590cef8;5;2;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";;96.221;9.022;87.199;9.022;21.0;10.047619047619047;21
+13a7c90dc4244362968b8a2b45fd6f4f;0;0;concatlists;semantic;normal;success;21;21;"result[index + length + 1] = second;";;110.522;32.045;78.477;32.045;48.0;13.291666666666666;48
+13a7c90dc4244362968b8a2b45fd6f4f;1;1;histogram;semantic;single;success;18;18;"c[e] += 1;";;69.082;12.812;56.27;12.812;17.0;11.764705882352942;17
+13a7c90dc4244362968b8a2b45fd6f4f;2;2;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";;74.26;12.882;61.378;12.882;31.0;12.161290322580646;31
+13a7c90dc4244362968b8a2b45fd6f4f;3;0;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;166.099;10.922;155.176;10.922;92.0;11.76086956521739;92
+13a7c90dc4244362968b8a2b45fd6f4f;4;1;readini;syntactic;single;success;21;21;"c.Add(g, h);";;64.84;9.191;55.649;9.191;55.0;14.236363636363636;55
+13a7c90dc4244362968b8a2b45fd6f4f;5;2;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;135.033;5.506;129.527;5.506;138.0;12.057971014492754;138
+f1ecc0e6316342f28bc6912466ba9e27;0;0;histogram;semantic;abbrev;success;18;18;"frq[chr] = idx;";;533.022;47.138;312.452;220.569;95.0;12.08421052631579;95
+f1ecc0e6316342f28bc6912466ba9e27;1;1;concatlists;semantic;single;success;21;21;"e[f + d] = h;";;436.794;15.794;414.572;22.222;108.0;14.694444444444445;108
+f1ecc0e6316342f28bc6912466ba9e27;2;2;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";;112.139;21.112;91.027;21.112;71.0;12.267605633802816;71
+f1ecc0e6316342f28bc6912466ba9e27;3;0;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;69.81;10.006;59.804;10.006;19.0;12.947368421052632;19
+f1ecc0e6316342f28bc6912466ba9e27;4;1;codestructure;syntactic;single;success;18;18;"d.Add(f);";;416.002;8.958;407.044;8.958;178.0;12.865168539325843;178
+f1ecc0e6316342f28bc6912466ba9e27;5;2;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;105.055;30.676;74.379;30.676;33.0;16.03030303030303;33
+6ea962eec5e54bfa961a4bf04f6e7c5d;0;0;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";der zweite Wert muss in den zweiten Teil des Rückgabewerts geschrieben werden;208.518;92.047;116.471;92.047;104.0;11.423076923076923;104
+6ea962eec5e54bfa961a4bf04f6e7c5d;1;1;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";es wurde auf falsches Array zugegriffen;124.011;56.675;67.336;56.675;95.0;15.884210526315789;95
+6ea962eec5e54bfa961a4bf04f6e7c5d;2;2;histogram;semantic;single;success;18;18;"c[e] = c[e] + 1;";die Häufigkeit muss um 1 erhöht werden;157.005;56.763;100.242;56.763;100.0;10.74;100
+6ea962eec5e54bfa961a4bf04f6e7c5d;3;0;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;67.962;14.859;53.103;14.859;25.0;14.44;25
+6ea962eec5e54bfa961a4bf04f6e7c5d;4;1;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;50.479;11.692;38.787;11.692;29.0;9.241379310344827;29
+6ea962eec5e54bfa961a4bf04f6e7c5d;5;2;codestructure;syntactic;single;success;18;18;"d.Add(f);";;141.079;9.866;131.213;9.866;76.0;13.618421052631579;76
+c94b600e2e8d4806ad269fa74b182f59;0;0;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt.FirstOrDefault();";;135.802;59.388;76.414;59.388;118.0;12.330508474576272;118
+c94b600e2e8d4806ad269fa74b182f59;1;1;histogram;semantic;single;success;18;18;"c[e] += 1;";;102.278;8.293;93.985;8.293;50.0;9.98;50
+c94b600e2e8d4806ad269fa74b182f59;2;2;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";;99.018;11.191;87.826;11.191;88.0;11.579545454545455;88
+c94b600e2e8d4806ad269fa74b182f59;3;0;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;58.631;7.218;51.413;7.218;46.0;11.673913043478262;46
+c94b600e2e8d4806ad269fa74b182f59;4;1;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;62.014;10.985;51.029;10.985;73.0;12.863013698630137;73
+c94b600e2e8d4806ad269fa74b182f59;5;2;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;41.445;10.329;31.116;10.329;29.0;13.241379310344827;29
+3a065afdd2764ec0ba20b3116417e688;0;0;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";;415.474;37.436;378.038;37.436;262.0;13.267175572519085;262
+3a065afdd2764ec0ba20b3116417e688;1;1;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";;232.14;10.222;221.918;10.222;125.0;10.92;125
+3a065afdd2764ec0ba20b3116417e688;2;2;parsequerystring;semantic;single;success;19;19;"string h = f[1];";;124.899;13.691;111.208;13.691;104.0;12.365384615384615;104
+3a065afdd2764ec0ba20b3116417e688;3;0;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;72.641;17.902;47.976;24.665;35.0;14.8;35
+3a065afdd2764ec0ba20b3116417e688;4;1;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";;100.249;9.121;91.128;9.121;42.0;12.928571428571429;42
+3a065afdd2764ec0ba20b3116417e688;5;2;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";;43.7;9.124;34.576;9.124;23.0;14.130434782608695;23
+ac4b21c3cf9645318c244d477ba6410e;0;0;concatlists;semantic;single;success;21;21;"e[f + d] = h;";der fte wert aus der collection die angefügt werden soll, muss in die hintere hälfte des neu erzeugten arrays zugewiesen werden;309.9;97.173;111.415;198.485;334.0;13.646706586826348;334
+ac4b21c3cf9645318c244d477ba6410e;1;1;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";jedes auftreten von character hat die gleiche gewichtung (1) und ist unabhängig von der position im string;179.693;62.354;117.339;62.354;169.0;11.319526627218934;169
+ac4b21c3cf9645318c244d477ba6410e;2;2;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";der parameter value steht rechts vom = und ist nicht der zweite part;123.49;55.483;68.007;55.483;107.0;10.485981308411215;107
+ac4b21c3cf9645318c244d477ba6410e;3;0;codestructure;syntactic;single;success;18;18;"d.Add(f);";"no javascript here ;)";54.861;21.885;32.976;21.885;15.0;11.0;15
+ac4b21c3cf9645318c244d477ba6410e;4;1;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";methoden aufruf, kein indexer;50.53;24.653;25.877;24.653;17.0;12.0;17
+ac4b21c3cf9645318c244d477ba6410e;5;2;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";variablezuweisung;35.801;17.349;18.452;17.349;22.0;13.954545454545455;22
+73190a68154f4a0cbe623c9181c0052c;0;0;codestructure;semantic;single;success;18;18;"d.Add(f);";;148.733;17.809;130.924;17.809;94.0;12.287234042553191;94
+73190a68154f4a0cbe623c9181c0052c;1;1;countchildren;semantic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;138.85;14.75;124.1;14.75;70.0;11.285714285714286;70
+73190a68154f4a0cbe623c9181c0052c;2;2;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;70.245;14.683;55.562;14.683;19.0;12.947368421052632;19
+73190a68154f4a0cbe623c9181c0052c;3;0;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;94.597;7.941;86.656;7.941;47.0;14.340425531914894;47
+73190a68154f4a0cbe623c9181c0052c;4;1;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";;64.583;9.204;55.379;9.204;23.0;12.217391304347826;23
+73190a68154f4a0cbe623c9181c0052c;5;2;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;43.594;8.313;35.281;8.313;21.0;13.571428571428571;21
+01734d33189a41c18b2a4a882c66bb9f;0;0;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";"Es muss in die richtige Collection geschrieben werden. Besseres Design:blc gar nicht beschreibbar machen. ;)";95.436;36.744;58.692;36.744;60.0;13.133333333333333;60
+01734d33189a41c18b2a4a882c66bb9f;1;1;readini;semantic;single;success;21;21;"c.Add(g, h);";Value merken, nicht die ganze Zeile. Saubere Benennung hilft!;75.472;35.256;40.216;35.256;56.0;13.392857142857142;56
+01734d33189a41c18b2a4a882c66bb9f;2;2;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Richtigen Index verwenden, nicht den Counter.;48.019;14.355;33.664;14.355;30.0;14.366666666666667;30
+01734d33189a41c18b2a4a882c66bb9f;3;0;histogram;syntactic;single;success;18;18;"c[e] += 1;";;48.373;30.532;17.841;30.532;14.0;10.5;14
+01734d33189a41c18b2a4a882c66bb9f;4;1;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";;17.555;5.794;11.761;5.794;14.0;10.5;14
+01734d33189a41c18b2a4a882c66bb9f;5;2;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;27.503;3.568;23.935;3.568;23.0;12.391304347826088;23
+1038a7e9bfff41cb92c4f094cab3bb3a;0;0;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";;115.774;46.303;51.17;64.604;113.0;13.15929203539823;113
+1038a7e9bfff41cb92c4f094cab3bb3a;1;1;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";;97.98;10.998;86.982;10.998;49.0;12.448979591836734;49
+1038a7e9bfff41cb92c4f094cab3bb3a;2;2;parsequerystring;semantic;single;success;19;19;"string h = f[1];";;65.307;20.616;44.691;20.616;70.0;12.728571428571428;70
+1038a7e9bfff41cb92c4f094cab3bb3a;3;0;codestructure;syntactic;single;success;18;18;"d.Add(f);";;17.714;5.441;12.273;5.441;18.0;12.333333333333334;18
+1038a7e9bfff41cb92c4f094cab3bb3a;4;1;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;21.491;9.276;12.215;9.276;21.0;13.714285714285714;21
+1038a7e9bfff41cb92c4f094cab3bb3a;5;2;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;214.038;27.89;178.026;36.012;202.0;15.044554455445544;202
+354429b16adf4c07902475fcdc595661;0;0;concatlists;semantic;abbrev;success;21;21;"rsl[len + idx] = scn;";;117.259;43.712;63.931;53.328;88.0;14.045454545454545;88
+354429b16adf4c07902475fcdc595661;1;1;parsequerystring;semantic;single;success;19;19;"string h = f[1];";;58.607;10.504;48.103;10.504;81.0;9.802469135802468;81
+354429b16adf4c07902475fcdc595661;2;2;histogram;semantic;normal;success;18;18;"frequencies[character]++;";;47.834;10.598;37.236;10.598;16.0;11.375;16
+354429b16adf4c07902475fcdc595661;3;0;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;23.946;6.706;17.24;6.706;20.0;13.2;20
+354429b16adf4c07902475fcdc595661;4;1;codestructure;syntactic;single;success;18;18;"d.Add(f);";;116.449;7.431;109.018;7.431;111.0;12.243243243243244;111
+354429b16adf4c07902475fcdc595661;5;2;readini;syntactic;abbrev;success;21;21;"stt.Add(idn, prp);";;32.153;5.542;26.611;5.542;16.0;11.5;16
+cd7e549273d94c50b2246c64319c82c5;0;0;readini;semantic;abbrev;success;21;21;"stt.Add(idn, prp);";Es sollte als zweiter Wert auch der Wert in das Dictionary eingetragen werden, nicht die gesamte Zeile.;96.661;40.522;56.139;40.522;69.0;10.608695652173912;69
+cd7e549273d94c50b2246c64319c82c5;1;1;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";"In der Schleife muss auf den ""index"" des Arrays Zugegriffen werden, nicht über den Counter der ""Children"".";92.371;39.362;53.008;39.362;23.0;14.130434782608695;23
+cd7e549273d94c50b2246c64319c82c5;2;2;codestructure;semantic;single;success;18;18;"d.Add(f);";f sollte zur Liste d hinzugefügt werden, nicht zu der Liste der Block-Zeichen (c).;127.137;43.53;83.607;43.53;119.0;10.285714285714286;119
+cd7e549273d94c50b2246c64319c82c5;3;0;histogram;syntactic;normal;success;18;18;"frequencies[character] += 1;";+- ist keine gültige Operation, hier sollte der Wert im Array hochgezählt werden.;80.42;39.988;40.432;39.988;15.0;11.0;15
+cd7e549273d94c50b2246c64319c82c5;4;1;concatlists;syntactic;single;success;21;21;"e[f + d] = h;";Das Semikolon wurde vergessen.;50.142;12.779;37.363;12.779;33.0;11.030303030303031;33
+cd7e549273d94c50b2246c64319c82c5;5;2;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt[1];";Die öffnende Klammer für den Zugriff auf ein Array-Element via Index muss eckig und nicht geschweift sein.;71.439;40.591;30.848;40.591;29.0;13.448275862068966;29
+4702cac704844bf7af1408fe988d636c;0;0;concatlists;semantic;single;success;21;21;"e[f + d] = h;";Beim Konkatenieren sollten die zwei Listen aneinandergehängt werden.;169.09;106.224;42.005;127.085;123.0;14.715447154471544;123
+4702cac704844bf7af1408fe988d636c;1;1;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Es wird der Wert aus dem falschen Array gelesen;115.902;34.41;81.492;34.41;114.0;14.570175438596491;114
+4702cac704844bf7af1408fe988d636c;2;2;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";Die Frequenz wird um eins und nicht um die Position erhöht;88.693;36.089;52.604;36.089;64.0;13.6875;64
+4702cac704844bf7af1408fe988d636c;3;0;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";Sollte eine Zuweisung sein;80.01;23.856;56.154;23.856;66.0;13.151515151515152;66
+4702cac704844bf7af1408fe988d636c;4;1;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";Semikolon ist zum Abschluss einer Anweisung notwendig;42.554;22.147;20.407;22.147;16.0;11.5;16
+4702cac704844bf7af1408fe988d636c;5;2;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";Falschen Klammertyp verwendet;32.508;18.143;14.365;18.143;23.0;12.391304347826088;23
+a757c193afbc404aae57c2bf0b6ce74e;0;0;histogram;semantic;abbrev;success;18;18;"frq[chr] += 1;";Das Anzahl des Zeichens soll um 1 erhöht werden. Statt dessen wurde es um den Index der Position innerhalb des Strings erhöht.;283.077;81.237;201.84;81.237;76.0;12.355263157894736;76
+a757c193afbc404aae57c2bf0b6ce74e;1;1;parsequerystring;semantic;single;success;19;19;"string h = f[1];";Nutzung falscher Variable.;341.997;26.321;315.676;26.321;337.0;12.035608308605342;337
+a757c193afbc404aae57c2bf0b6ce74e;2;2;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";Werte aus dem zweiten Array sollen erst hinter den kompletten Satz aus Array 1 geschrieben werden.;552.656;62.78;489.876;62.78;165.0;14.303030303030303;165
+a757c193afbc404aae57c2bf0b6ce74e;3;0;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;121.142;18.717;102.425;18.717;90.0;9.866666666666667;90
+a757c193afbc404aae57c2bf0b6ce74e;4;1;readini;syntactic;single;success;21;21;"c.Add(g, h);";;49.104;16.176;29.162;19.942;28.0;13.857142857142858;28
+a757c193afbc404aae57c2bf0b6ce74e;5;2;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;78.58;8.709;69.87;8.709;24.0;14.25;24
+2032624690e24f458d3a05e0bfa8698c;0;0;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";str wird nie gesetzt.   Ich verstehe vom Kommentar nicht was die Funktion eigentlich machen soll...;186.611;77.126;78.705;107.906;232.0;12.53448275862069;232
+2032624690e24f458d3a05e0bfa8698c;1;1;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[children]);";int.Parse throwed exception wenn string nicht Zahl enthält;120.187;25.637;94.549;25.637;177.0;13.429378531073446;177
+2032624690e24f458d3a05e0bfa8698c;2;2;readini;semantic;single;success;21;21;"c.Add(g, h);";;53.048;6.103;46.945;6.103;137.0;11.321167883211679;137
+2032624690e24f458d3a05e0bfa8698c;3;0;concatlists;syntactic;normal;success;21;21;result[index + length] = second;;173.991;17.742;28.723;145.268;172.0;14.866279069767442;172
+2032624690e24f458d3a05e0bfa8698c;4;1;histogram;syntactic;single;success;18;18;"c[e] +- 1;";;43.601;4.904;38.697;4.904;32.0;12.65625;32
+2032624690e24f458d3a05e0bfa8698c;5;2;parsequerystring;syntactic;abbrev;success;19;19;"string pmt = stt{1];";;33.807;4.441;29.366;4.441;32.0;9.375;32
+20c2dd965c5a4fe5a4a806b290a143d0;0;0;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;356.623;120.36;224.351;132.272;174.0;13.275862068965518;174
+20c2dd965c5a4fe5a4a806b290a143d0;1;1;countchildren;semantic;single;success;17;17;"int h = int.Parse(f[g]);";;174.614;18.773;155.841;18.773;204.0;9.343137254901961;204
+20c2dd965c5a4fe5a4a806b290a143d0;2;2;readini;semantic;normal;success;21;21;"settings.Add(identifier, property);";;115.578;24.03;91.548;24.03;17.0;10.823529411764707;17
+20c2dd965c5a4fe5a4a806b290a143d0;3;0;histogram;syntactic;abbrev;success;18;18;"frq[chr] += 1;";;72.083;22.283;49.8;22.283;22.0;11.409090909090908;22
+20c2dd965c5a4fe5a4a806b290a143d0;4;1;concatlists;syntactic;normal;success;21;21;"result[index + length] = second;";;58.641;9.94;48.701;9.94;19.0;12.68421052631579;19
+20c2dd965c5a4fe5a4a806b290a143d0;5;2;parsequerystring;syntactic;single;success;19;19;"string h = f[1];";;55.558;15.871;39.687;15.871;13.0;10.0;13
+db660a798526421cbcdab7866cbc0bcf;0;0;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";;353.052;23.316;329.736;23.316;66.0;11.515151515151516;66
+db660a798526421cbcdab7866cbc0bcf;1;1;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";;102.794;12.963;89.831;12.963;32.0;11.875;32
+db660a798526421cbcdab7866cbc0bcf;2;2;concatlists;semantic;single;success;21;21;"e[f * 2] = h;";;146.932;10.959;135.973;10.959;56.0;13.392857142857142;56
+db660a798526421cbcdab7866cbc0bcf;3;0;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;60.908;8.805;52.103;8.805;21.0;9.428571428571429;21
+db660a798526421cbcdab7866cbc0bcf;4;1;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;149.327;7.731;141.596;7.731;48.0;15.0;48
+db660a798526421cbcdab7866cbc0bcf;5;2;codestructure;syntactic;single;success;18;18;"d.Add(f);";;54.036;7.284;46.752;7.284;19.0;12.526315789473685;19
+c672ce9398d04212a5798966870e5dd8;0;0;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Der Wert steckt in setting nicht in parts;144.911;32.191;112.72;32.191;59.0;12.084745762711865;59
+c672ce9398d04212a5798966870e5dd8;1;1;histogram;semantic;single;success;18;18;"c[e] += 1;";Der Wert muss um 1 nicht um d erhöht werden;102.988;30.551;72.437;30.551;47.0;11.0;47
+c672ce9398d04212a5798966870e5dd8;2;2;concatlists;semantic;abbrev;success;21;21;"rsl[idx + str.length] = scn;";Das 2. Array ist immer um die Länge des 1. Arrays versetzt.;228.8;127.91;82.091;146.709;81.0;15.728395061728396;81
+c672ce9398d04212a5798966870e5dd8;3;0;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";Eckige Klammer war falsch;132.041;17.927;114.114;17.927;78.0;14.576923076923077;78
+c672ce9398d04212a5798966870e5dd8;4;1;countchildren;syntactic;single;success;17;17;"int h = int.Parse(f[g]);";statt - muss ein = hin;195.259;71.204;38.798;156.461;114.0;14.394736842105264;114
+c672ce9398d04212a5798966870e5dd8;5;2;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";Semikolon;50.698;15.363;35.335;15.363;33.0;13.333333333333334;33
+833fa3166cc847fea5bcb568bdc32226;0;0;countchildren;semantic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";Falsche Variable für Index;395.987;21.646;374.341;21.646;325.0;13.326153846153845;325
+833fa3166cc847fea5bcb568bdc32226;1;1;codestructure;semantic;abbrev;success;18;18;"str.Add(chr);";;120.555;12.125;108.43;12.125;116.0;12.517241379310345;116
+833fa3166cc847fea5bcb568bdc32226;2;2;readini;semantic;single;success;21;21;"c.Add(g, h);";;194.734;29.555;121.335;73.398;170.0;12.994117647058824;170
+833fa3166cc847fea5bcb568bdc32226;3;0;parsequerystring;syntactic;normal;success;19;19;"string parameterValue = setting[1];";;29.434;8.395;21.039;8.395;15.0;11.0;15
+833fa3166cc847fea5bcb568bdc32226;4;1;concatlists;syntactic;abbrev;success;21;21;"rsl[idx + len] = scn;";;431.148;6.694;424.454;6.694;356.0;14.224719101123595;356
+833fa3166cc847fea5bcb568bdc32226;5;2;histogram;syntactic;single;success;18;18;"c[e] += 1;";;75.755;10.958;64.797;10.958;75.0;11.04;75
+60e3920a39df484c9539862682c3c779;0;0;histogram;semantic;single;success;18;18;"c[e] += 1;";Der Zähler des einzelnen Characters sollte nur um eins erhöht werde nicht um den Zähler der Schleife;188.745;52.171;136.573;52.171;64.0;10.921875;64
+60e3920a39df484c9539862682c3c779;1;1;concatlists;semantic;normal;success;21;21;"result[index + length] = second;";Beim zweiten Durchlauf der Schleife würde first den second Wert vom ersten Durchlauf der Schleife überschreiben und nur der letzte Wert der zweiten Liste würde als erstes Element nach der ersten Liste gespeichert werden;289.169;132.797;156.372;132.797;77.0;13.766233766233766;77
+60e3920a39df484c9539862682c3c779;2;2;parsequerystring;semantic;abbrev;success;19;19;"string pmt = stt[1];";"Der Bisherige Code gibt als value des Query String Parameters immer das zweite komplette KeyValuePair als String aus : ""key=value""";251.185;87.6;163.585;87.6;72.0;13.527777777777779;72
+60e3920a39df484c9539862682c3c779;3;0;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;110.18;11.929;98.251;11.929;67.0;12.223880597014926;67
+60e3920a39df484c9539862682c3c779;4;1;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;132.037;13.584;118.453;13.584;64.0;12.125;64
+60e3920a39df484c9539862682c3c779;5;2;readini;syntactic;single;success;21;21;"c.Add(g, h);";;81.231;8.927;72.304;8.927;18.0;12.5;18
+6998b38b9e9f4c069aaf4999b68014df;0;0;concatlists;semantic;single;success;21;21;"e[d + f + 1] = h;";;221.132;43.07;89.862;131.269;178.0;14.073033707865168;178
+6998b38b9e9f4c069aaf4999b68014df;1;1;histogram;semantic;abbrev;success;18;18;"frq[chr]++;";;190.519;13.642;176.877;13.642;184.0;11.141304347826088;184
+6998b38b9e9f4c069aaf4999b68014df;2;2;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";;94.438;8.712;85.726;8.712;111.0;11.747747747747749;111
+6998b38b9e9f4c069aaf4999b68014df;3;0;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";;27.243;8.922;18.321;8.922;20.0;12.25;20
+6998b38b9e9f4c069aaf4999b68014df;4;1;codestructure;syntactic;single;success;18;18;"d.Add(f);";;59.994;7.643;52.351;7.643;73.0;11.643835616438356;73
+6998b38b9e9f4c069aaf4999b68014df;5;2;readini;syntactic;normal;success;21;21;"settings.Add(identifier, property);";;22.932;9.508;13.424;9.508;17.0;12.0;17
+8462cc5900c344efb2dd7dabc36a6eec;0;0;histogram;semantic;normal;success;18;18;"frequencies[character] += 1;";Wenn ein Zeichen gefunden wurde, muss der Zähler um 1 erhöht werden und nicht um den Index.;163.905;59.53;104.375;59.53;59.0;11.40677966101695;59
+8462cc5900c344efb2dd7dabc36a6eec;1;1;parsequerystring;semantic;single;success;19;19;"string h = f[1];";c enthält Key Value Pairs, wir wollen aber den Value haben, dieser ist das zweite Element in f.;261.4;138.339;98.68;162.72;188.0;10.414893617021276;188
+8462cc5900c344efb2dd7dabc36a6eec;2;2;concatlists;semantic;abbrev;success;21;21;"rsl[idx + len] = scn;";Das Element aus dem zweiten Array muss in die zweite Hälfte von rsl geschrieben werden, beginnend mit dem Index len.;292.622;133.713;135.52;157.102;133.0;11.61654135338346;133
+8462cc5900c344efb2dd7dabc36a6eec;3;0;codestructure;syntactic;abbrev;success;18;18;"str.Add(chr);";;321.128;30.53;258.976;62.152;284.0;12.665492957746478;284
+8462cc5900c344efb2dd7dabc36a6eec;4;1;countchildren;syntactic;normal;success;17;17;"int personAge = int.Parse(numbers[index]);";;68.719;19.415;49.304;19.415;58.0;15.551724137931034;58
+8462cc5900c344efb2dd7dabc36a6eec;5;2;readini;syntactic;single;success;21;21;"c.Add(g, h);";;56.912;8.176;48.736;8.176;20.0;13.1;20
+a4d27d625ae84572b00e8c7f88a7e23c;0;0;parsequerystring;semantic;normal;success;19;19;"string parameterValue = setting[1];";Der Value muss aus dem setting gelesen werden;139.069;35.25;103.819;35.25;76.0;11.092105263157896;76
+a4d27d625ae84572b00e8c7f88a7e23c;1;1;histogram;semantic;abbrev;success;18;18;"frq[chr]++;";Die Häufigkeit (frq) muss lediglich um 1 inkrementiert werden;109.9;41.442;68.458;41.442;48.0;11.3125;48
+a4d27d625ae84572b00e8c7f88a7e23c;2;2;concatlists;semantic;single;success;21;21;"e[f + d] = h;";;366.411;118.114;126.535;239.876;300.0;10.74;300
+a4d27d625ae84572b00e8c7f88a7e23c;3;0;readini;syntactic;single;success;21;21;"c.Add(g, h);";Falsche Klammer;39.309;11.067;28.242;11.067;18.0;12.5;18
+a4d27d625ae84572b00e8c7f88a7e23c;4;1;codestructure;syntactic;normal;success;18;18;"structure.Add(character);";"fehlendes ;";35.283;11.011;24.272;11.011;17.0;11.941176470588236;17
+a4d27d625ae84572b00e8c7f88a7e23c;5;2;countchildren;syntactic;abbrev;success;17;17;"int prs = int.Parse(num[idx]);";- statt =;42.359;11.316;31.043;11.316;23.0;14.304347826086957;23

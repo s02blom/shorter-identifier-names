@@ -1,0 +1,38 @@
+1. Wie sind Sie zur Zeit beschäftigt? (jobtype) *
+    Beruf
+    [
+        Selbstständig (selbstständig)
+        Angestellt (angestellt)
+        Student (student)
+        Kein Beruf (none)
+        Anders (other)
+    ]
+
+2. Wie würden Sie Ihre derzeitige Position mit einem Wort beschreiben? (job_description) *
+    Stellen- oder Positionsbeschreibung
+    [__Beschreibung oder Jobtitel__]
+
+3. Geben Sie Ihren höchsten Schulabschluss an!(education)
+    Schulbildung 
+    [
+        Hauptschulabschluss (hauptschule)
+        Mittlere Reife (mr)
+        Abitur / Fachabitur (abi)
+        Kein Abschluss (none)
+        Anderer Abschluss (other)
+    ]
+
+4. Geben Sie Ihren höchsten weiteren Abschluss an! (academic_degree)
+    Weitere Ausbildung
+    [
+        Lehre / Fachausbildung (lehre)
+        Bachelor (ba)
+        Master / Diplom (msc)
+        Promotion (dr)
+        Quereinsteiger / Keine Abschluss (none)
+        Anderer Abschluss (other)
+    ]
+
+5. Welchen Titel haben Sie genau erlangt? (subject) *
+    Zum Beispiel: Dipl.-Inform. \(FH\), Fachinformatiker.
+    [__Fachrichtung__]

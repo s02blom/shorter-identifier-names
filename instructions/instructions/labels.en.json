@@ -1,0 +1,20 @@
+{ "data": {
+    "button_cancel": "Cancel",
+    "button_close": "Close",
+    "button_found": "Done",
+    "button_surrender": "Surrender",
+    "clock": "Clock",
+    "description": "Description",
+    "email_submitted": "Thank you!",
+    "example_description": "Property LastName should be assigned from lastName, not firstName",
+    "example_line_number": 12,
+    "instruction_notice": "(Please read the instructions below, then press the Next-button to continue.)",
+    "label_about": "About",
+    "label_mobile": "Mobile Devices",
+    "label_privacy": "Privacy",
+    "line_number": "Line number",
+    "participate_now": "Participate Now!",
+    "surrender_notice": "You will skip to the next snippet. Are you sure?",
+    "time_notice": "You have got at most 10 minutes",
+    "time_warning": "Please finish the snippet in the next 2 minutes."
+}}

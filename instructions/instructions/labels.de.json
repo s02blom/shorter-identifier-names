@@ -1,0 +1,70 @@
+{ "data": {
+    "button_cancel": "Zurück zum Code",
+    "button_close": "Schließen",
+    "button_found": "Fertig",
+    "button_next": "Weiter",
+    "button_surrender": "Aufgeben",
+    "clock": "Uhr",
+    "description": "Beschreibung (optional)",
+    "correction": "Korrektur",
+    "email_submitted": "Danke!",
+    "example_correction": "LastName = lastName;",
+    "example_description": "Das Property LastName sollte lastName speichern, nicht firstName",
+    "example_line_number": 12,
+    "instruction_notice": "(Bitte lesen Sie die Anweisungen unten und klicken Sie dann auf Weiter)",
+    "label_about": "Über",
+    "label_mobile": "Mobilgeräte",
+    "label_privacy": "Datenschutz",
+    "answer_error": {
+        "message": "<img src='/static/images/fly.png' class='feedback-image'><br> Der Fehler befindet sich nicht in der angegebenen Zeile. Bitte versuchen Sie es noch einmal.<br><br>Verbleibende Versuche: "
+    },
+    "success": {
+        "id": -1,
+        "caption": "",
+        "text": [
+            "<img src='/static/images/thumbsup.png' class='feedback-image'>",
+            "<p class='text-center'>Ihre Antwort war richtig!</p>"
+        ],
+        "interactions": [
+            {
+                "type": "button",
+                "value": "Weiter"
+            }
+        ]
+    },
+    "failure": {
+        "id": -1,
+        "caption": "",
+        "text": [
+            "<img src='/static/images/flag.png' class='feedback-image'>",
+            "<p class='text-center'>Der Fehler befindet sich nicht in der angegeben Zeile. Sie haben keine Versuche mehr übrig.</p>"
+        ],
+        "interactions": [
+            {
+                "type": "button",
+                "value": "Weiter"
+            }
+        ]
+    },
+    "elapsed": {
+        "id": -1,
+        "caption": "",
+        "text": [
+            "<img src='/static/images/flag.png' class='feedback-image'>",
+            "<p class='text-center'>Die Zeit ist abgelaufen.</p>"
+        ],
+        "interactions": [
+            {
+                "type": "button",
+                "value": "Weiter"
+            }
+        ]
+    },
+    "line_number": "Zeile",
+    "participate_now": "Jetzt teilnehmen!",
+    "snippet_count": "3",
+    "surrender_notice": "Sie springen zum nächsten Snippet. Sind Sie sicher?",
+    "time_notice": "Sie haben maximal 10 Minuten Zeit.",
+    "time_warning": "Bitte beenden Sie den Durchgang in den nächsten 2 Minuten."
+}}
+

@@ -1,0 +1,162 @@
+﻿{
+    "data": [
+        {
+            "text": [
+                "Die Einführung ist nun beendet.", 
+                "Die eigentliche Studie besteht aus 4 Abschnitten, die alle ungefähr gleich viel Zeit in Anspruch nehmen (ca. 5 Minuten).", 
+                "Vor Beginn von Abschnitt 4 erhalten Sie zusätzliche Anweisungen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "structure"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 0, 
+            "condition": "structure", 
+            "caption": "Ablauf"
+        }, 
+        {
+            "text": [
+                "Los gehts!", 
+                "Achten Sie bitte auf eine störungsfreie Umgebung. Störungen können die Qualität der erhobenen Daten verringern. Bitte schalten Sie ihr Handy aus, schließen Sie alle Messenger und bitten Sie Ihre Kollegen, Sie nicht zu stören."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 1, 
+            "condition": "start", 
+            "caption": "Abschnitt 1"
+        }, 
+        {
+            "text": [
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 2, 
+            "condition": "semantic", 
+            "caption": "Sie sehen nun Abschnitt 1 von 4."
+        }, 
+        {
+            "text": [
+                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 3, 
+            "condition": "semantic", 
+            "caption": "Sie sehen nun Abschnitt 2 von 4."
+        }, 
+        {
+            "text": [
+                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 4, 
+            "condition": "semantic", 
+            "caption": "Sie sehen nun Abschnitt 3 von 4."
+        }, 
+        {
+            "text": [
+                "Sie haben nun 3 Snippets bearbeitet, in denen Sie jeweils einen inhaltlichen Fehler gefunden haben.", 
+                "Sie sehen in diesem Abschnitt drei weitere Snippets (A,B und C). Diesmal ist Ihre Aufgabe, einen <b>Syntaxfehler</b> zu finden. Diese Aufgabe ist einfacher, daher dauert die Bearbeitung dieser 3 Snippets zusammen voraussichtlich so lange wie einer der vorherigen Abschnitte.", 
+                "Der Code ist diesmal also inhaltlich korrekt, aber er kann wegen des Syntaxfehlers <b>nicht kompiliert</b> werden."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "xkcd"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 5, 
+            "condition": "entersyntax", 
+            "caption": "Abschnitt 4"
+        }, 
+        {
+            "text": [
+                "Denken Sie daran, dass das Snippet nun einen <b>syntaktischen Fehler</b> aufweist und keinen inhaltlichen.", 
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 6, 
+            "condition": "syntactic", 
+            "caption": "Sie sehen nun Snippet 4A."
+        }, 
+        {
+            "text": [
+                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 7, 
+            "condition": "syntactic", 
+            "caption": "Sie sehen nun Snippet 4B."
+        }, 
+        {
+            "text": [
+                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
+                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }
+            ], 
+            "id": 8, 
+            "condition": "syntactic", 
+            "caption": "Sie sehen nun Snippet 4C."
+        }, 
+        {
+            "text": [
+                "Bitte beantworten Sie noch die folgenden Fragen."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Weiter"
+                }
+            ], 
+            "id": 9, 
+            "condition": "almostdone", 
+            "caption": "Fast fertig!"
+        }
+    ]
+}

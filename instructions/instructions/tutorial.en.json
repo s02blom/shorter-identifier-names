@@ -1,0 +1,241 @@
+﻿{
+    "data": [
+        {
+            "text": [
+                "Please read the following instructions and explanations carefully. The annotations will not be shown during the actual experiment."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 1, 
+            "condition": "intro", 
+            "caption": "Introduction"
+        }, 
+        {
+            "text": [
+                "A colleague has asked you to help with some code from another project.", 
+                "The code is working, but it is behaving unexpectedly. Your colleague needs your help to find out why, so that he can change the implementation later on."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 2, 
+            "condition": "situation", 
+            "caption": "Situation"
+        }, 
+        {
+            "text": [
+                "Here you can see a function, written in C#.", 
+                "The code is commented. The purpose of the function is stated in the first comment line. The other lines contain an overview of the variables that occur in the code."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 3, 
+            "condition": "code", 
+            "caption": "Example Code"
+        }, 
+        {
+            "text": [
+                "Your task is to find an error in the code, but you don't have to fix it.", 
+                "The code compiles correctly, but it produces faulty behavior during runtime. The function contains only one error.", 
+                "The shown function is an example to illustrate what the screen looks like."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 4, 
+            "condition": "task", 
+            "caption": "Your Task"
+        }, 
+        {
+            "text": [
+                "During the experiment only a couple of lines are visible, while the remaining lines are hidden."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 5, 
+            "condition": "letterbox", 
+            "caption": "Visible area"
+        }, 
+        {
+            "text": [
+                "You can move the visible area using the arrow keys on your keyboard. Move the visible area to the bottom now (by pressing the down arrow key)!"
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "arrows"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 6, 
+            "condition": "control", 
+            "caption": "Control"
+        }, 
+        {
+            "text": [
+                "As soon as you are certain that you have found the error, press the space bar. A dialog will appear.", 
+                "(Press the spacebar now.)"
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "spacebar"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 7, 
+            "condition": "founddialog", 
+            "caption": "Error found"
+        }, 
+        {
+            "text": [
+                "When you found the error, please specify the line number it's in."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "fillin"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 8, 
+            "condition": "linenumber", 
+            "caption": "Line Number"
+        }, 
+        {
+            "text": [
+                "Please also give a short description of the error and explain what exactly is wrong."
+            ], 
+            "interactions": [
+                {
+                    "type": "image", 
+                    "value": "fillin"
+                }, 
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 9, 
+            "condition": "description", 
+            "caption": "Description"
+        }, 
+        {
+            "text": [
+                "The \"Cancel\" button lets you return to the code, in case you are uncertain about the error."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 10, 
+            "condition": "cancel", 
+            "caption": "Cancel"
+        }, 
+        {
+            "text": [
+                "If you can't find the error, you can press \"Surrender\" as a last resort. You will then skip to the next code snippet."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 11, 
+            "condition": "surrender", 
+            "caption": "Surrender"
+        }, 
+        {
+            "text": [
+                "In order to finish, please click the \"Done\"-Button."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 12, 
+            "condition": "completion", 
+            "caption": "Completion"
+        }, 
+        {
+            "text": [
+                "You have got at most 10 minutes to find the error. Try to find the error as quickly as possible. However, accuracy is more important than speed.", 
+                "Close to the end a warning message will be shown. After the timer has elapsed, the next trial will be presented."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 13, 
+            "condition": "timelimit", 
+            "caption": "Time limit"
+        }, 
+        {
+            "text": [
+                "You will see a total of {{ number }} different code snippets.", 
+                "Each snippet will take approximately 5 - 10 minutes. You can take a short break between the snippets."
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 14, 
+            "condition": "procedure", 
+            "caption": "Procedure"
+        }, 
+        {
+            "text": [
+                "To sum things up:", 
+                "- Find the error that is causing the faulty behavior in the code", 
+                "- Move the visible area with your arrow keys", 
+                "- Press the space bar when you are certain that you found the error", 
+                "- You have got at most 10 minutes per snippet"
+            ], 
+            "interactions": [
+                {
+                    "type": "button", 
+                    "value": "Next"
+                }
+            ], 
+            "id": 15, 
+            "condition": "summary", 
+            "caption": "Summary"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+6. Wie gut kennen Sie sich mit den folgenden Sprachen aus? (other_languages_matrix) *
+    Bei mehreren Möglichkeiten antworten Sie für die Sprache, die Sie am besten kennen!
+    { Keine Erfahrung (0) -- Grundkenntnisse (1) -- Projekterfahrung (2) -- Regelmäßig (3) -- Experte (4) }
+    [
+        C# (csharp)
+        Java (java)
+        C, C++ (c_or_cpp)
+        JavaScript (js)
+        F# (fsharp)       
+        VB.NET (vbnet)
+        PHP (php)
+    ]
+
+7. Wie viele Jahre Erfahrung haben Sie mit C# \(regelmäßige, professionelle Anwendung\)? (years_experience_csharp) *
+    [_Jahre_] (0-100)
+
+8. Seit wie vielen Jahren programmieren Sie? (years_experience_any) *
+    [_Jahre_] (0-100)
+
+9. Welche anderen Sprachen kennen Sie \(Grundkenntnisse oder mehr\)? (other_languages) 
+    Sprachen
+    [_Mehrere Werte bitte mit Kommata getrennt angeben._]
+    [__________]
+    [__________]
+
+10. Was ist Ihre Muttersprache? (mother_tounge) *
+    Natürliche Sprachen
+    [
+        Deutsch (de)
+        Englisch (en)
+        Russisch (ru)
+        Polnisch (pl)
+        Tschechisch (cz)
+        Spanisch (es)
+        Italienisch (it)
+        Französisch (fr)
+        Andere (other)
+    ]

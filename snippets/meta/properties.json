@@ -1,0 +1,90 @@
+[
+    {
+        "LOC": "15", 
+        "name": "codestructure", 
+        "Identifiers": "24", 
+        "Tokens": "92", 
+        "Domain Identifiers": "6", 
+        "Unique Identifiers": "11"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "concatlists", 
+        "Identifiers": "26", 
+        "Tokens": "92", 
+        "Domain Identifiers": "8", 
+        "Unique Identifiers": "10"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "countchildren", 
+        "Identifiers": "25", 
+        "Tokens": "92", 
+        "Domain Identifiers": "9", 
+        "Unique Identifiers": "12"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "histogram", 
+        "Identifiers": "24", 
+        "Tokens": "91", 
+        "Domain Identifiers": "5", 
+        "Unique Identifiers": "9"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "mergelists", 
+        "Identifiers": "27", 
+        "Tokens": "94", 
+        "Domain Identifiers": "8", 
+        "Unique Identifiers": "13"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "parsequerystring", 
+        "Identifiers": "23", 
+        "Tokens": "92", 
+        "Domain Identifiers": "8", 
+        "Unique Identifiers": "12"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "passwordgenerator", 
+        "Identifiers": "28", 
+        "Tokens": "92", 
+        "Domain Identifiers": "10", 
+        "Unique Identifiers": "14"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "readini", 
+        "Identifiers": "24", 
+        "Tokens": "91", 
+        "Domain Identifiers": "8", 
+        "Unique Identifiers": "14"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "replace", 
+        "Identifiers": "27", 
+        "Tokens": "93", 
+        "Domain Identifiers": "8", 
+        "Unique Identifiers": "10"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "reverse", 
+        "Identifiers": "24", 
+        "Tokens": "91", 
+        "Domain Identifiers": "6", 
+        "Unique Identifiers": "7"
+    }, 
+    {
+        "LOC": "15", 
+        "name": "sumscores", 
+        "Identifiers": "23", 
+        "Tokens": "93", 
+        "Domain Identifiers": "7", 
+        "Unique Identifiers": "13"
+    }
+]

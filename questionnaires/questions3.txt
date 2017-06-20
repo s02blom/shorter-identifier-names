@@ -1,0 +1,50 @@
+11. Geschlecht (sex) *
+    ( ) Männlich (m)
+    ( ) Weiblich (w)
+
+12. Wie alt sind Sie? (age) * 
+    Alter
+    [__ Ihr Alter __] (0-100)
+
+13. Folgen Sie dem Account @pro\_cessor auf Twitter? (is_twitter_follower) *
+    ( ) Ja (yes)
+    ( ) Nein (no)
+
+14. Haben Sie schonmal einen Vortrag von mir \(Johannes Hofmeister\) gesehen? (has_heard_presentation) *
+    ( ) Ja (yes)
+    ( ) Nein (no)
+
+15. Kennen Sie meinen Artikel über "Weasel Words" in der dotnetpro? (has_read_dnp_article) *
+    ( ) Ja (yes)
+    ( ) Nein (no)
+
+16. Haben Sie alle Aufgaben ernsthaft beantwortet, oder wollten Sie nur mal gucken? (are_you_serious) *
+    ( ) Ja, ich habe die Studie sorgfältig bearbeitet (yes)
+    ( ) Nein, ich wollte nur mal gucken und habe mich durchgeklickt. (no)
+
+17. Haben Sie schon einmal an <b>dieser</b> Studie teilgenommen? (boomerang_participant) *
+    ( ) Ja, ich wollte öfter mitmachen! (yes)
+    ( ) Nein, dies ist mein erstes mal! (no)
+
+18. Haben Sie im Jahr 2013 an der Vorgängerstudie teilgenommen? (empra_participant) *
+    ( ) Ja (yes)
+    ( ) Nein (no)
+
+19. Würden Sie noch einmal an einer ähnlichen Studie teilnehmen? (would_participate_again) *
+    ( ) Ja (yes)
+    ( ) Vielleicht (maybe)
+    ( ) Nein (no)
+
+20. Was glauben Sie, wurde hier untersucht? (guess_hypothesis) *
+    [__ Ihre Hypothese ___]
+    [_____________________]
+    [_____________________]
+    [_____________________]
+    [_____________________]
+
+21. Haben Sie Kommentare, Anregungen oder Kritik, die Sie gerne mitteilen würden? (kotzbox)
+    [__ Kommentare _______]
+    [_____________________]
+    [_____________________]
+    [_____________________]
+    [_____________________]

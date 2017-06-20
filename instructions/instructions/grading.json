@@ -1,0 +1,86 @@
+{
+    "data": {
+        "codestructure": {
+            "Correction": "structure.Add(character);",
+            "Semantic": "blackCharacters.Add(character);",
+            "Line": 18,
+            "Syntactic": "structure.Add(character)",
+            "Replace": [";", ""]
+        },
+        "countchildren": {
+            "Correction": "int personAge = int.Parse(numbers[index]);",
+            "Semantic": "int personAge = int.Parse(numbers[children]);",
+            "Line": 17,
+            "Syntactic": "int personAge - int.Parse(numbers[index]);",
+            "Replace": ["=", "-"]
+        },
+        "readini": {
+            "Correction": "setting.Add(identifier, property);",
+            "Semantic": "settings.Add(identifier, line);",
+            "Line": 21,
+            "Syntactic": "setting.Add[identifier, property);",
+            "Replace": ["(", "["]
+        },
+
+        "parsequerystring": {
+            "Correction": "string parameterValue = setting[1];",
+            "Semantic": "string parameterValue = parts[1];",
+            "Line": 19,
+            "Syntactic": "string parameterValue = setting{1];",
+            "Replace": ["[", "{"]
+        },
+        "concatlists": {
+            "Correction": "result[index + length] = second;",
+            "Semantic": "result[index + 1] = second;",
+            "Line": 21,
+            "Syntactic": "result[index + length] = second",
+            "Replace": [";", ""]
+        },
+        "histogram": {
+            "Correction": "frequencies[character] += 1;",
+            "Semantic": "frequencies[character] += index;",
+            "Line": 18,
+            "Syntactic": "frequencies[character] +- 1;",
+            "Replace": ["+=", "+-"]
+        },
+
+
+
+        "passwordgenerator": {
+            "Correction": "char letter = alphabet[randomIndex];",
+            "Semantic": "char letter = alphabet[index];",
+            "Line": 22,
+            "Syntactic": "chr letter = alphabet[randomIndex];",
+            "Replace": ["char", "chr"]
+        },
+        "replace": {
+            "Correction": "result[index] = replace;",
+            "Semantic": "target[index] = replace;",
+            "Line": 21,
+
+            "Syntactic": "result[index} = replace;",
+            "Replace": ["]", "}"]
+        },
+        "reverse": {
+            "Correction": "result[left] = array[right];",
+            "Semantic": "result[left] = array[auxiliary];",
+            "Line": 16,
+            "Syntactic": "result[left] = array[right|;",
+            "Replace": ["]", "|"]
+        },
+        "sumscores": {
+            "Correction": "result[lastIndex] += int.Parse(roll);",
+            "Semantic": "games[lastIndex] += int.Parse(roll);",
+            "Line": 19,
+            "Syntactic": "result[lastIndex] _= int.Parse(roll);",
+            "Replace": ["+", "_"]
+        },
+        "mergelists": {
+            "Correction": "merged.Add(length);",
+            "Semantic": "merged.Add(first);",
+            "Line": 20,
+            "Syntactic": "merged.Add(length),",
+            "Replace": [";", ","]
+        }
+    }
+}
