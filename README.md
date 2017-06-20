@@ -29,4 +29,4 @@ Please note that the study was conducted with a sample of German C# developers.
 We had conducted a pretest to understand our stimulus material, which was conducted in English, and thus some instructions slightly differ between the German and English versions.
 
 If you have further questions about how to interpret these data, please let me know, I would be happy to discuss this with you.
-
+ - Johannes Hofmeister (shorter-code [äht] spam.cessor.de)
