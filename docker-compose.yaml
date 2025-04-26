@@ -1,0 +1,23 @@
+services:
+
+  peter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workplace
+    ports:
+      - 5000:5000
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+#      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db
