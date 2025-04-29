@@ -15,8 +15,8 @@ services:
   mongodb:
     image: mongodb/mongodb-community-server:latest
     environment:
-      - MONGO_INITDB_ROOT_USERNAME: admin
-      - MONGO_INITDB_ROOT_PASSWORD: run/secrets/database_root_password
+      MONGODB_INITDB_ROOT_USERNAME: root
+      MONGODB_INITDB_ROOT_PASSWORD_FILE: run/secrets/database_root_password
     volumes:
       - type: bind
         source: ./data
@@ -24,6 +24,6 @@ services:
     secrets:
       - database_root_password
 
-  secrets: 
-    database_root_password:
-      file: database_root_password.txt
+secrets: 
+  database_root_password:
+    file: ./database_root_password.txt
