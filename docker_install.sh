@@ -1,9 +1,9 @@
 set -e
 
-sudo apt update 
-sudo apt upgrade -y 
-sudo apt install bc wget -y
-sudo apt install python2.7 -y 
+apt update 
+apt upgrade -y 
+apt install bc wget -y
+apt install python2.7 -y 
 wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
 python2.7 get-pip.py
 pip2.7 install -r requirements.txt
