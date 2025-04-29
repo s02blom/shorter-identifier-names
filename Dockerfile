@@ -10,7 +10,7 @@ MAINTAINER Johannes Hofmeister <docker@spam.cessor.de>
 WORKDIR /workdir
 
 COPY docker_install.sh .
-COPy requirements.txt .
+COPY requirements.txt .
 
 RUN ./docker_install.sh
 
