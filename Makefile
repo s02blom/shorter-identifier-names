@@ -24,5 +24,8 @@ runDB:	## Run's the database in detatched mode
 runApp:	## Run's the application in detatched mode
 	@docker run --name peter -d -p 5000:5000 --link mongodb:mongodb cessor/peter
 
+secrets:	## Uses python3 to generate secrets for the database
+	python3 generate_secrets.py
+
 help: ## Show this help
 	@grep -E '^[.a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
