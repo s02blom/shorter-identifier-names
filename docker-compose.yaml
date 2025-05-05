@@ -13,7 +13,7 @@ services:
 #      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
     
   mongodb:
-    image: mongodb/mongodb-community-server:latest
+    image: mongo:4.4.28
     environment:
       MONGODB_INITDB_ROOT_USERNAME: root
       MONGODB_INITDB_ROOT_PASSWORD_FILE: run/secrets/database_root_password
