@@ -31,7 +31,7 @@ ADD ./src /var/peter
 RUN python2.7 -c "import random,string; print 'cookie_secret=\'%s\'' % ''.join([random.choice(string.letters+string.digits) for _ in range(32)])" >> /var/peter/config/docker.cfg
 
 # Generate Admin Password
-RUN python2.7 -c "import random,string; print ''.join([random.choice(string.letters+string.digits) for _ in range(12)])" > /var/peter/.key
+# RUN python2.7 -c "import random,string; print ''.join([random.choice(string.letters+string.digits) for _ in range(12)])" > /var/peter/.key
 
 # Write this down.
 RUN echo Your Password for /admin/login is: $(cat /var/peter/.key)
