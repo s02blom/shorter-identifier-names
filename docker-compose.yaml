@@ -23,6 +23,8 @@ services:
         target: /data/db
     secrets:
       - database_root_password
+    ports:
+      - 27017:27017
 
 secrets: 
   database_root_password:
