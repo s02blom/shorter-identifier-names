@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="col-lg-8 col-lg-offset-2 page-header">
-        <h1>Sprachen</h1>
+        <h1>Languages</h1>
       </div>
       <div class="col-lg-8 col-lg-offset-2">
         <progress-bar></progress-bar>
@@ -10,17 +10,17 @@
           <form class="form" name="questionForm" ng-submit="questionForm.$valid && questionsCtrl.addQuestions(questionForm, page)">
             <fieldset>
               <div ng-class="{ 'form-group': questionForm.other_languages_matrix.$pristine, 'form-group has-success': questionForm.other_languages_matrix.$touched && questionForm.other_languages_matrix.$valid, 'form-group has-error': !questionForm.other_languages_matrix.$pristine && questionForm.other_languages_matrix.$invalid }">
-                <legend for="other_languages_matrix">6. Wie gut kennen Sie sich mit den folgenden Sprachen aus? </legend>
-                <span class="help-block">Bei mehreren Möglichkeiten antworten Sie für die Sprache, die Sie am besten kennen!</span>
+                <legend for="other_languages_matrix">6. How well do you know the following languages? </legend>
+                <span class="help-block">If there are several options, answer for the language you know best!</span>
                 <table class="table table-condensed">
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Keine Erfahrung</th>
-                    <th>Grundkenntnisse</th>
-                    <th>Projekterfahrung</th>
-                    <th>Regelmäßig</th>
-                    <th>Experte</th>
+                    <th>No Experience</th>
+                    <th>Basic knowledge</th>
+                    <th>Experienced</th>
+                    <th>Regular usage</th>
+                    <th>Expert</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -294,40 +294,40 @@
                 </table>
               </div>
               <div ng-class="{ 'form-group': questionForm.years_experience_csharp.$pristine, 'form-group has-success': questionForm.years_experience_csharp.$touched && questionForm.years_experience_csharp.$valid, 'form-group has-error': !questionForm.years_experience_csharp.$pristine && questionForm.years_experience_csharp.$invalid }">
-                <legend for="years_experience_csharp">7. Wie viele Jahre Erfahrung haben Sie mit C# (regelmäßige, professionelle Anwendung)? </legend>
-                <span class="help-block">Regelmäßige, professionelle Anwendung</span>
+                <legend for="years_experience_csharp">7. How many years of experience do you have with C# (regular, professional use)? </legend>
+                <span class="help-block">Regular usage, professional use</span>
                 <div class="form-control-wrapper">
-                  <input ng-model="page.years_experience_csharp" type="number" min="0" max="100" class="form-control" name="years_experience_csharp" placeholder="Jahre" required>
+                  <input ng-model="page.years_experience_csharp" type="number" min="0" max="100" class="form-control" name="years_experience_csharp" placeholder="Years" required>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.years_experience_any.$pristine, 'form-group has-success': questionForm.years_experience_any.$touched && questionForm.years_experience_any.$valid, 'form-group has-error': !questionForm.years_experience_any.$pristine && questionForm.years_experience_any.$invalid }">
-                <legend for="years_experience_any">8. Seit wie vielen Jahren programmieren Sie? </legend>
-                <span class="help-block">Regelmäßige, professionelle Anwendung</span>
+                <legend for="years_experience_any">8. How many years have you been programming? </legend>
+                <span class="help-block">Regular, professional</span>
                 <div class="form-control-wrapper">
-                  <input ng-model="page.years_experience_any" type="number" min="0" max="100" class="form-control" name="years_experience_any" placeholder="Jahre" required>
+                  <input ng-model="page.years_experience_any" type="number" min="0" max="100" class="form-control" name="years_experience_any" placeholder="Years" required>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.other_languages.$pristine, 'form-group has-success': questionForm.other_languages.$touched && questionForm.other_languages.$valid, 'form-group has-error': !questionForm.other_languages.$pristine && questionForm.other_languages.$invalid }">
-                <legend for="other_languages">9. Welche anderen Sprachen kennen Sie (Grundkenntnisse oder mehr)? (optional)</legend>
-                <span class="help-block">Nennen Sie Sprachen, in denen sie Grundkenntnisse oder mehr haben. Trennen Sie mehrere Sprachen durch Kommata.</span>
+                <legend for="other_languages">9. What other languages ​​do you know (basic or more)? (optional question)</legend>
+                <span class="help-block">Name languages ​​in which you have basic or more knowledge. Separate multiple languages ​​with commas.</span>
                 <div class="form-control-wrapper">
-                  <textarea ng-model="page.other_languages" class="form-control" name="other_languages" placeholder="Sprachen" rows="3" ></textarea>
+                  <textarea ng-model="page.other_languages" class="form-control" name="other_languages" placeholder="Language1, Language2" rows="3" ></textarea>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.mother_tounge.$pristine, 'form-group has-success': questionForm.mother_tounge.$touched && questionForm.mother_tounge.$valid, 'form-group has-error': !questionForm.mother_tounge.$pristine && questionForm.mother_tounge.$invalid }">
-                <legend for="mother_tounge">10. Was ist Ihre Muttersprache? </legend>
+                <legend for="mother_tounge">10. What is your native language? </legend>
                 <div class="form-control-wrapper">
                   <select ng-model="page.mother_tounge" class="form-control" name="mother_tounge" required>
-                    <option selected="selected" value="">Bitte wählen</option>
-                    <option value="de">Deutsch</option>
-                    <option value="en">Englisch</option>
-                    <option value="ru">Russisch</option>
-                    <option value="pl">Polnisch</option>
-                    <option value="cz">Tschechisch</option>
-                    <option value="es">Spanisch</option>
-                    <option value="it">Italienisch</option>
-                    <option value="fr">Französisch</option>
-                    <option value="other">Andere</option>
+                    <option selected="selected" value="">Options:</option>
+                    <option value="de">German</option>
+                    <option value="en">English</option>
+                    <option value="ru">Russian</option>
+                    <option value="pl">Polish</option>
+                    <option value="cz">Czech</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="fr">French</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
               </div>
