@@ -1,0 +1,31 @@
+services:
+
+  peter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workplace
+    ports:
+      - 5000:5000
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+#      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    
+  mongodb:
+    image: mongo:4.4.28
+    environment:
+      MONGODB_INITDB_ROOT_USERNAME: root
+      MONGODB_INITDB_ROOT_PASSWORD_FILE: run/secrets/database_root_password
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db
+    secrets:
+      - database_root_password
+    ports:
+      - 27017:27017
+
+secrets: 
+  database_root_password:
+    file: ./database_root_password.txt

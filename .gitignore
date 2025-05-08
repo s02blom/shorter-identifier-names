@@ -11,3 +11,5 @@ __pycache__/
 
 data/*
 venv/
+database_root_password.txt
+get-pip.py
