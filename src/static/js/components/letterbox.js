@@ -56,7 +56,7 @@
                 return visibleArea.top() - LINE_HEIGHT >= new Pane(editor).top();
             }
             if(goingDown(direction)){
-                return visibleArea.bottom() + LINE_HEIGHT <= new Pane(editor).bottom();
+                return visibleArea.bottom() + LINE_HEIGHT <= (new Pane(editor).bottom() + 2);
             }
         }
 
