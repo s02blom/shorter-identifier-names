@@ -2,27 +2,27 @@
     "data": [
         {
             "text": [
-                "Bitte lesen Sie die folgenden Anweisungen in Ruhe durch. Während der eigentlichen Erhebung werden die Hinweise nicht eingeblendet."
+                "Please read the following instructions carefully. These instructions will not be displayed during the actual survey."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 1, 
             "condition": "intro", 
-            "caption": "Einführung"
+            "caption": "Introduction"
         }, 
         {
             "text": [
-                "Ein Kollege bittet Sie, ihm mit einem Problem im Quellcode eines anderen Projekts zu helfen.", 
-                "Der Code funktioniert, verhält sich aber unerwartet. Ihr Kollege braucht Ihre Hilfe bei der Fehleranalyse, um die Implementierung später ändern zu können."
+                "A colleague asks you to help him with a problem in the source code of another project.", 
+                "The code works, but behaves unexpectedly. Your colleague needs your help analyzing the error so they can change the implementation later."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 2, 
@@ -31,51 +31,51 @@
         }, 
         {
             "text": [
-                "Hier sehen Sie ein Snippet mit einer in C# geschriebenen Funktion.", 
-                "Der Code ist kommentiert. Der Zweck der Funktion steht in der ersten Kommentarzeile. Die restlichen Kommentare beinhalten eine Übersicht der im Code verwendeten Variablen."
+                "Here you can see a snippet with a function written in C#.", 
+                "The code is commented. The purpose of the function is stated in the first comment line. The remaining comments contain an overview of the variables used in the code."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 3, 
             "condition": "code", 
-            "caption": "Erhebung"
+            "caption": "Survey"
         }, 
         {
             "text": [
-                "Ihre Aufgabe ist es, einen Fehler im Code zu finden.", 
-                "Der Code kompiliert korrekt, aber er weist zur Laufzeit ein fehlerhaftes Verhalten auf. Die Funktion hat nur einen Fehler."
+                "Your task is to find a bug in the code.", 
+                "The code compiles correctly, but it exhibits erroneous behavior at runtime. The function has only one error."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 4, 
             "condition": "task", 
-            "caption": "Ihre Aufgabe"
+            "caption": "Your task"
         }, 
         {
             "text": [
-                "Während der Studie sind vom Code nur einige Zeilen sichtbar, die restlichen sind ausgeblendet."
+                "During the study, only a few lines of the code are visible, the rest are hidden."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 5, 
             "condition": "letterbox", 
-            "caption": "Sichtbarer Bereich"
+            "caption": "Visible area"
         }, 
         {
             "text": [
-                "Sie können den sichtbaren Bereich mit den Pfeiltasten auf Ihrer Tastatur verschieben. Verschieben Sie nun den sichtbaren Bereich bis zum Ende (durch Drücken der Nach-Unten Taste)!"
+                "You can move the visible area using the arrow keys on your keyboard. Now move the visible area to the end (by pressing the down arrow key)!"
             ], 
             "interactions": [
                 {
@@ -84,17 +84,17 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 6, 
             "condition": "control", 
-            "caption": "Steuerung"
+            "caption": "Controlls"
         }, 
         {
             "text": [
-                "Sobald Sie sich sicher sind, dass Sie den Fehler gefunden haben, drücken Sie die Leertaste. Es erscheint ein Dialog.", 
-                "(Drücken Sie jetzt die Leertaste.)"
+                "Once you're sure you've found the error, press the spacebar. A dialog will appear.", 
+                "(Now press the spacebar.)"
             ], 
             "interactions": [
                 {
@@ -103,16 +103,16 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 7, 
             "condition": "founddialog", 
-            "caption": "Fehler gefunden"
+            "caption": "Error found"
         }, 
         {
             "text": [
-                "Wenn Sie den Fehler gefunden haben, dann geben Sie bitte die Zeilennummer an, in der sich der Fehler befindet. Die ausgewählte Zeile wird hervorgehoben."
+                "If you find the error, please indicate the line number where the error is located. The selected line will be highlighted."
             ], 
             "interactions": [
                 {
@@ -121,16 +121,16 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 8, 
             "condition": "linenumber", 
-            "caption": "Zeilennummer"
+            "caption": "Line number"
         }, 
         {
             "text": [
-                "Geben Sie bitte im Feld \"Korrektur\" an, wie der Code korrekter Weise lauten müsste. Das Feld wird mit der ausgewählten Zeile vorgefüllt, sodass Sie den Code korrigieren können."
+                "Please enter the correct code in the \"Correction\" field. The field will be prefilled with the selected line so you can correct the code."
             ], 
             "interactions": [
                 {
@@ -139,103 +139,103 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 9, 
             "condition": "correction", 
-            "caption": "Korrektur"
+            "caption": "Correction"
         }, 
         {
             "text": [
-                "Geben Sie bitte auch eine kurze Beschreibung des Fehlers an und erklären Sie, was genau falsch ist."
+                "Please also provide a brief description of the error and explain what exactly is wrong."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 10, 
             "condition": "description", 
-            "caption": "Beschreibung"
+            "caption": "Description"
         }, 
         {
             "text": [
-                "Durch den \"Zurück zum Code\" Button kehren Sie zum Code zurück, falls Sie sich bezüglich des Fehlers unsicher sind."
+                "The \"Back to Code\" button will take you back to the code if you are unsure about the error."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 11, 
             "condition": "cancel", 
-            "caption": "Abbruch"
+            "caption": "Cancel"
         }, 
         {
             "text": [
-                "Zum Abschluss eines Durchgangs klicken Sie auf den \"Fertig\"-Button."
+                "To complete a round, click the \"Done\" button."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 13, 
             "condition": "completion", 
-            "caption": "Abschluss"
+            "caption": "Done"
         }, 
         {
             "text": [
-                "Sie haben maximal 3 Versuche, um den Fehler in einem Snippet zu finden.", 
-                "Bitte versuchen Sie den Fehler zu finden, ohne zu raten und drücken Sie die Leertaste erst, wenn Sie sich sicher sind."
+                "You have a maximum of 3 attempts to find the error in a snippet of code.", 
+                "Please try to find the error without guessing and only press the spacebar when you are sure."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 14, 
             "condition": "attempts", 
-            "caption": "Versuche"
+            "caption": "Try"
         }, 
         {
             "text": [
-                "Sie haben für das Auffinden des Fehlers bis zu 10 Minuten Zeit. Versuchen Sie, den Fehler so schnell wie möglich zu finden. Allerdings ist Genauigkeit wichtiger als Geschwindigkeit.", 
-                "Kurz vor dem Ende wird eine Warnung eingeblendet. Nach Ablauf der Zeit wird automatisch das nächste Snippet angezeigt."
+                "You have up to 10 minutes to find the error. Try to find it as quickly as possible. However, accuracy is more important than speed.", 
+                "A warning will appear shortly before the end. After the time has elapsed, the next snippet will automatically be displayed."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 15, 
             "condition": "timelimit", 
-            "caption": "Zeitbegrenzung"
+            "caption": "Time limit"
         }, 
         {
             "text": [
-                "Zusammenfassend ist Ihre Aufgabe also:", 
-                "- Finden Sie den Fehler, der das defekte Verhalten des Codes verursacht", 
-                "- Verschieben Sie den sichtbaren Bereich mit den Pfeiltasten", 
-                "- Drücken Sie die Leertaste, wenn Sie den Fehler gefunden haben", 
-                "- Sie haben pro Snippet bis zu 10 Minuten Zeit", 
-                "- Sie haben maximal 3 Versuche pro Snippet, um den Fehler zu finden"
+                "In summary, your task is:", 
+                "- Find the error that causes the broken behavior", 
+                "- Move the visible area with the arrow keys", 
+                "- Press the spacebar when you find the error", 
+                "- You have up to 10 minutes per code snippet", 
+                "- You have a maximum of 3 attempts per code snippet to find the error"
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 16, 
             "condition": "summary", 
-            "caption": "Zusammenfassung"
+            "caption": "Summary"
         }
     ]
 }

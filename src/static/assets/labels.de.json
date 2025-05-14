@@ -1,34 +1,34 @@
 { "data": {
-    "button_cancel": "Zurück zum Code",
-    "button_close": "Schließen",
-    "button_found": "Fertig",
-    "button_next": "Weiter",
-    "button_surrender": "Aufgeben",
-    "clock": "Uhr",
-    "description": "Beschreibung (optional)",
-    "correction": "Korrektur",
-    "email_submitted": "Danke!",
+    "button_cancel": "Back to code",
+    "button_close": "Close",
+    "button_found": "Ready",
+    "button_next": "Next (Further)",
+    "button_surrender": "Give up",
+    "clock": "Time",
+    "description": "Description (optional)",
+    "correction": "correction",
+    "email_submitted": "Thank you!",
     "example_correction": "LastName = lastName;",
-    "example_description": "Das Property LastName sollte lastName speichern, nicht firstName",
+    "example_description": "The variable LastName should store lastName, not firstName",
     "example_line_number": 12,
-    "instruction_notice": "(Bitte lesen Sie die Anweisungen unten und klicken Sie dann auf Weiter)",
-    "label_about": "Über",
-    "label_mobile": "Mobilgeräte",
-    "label_privacy": "Datenschutz",
+    "instruction_notice": "(Please read the instructions below and then click Next)",
+    "label_about": "Over",
+    "label_mobile": "Mobile devices",
+    "label_privacy": "Data protection",
     "answer_error": {
-        "message": "<img src='/static/images/fly.png' class='feedback-image'><br> Der Fehler befindet sich nicht in der angegebenen Zeile. Bitte versuchen Sie es noch einmal.<br><br>Verbleibende Versuche: "
+        "message": "<img src='/static/images/fly.png' class='feedback-image'><br> The error is not in the specified line. Please try again.<br><br>Remaining attempts: "
     },
     "success": {
         "id": -1,
         "caption": "",
         "text": [
             "<img src='/static/images/thumbsup.png' class='feedback-image'>",
-            "<p class='text-center'>Ihre Antwort war richtig!</p>"
+            "<p class='text-center'>Your answer was correct!</p>"
         ],
         "interactions": [
             {
                 "type": "button",
-                "value": "Weiter"
+                "value": "Next"
             }
         ]
     },
@@ -37,12 +37,12 @@
         "caption": "",
         "text": [
             "<img src='/static/images/flag.png' class='feedback-image'>",
-            "<p class='text-center'>Der Fehler befindet sich nicht in der angegeben Zeile. Sie haben keine Versuche mehr übrig.</p>"
+            "<p class='text-center'>The error is not in the specified line. You have no more attempts left.</p>"
         ],
         "interactions": [
             {
                 "type": "button",
-                "value": "Weiter"
+                "value": "Next"
             }
         ]
     },
@@ -51,20 +51,20 @@
         "caption": "",
         "text": [
             "<img src='/static/images/flag.png' class='feedback-image'>",
-            "<p class='text-center'>Die Zeit ist abgelaufen.</p>"
+            "<p class='text-center'>The time has run out.</p>"
         ],
         "interactions": [
             {
                 "type": "button",
-                "value": "Weiter"
+                "value": "Next"
             }
         ]
     },
-    "line_number": "Zeile",
-    "participate_now": "Jetzt teilnehmen!",
+    "line_number": "Line number",
+    "participate_now": "Participate now!",
     "snippet_count": "3",
-    "surrender_notice": "Sie springen zum nächsten Snippet. Sind Sie sicher?",
-    "time_notice": "Sie haben maximal 10 Minuten Zeit.",
-    "time_warning": "Bitte beenden Sie den Durchgang in den nächsten 2 Minuten."
+    "surrender_notice": "You're jumping to the next part. Are you sure?",
+    "time_notice": "You have a maximum of 10 minutes.",
+    "time_warning": "Please finish the round in the next 2 minutes."
 }}
 

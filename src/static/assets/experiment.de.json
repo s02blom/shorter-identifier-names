@@ -2,9 +2,9 @@
     "data": [
         {
             "text": [
-                "Die Einführung ist nun beendet.", 
-                "Die eigentliche Studie besteht aus 4 Abschnitten, die alle ungefähr gleich viel Zeit in Anspruch nehmen (ca. 5 Minuten).", 
-                "Vor Beginn von Abschnitt 4 erhalten Sie zusätzliche Anweisungen."
+                "The introduction is now complete.", 
+                "The actual study consists of 4 parts, each of which takes approximately the same amount of time (approximately 5 minutes).", 
+                "You will receive additional instructions before beginning Part 4."
             ], 
             "interactions": [
                 {
@@ -13,31 +13,31 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 0, 
             "condition": "structure", 
-            "caption": "Ablauf"
+            "caption": "Content"
         }, 
         {
             "text": [
-                "Los gehts!", 
-                "Achten Sie bitte auf eine störungsfreie Umgebung. Störungen können die Qualität der erhobenen Daten verringern. Bitte schalten Sie ihr Handy aus, schließen Sie alle Messenger und bitten Sie Ihre Kollegen, Sie nicht zu stören."
+                "Let's go!", 
+                "Please ensure your environment is free from distractions. Disturbances can reduce the quality of the collected data. Please turn off your cell phone, close all messaging apps, and ask your colleagues not to disturb you."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 1, 
             "condition": "start", 
-            "caption": "Abschnitt 1"
+            "caption": "Part 1"
         }, 
         {
             "text": [
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -47,12 +47,12 @@
             ], 
             "id": 2, 
             "condition": "semantic", 
-            "caption": "Sie sehen nun Abschnitt 1 von 4."
+            "caption": "You are now viewing part 1 of 4."
         }, 
         {
             "text": [
-                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "If you want, you can take a short break.", 
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -62,12 +62,12 @@
             ], 
             "id": 3, 
             "condition": "semantic", 
-            "caption": "Sie sehen nun Abschnitt 2 von 4."
+            "caption": "You are now viewing part 2 of 4."
         }, 
         {
             "text": [
-                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "If you want, you can take a short break.", 
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -77,13 +77,13 @@
             ], 
             "id": 4, 
             "condition": "semantic", 
-            "caption": "Sie sehen nun Abschnitt 3 von 4."
+            "caption": "You are now viewing part 3 of 4."
         }, 
         {
             "text": [
-                "Sie haben nun 3 Snippets bearbeitet, in denen Sie jeweils einen inhaltlichen Fehler gefunden haben.", 
-                "Sie sehen in diesem Abschnitt drei weitere Snippets (A,B und C). Diesmal ist Ihre Aufgabe, einen <b>Syntaxfehler</b> zu finden. Diese Aufgabe ist einfacher, daher dauert die Bearbeitung dieser 3 Snippets zusammen voraussichtlich so lange wie einer der vorherigen Abschnitte.", 
-                "Der Code ist diesmal also inhaltlich korrekt, aber er kann wegen des Syntaxfehlers <b>nicht kompiliert</b> werden."
+                "You have now edited 3 snippets, in each of which you found a content error.", 
+                "You'll see three more snippets in this section (A, B, and C). This time, your task is to find a <b>syntax error</b>. This task is easier, so editing these three snippets together will likely take as long as any of the previous sections.", 
+                "This time the code is correct in terms of content, but it cannot be compiled because of the syntax error."
             ], 
             "interactions": [
                 {
@@ -92,17 +92,17 @@
                 }, 
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 5, 
             "condition": "entersyntax", 
-            "caption": "Abschnitt 4"
+            "caption": "Part 4"
         }, 
         {
             "text": [
-                "Denken Sie daran, dass das Snippet nun einen <b>syntaktischen Fehler</b> aufweist und keinen inhaltlichen.", 
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "Remember that the snippet now has a <b>syntactic error</b> and not a content error.", 
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -112,12 +112,12 @@
             ], 
             "id": 6, 
             "condition": "syntactic", 
-            "caption": "Sie sehen nun Snippet 4A."
+            "caption": "You now see Part 4A."
         }, 
         {
             "text": [
-                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "If you want, you can take a short break.", 
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -127,12 +127,12 @@
             ], 
             "id": 7, 
             "condition": "syntactic", 
-            "caption": "Sie sehen nun Snippet 4B."
+            "caption": "You now see Part 4B."
         }, 
         {
             "text": [
-                "Wenn Sie möchten, können Sie eine kurze Pause einlegen.", 
-                "Drücken Sie die Leertaste, wenn Sie sicher sind, dass Sie den Fehler gefunden haben. Drücken Sie nun die Leertaste, um zu beginnen."
+                "If you want, you can take a short break.", 
+                "Press the spacebar when you're sure you've found the error. Now press the spacebar to begin."
             ], 
             "interactions": [
                 {
@@ -142,21 +142,21 @@
             ], 
             "id": 8, 
             "condition": "syntactic", 
-            "caption": "Sie sehen nun Snippet 4C."
+            "caption": "You now see Part 4C."
         }, 
         {
             "text": [
-                "Bitte beantworten Sie noch die folgenden Fragen."
+                "Please answer the following questions."
             ], 
             "interactions": [
                 {
                     "type": "button", 
-                    "value": "Weiter"
+                    "value": "Next"
                 }
             ], 
             "id": 9, 
             "condition": "almostdone", 
-            "caption": "Fast fertig!"
+            "caption": "Almost finished!"
         }
     ]
 }

@@ -10,56 +10,56 @@
           <form class="form" name="questionForm" ng-submit="questionForm.$valid && questionsCtrl.addQuestions(questionForm, page)">
             <fieldset>
               <div ng-class="{ 'form-group': questionForm.jobtype.$pristine, 'form-group has-success': questionForm.jobtype.$touched && questionForm.jobtype.$valid, 'form-group has-error': !questionForm.jobtype.$pristine && questionForm.jobtype.$invalid }">
-                <legend for="jobtype">1. Wie sind Sie zur Zeit beschäftigt? </legend>
+                <legend for="jobtype">1. What is your current employment status? </legend>
                 <div class="form-control-wrapper">
                   <select ng-model="page.jobtype" class="form-control" name="jobtype" required>
-                    <option selected="selected" value="">Bitte wählen</option>
-                    <option value="selbstständig">Selbstständig</option>
-                    <option value="angestellt">Angestellt</option>
+                    <option selected="selected" value="">Options:</option>
+                    <option value="selbstständig">Self employed</option>
+                    <option value="angestellt">Employed</option>
                     <option value="student">Student</option>
-                    <option value="none">Kein Beruf</option>
-                    <option value="other">Anders</option>
+                    <option value="none">Unemployed</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.job_description.$pristine, 'form-group has-success': questionForm.job_description.$touched && questionForm.job_description.$valid, 'form-group has-error': !questionForm.job_description.$pristine && questionForm.job_description.$invalid }">
-                <legend for="job_description">2. Wie lautet Ihre Berufsbezeichnung? </legend>
-                <span class="help-block">Beschreibung, Titel, Studienfach, etc.</span>
+                <legend for="job_description">2. What is your job title? </legend>
+                <span class="help-block">Description, Title, Study program, etc.</span>
                 <div class="form-control-wrapper">
-                  <input ng-model="page.job_description" class="form-control" type="text" name="job_description" placeholder="Beschreibung oder Titel" required>
+                  <input ng-model="page.job_description" class="form-control" type="text" name="job_description" placeholder="Description or Title" required>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.school_leave_qualification.$pristine, 'form-group has-success': questionForm.school_leave_qualification.$touched && questionForm.school_leave_qualification.$valid, 'form-group has-error': !questionForm.school_leave_qualification.$pristine && questionForm.school_leave_qualification.$invalid }">
-                <legend for="school_leave_qualification">3. Geben Sie Ihren höchsten Schulabschluss an! </legend>
+                <legend for="school_leave_qualification">3. State your highest level of education! </legend>
                 <div class="form-control-wrapper">
                   <select ng-model="page.school_leave_qualification" class="form-control" name="school_leave_qualification" required>
-                    <option selected="selected" value="">Bitte wählen</option>
-                    <option value="hauptschule">Hauptschulabschluss</option>
-                    <option value="mr">Mittlere Reife</option>
-                    <option value="abi">Abitur / Fachabitur</option>
-                    <option value="none">Kein Abschluss</option>
-                    <option value="other">Anderer Abschluss</option>
+                    <option selected="selected" value="">Options:</option>
+                    <option value="hauptschule">Secondary school</option>
+                    <option value="mr">Primary School</option>
+                    <option value="abi">High school / University</option>
+                    <option value="none">No degree</option>
+                    <option value="other">Other degree</option>
                   </select>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.subject.$pristine, 'form-group has-success': questionForm.subject.$touched && questionForm.subject.$valid, 'form-group has-error': !questionForm.subject.$pristine && questionForm.subject.$invalid }">
-                <legend for="subject">4. Welchen Titel haben Sie genau erlangt? </legend>
-                <span class="help-block">Zum Beispiel: Dipl.-Inform. (FH), Fachinformatiker.</span>
+                <legend for="subject">4. What title did you get upon finishing your degree? </legend>
+                <span class="help-block">For example: Masters in computer science.</span>
                 <div class="form-control-wrapper">
-                  <input ng-model="page.subject" class="form-control" type="text" name="subject" placeholder="Fachrichtung" required>
+                  <input ng-model="page.subject" class="form-control" type="text" name="subject" placeholder="Masters in computer science" required>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.academic_degree.$pristine, 'form-group has-success': questionForm.academic_degree.$touched && questionForm.academic_degree.$valid, 'form-group has-error': !questionForm.academic_degree.$pristine && questionForm.academic_degree.$invalid }">
-                <legend for="academic_degree">5. Geben Sie Ihren höchsten weiteren Abschluss an! </legend>
+                <legend for="academic_degree">5. State your highest class of qualification! </legend>
                 <div class="form-control-wrapper">
                   <select ng-model="page.academic_degree" class="form-control" name="academic_degree" required>
-                    <option selected="selected" value="">Bitte wählen</option>
-                    <option value="lehre">Lehre / Fachausbildung</option>
+                    <option selected="selected" value="">Options:</option>
+                    <option value="lehre">Teacher / Specialist training</option>
                     <option value="ba">Bachelor</option>
                     <option value="msc">Master / Diplom</option>
-                    <option value="dr">Promotion</option>
-                    <option value="none">Quereinsteiger / Keine Abschluss</option>
-                    <option value="other">Anderer Abschluss</option>
+                    <option value="dr">Doctorate</option>
+                    <option value="none">Carreer focused / No degree</option>
+                    <option value="other">Other degree</option>
                   </select>
                 </div>
               </div>

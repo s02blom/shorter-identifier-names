@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="col-lg-8 col-lg-offset-2 page-header">
-        <h1>Abschluss</h1>
+        <h1>About you</h1>  <!--Meta data(?)-->
       </div>
       <div class="col-lg-8 col-lg-offset-2">
         <progress-bar></progress-bar>
@@ -10,50 +10,50 @@
           <form class="form" name="questionForm" ng-submit="questionForm.$valid && questionsCtrl.addQuestions(questionForm, page)">
             <fieldset>
               <div ng-class="{ 'form-group': questionForm.sex.$pristine, 'form-group has-success': questionForm.sex.$touched && questionForm.sex.$valid, 'form-group has-error': !questionForm.sex.$pristine && questionForm.sex.$invalid }">
-                <legend for="sex">11. Geschlecht </legend>
+                <legend for="sex">11. Gender </legend>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.sex" type="radio" name="sex" value="m" required>Männlich
+                    <input ng-model="page.sex" type="radio" name="sex" value="m" required>Man
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.sex" type="radio" name="sex" value="w" required>Weiblich
+                    <input ng-model="page.sex" type="radio" name="sex" value="w" required>Women
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.sex" type="radio" name="sex" value="o" required>Andere
+                    <input ng-model="page.sex" type="radio" name="sex" value="o" required>Other
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.age.$pristine, 'form-group has-success': questionForm.age.$touched && questionForm.age.$valid, 'form-group has-error': !questionForm.age.$pristine && questionForm.age.$invalid }">
-                <legend for="age">12. Wie alt sind Sie? </legend>
+                <legend for="age">12. How old are you? </legend>
                 <div class="form-control-wrapper">
-                  <input ng-model="page.age" type="number" min="0" max="100" class="form-control" name="age" placeholder="Alter" required>
+                  <input ng-model="page.age" type="number" min="0" max="100" class="form-control" name="age" placeholder="Age" required>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.german_level.$pristine, 'form-group has-success': questionForm.german_level.$touched && questionForm.german_level.$valid, 'form-group has-error': !questionForm.german_level.$pristine && questionForm.german_level.$invalid }">
-                <legend for="german_level">13. Auf Deutsch: Wie gut verstehen Sie geschriebenes Deutsch? </legend>
-                <span class="help-block">Wählen sie bitte die höchste Option, die auf Sie zutrifft</span>
+                <legend for="german_level">13. In German: Wie gut verstehen Sie geschriebenes Deutsch? </legend>
+                <span class="help-block">Please select the highest option that applies to you</span>
                 <div class="form-control-wrapper">
                   <select ng-model="page.german_level" class="form-control" name="german_level" required>
-                    <option selected="selected" value="">Bitte wählen</option>
-                    <option value="1">Ich verstehe einfaches Deutsch.</option>
-                    <option value="2">Ich verstehe Sätze über Familie, Shopping, Geografie, Arbeit, etc.</option>
-                    <option value="3">Ich verstehe die Kernpunkte mir bekannter Themen</option>
-                    <option value="4">Ich verstehe die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen, inklusive Fachdiskussionen in meinem Spezialgebiet.</option>
-                    <option value="5">Ich verstehe ein breites Spektrum anspruchsvoller, längerer Texte und kann implizite Bedeutungen erfassen.</option>
-                    <option value="6">Ich verstehe mit Leichtigkeit nahezu alles, was ich lese.</option>
+                    <option selected="selected" value="">Options:</option>
+                    <option value="1">I understand simple German.</option>
+                    <option value="2">I understand sentences about family, shopping, geography, employment, etc.</option>
+                    <option value="3">I can understand the main points of information on topics I know well.</option>
+                    <option value="4">I can understand the main ideas of more complex text on both concrete and abstract topics, including technical discussions in my field of specialization.</option>
+                    <option value="5">I understand a wide range of demanding, longer texts and can recognize implicit meanings.</option>
+                    <option value="6">I can understand with ease virtually everything read.</option>
                   </select>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.english_level.$pristine, 'form-group has-success': questionForm.english_level.$touched && questionForm.english_level.$valid, 'form-group has-error': !questionForm.english_level.$pristine && questionForm.english_level.$invalid }">
-                <legend for="english_level">14. Auf Englisch: How well can you understand written English? </legend>
-                <span class="help-block">Please choose the highest option that still applies to you</span>
+                <legend for="english_level">14. In English: How well can you understand written English? </legend>
+                <span class="help-block">Please choose the highest option that applies to you</span>
                 <div class="form-control-wrapper">
                   <select ng-model="page.english_level" class="form-control" name="english_level" required>
-                    <option selected="selected" value="">Bitte wählen</option>
+                    <option selected="selected" value="">Options:</option>
                     <option value="1">I can understand very simple English.</option>
                     <option value="2">I can understand common sentences about family, shopping, geography, employment, etc.</option>
                     <option value="3">I can understand the main points of information on topics I know well.</option>
@@ -64,119 +64,119 @@
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.are_you_serious.$pristine, 'form-group has-success': questionForm.are_you_serious.$touched && questionForm.are_you_serious.$valid, 'form-group has-error': !questionForm.are_you_serious.$pristine && questionForm.are_you_serious.$invalid }">
-                <legend for="are_you_serious">15. Haben Sie alle Aufgaben ernsthaft beantwortet, oder wollten Sie nur mal gucken? </legend>
+                <legend for="are_you_serious">15. Did you answer all the questions seriously, or did you just want to have a look? </legend>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.are_you_serious" type="radio" name="are_you_serious" value="yes" required>Ja, ich habe die Studie sorgfältig bearbeitet
+                    <input ng-model="page.are_you_serious" type="radio" name="are_you_serious" value="yes" required>Yes, I have carefully answering the study
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.are_you_serious" type="radio" name="are_you_serious" value="no" required>Nein, ich wollte nur mal gucken und habe mich durchgeklickt.
+                    <input ng-model="page.are_you_serious" type="radio" name="are_you_serious" value="no" required>No, I just wanted to have a look and clicked through.
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.encountered_distraction.$pristine, 'form-group has-success': questionForm.encountered_distraction.$touched && questionForm.encountered_distraction.$valid, 'form-group has-error': !questionForm.encountered_distraction.$pristine && questionForm.encountered_distraction.$invalid }">
-                <legend for="encountered_distraction">16. Wurden Sie während der Bearbeitung abgelenkt? </legend>
-                <span class="help-block">bspw. Telefon, Popups, Kollegen</span>
+                <legend for="encountered_distraction">16. Were you distracted while answering? </legend>
+                <span class="help-block">e.g. Phone, Pop-ups, Colleagues</span>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.encountered_distraction" type="radio" name="encountered_distraction" value="yes" required>Ja
+                    <input ng-model="page.encountered_distraction" type="radio" name="encountered_distraction" value="yes" required>Yes
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.encountered_distraction" type="radio" name="encountered_distraction" value="no" required>Nein
+                    <input ng-model="page.encountered_distraction" type="radio" name="encountered_distraction" value="no" required>No
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.boomerang_participant.$pristine, 'form-group has-success': questionForm.boomerang_participant.$touched && questionForm.boomerang_participant.$valid, 'form-group has-error': !questionForm.boomerang_participant.$pristine && questionForm.boomerang_participant.$invalid }">
-                <legend for="boomerang_participant">17. Haben Sie schon einmal an <b>dieser</b> Studie teilgenommen? </legend>
+                <legend for="boomerang_participant">17. Have you participated in <b>this</b> study before? </legend>  <!--Have you participated in <b>this</b> study before?-->
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.boomerang_participant" type="radio" name="boomerang_participant" value="yes" required>Ja, ich wollte öfter mitmachen!
+                    <input ng-model="page.boomerang_participant" type="radio" name="boomerang_participant" value="yes" required>Yes, I wanted to participate more often!
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.boomerang_participant" type="radio" name="boomerang_participant" value="no" required>Nein, dies ist mein erstes mal!
+                    <input ng-model="page.boomerang_participant" type="radio" name="boomerang_participant" value="no" required>No, this is my first time!
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.legacy_participant.$pristine, 'form-group has-success': questionForm.legacy_participant.$touched && questionForm.legacy_participant.$valid, 'form-group has-error': !questionForm.legacy_participant.$pristine && questionForm.legacy_participant.$invalid }">
-                <legend for="legacy_participant">18. Haben Sie schon einmal an einer Vorgängerstudie teilgenommen? </legend>
+                <legend for="legacy_participant">18. Have you ever participated in a previous version of this study? </legend>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="no" required>Nein
+                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="no" required>No
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="2015" required>Ja, April 2015
+                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="2015" required>Yes in April 2015
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="2013" required>Ja, August 2013
+                    <input ng-model="page.legacy_participant" type="radio" name="legacy_participant" value="2013" required>Yes in August 2013
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.would_participate_again.$pristine, 'form-group has-success': questionForm.would_participate_again.$touched && questionForm.would_participate_again.$valid, 'form-group has-error': !questionForm.would_participate_again.$pristine && questionForm.would_participate_again.$invalid }">
-                <legend for="would_participate_again">19. Würden Sie noch einmal an einer ähnlichen Studie teilnehmen? </legend>
+                <legend for="would_participate_again">19. Would you participate in a similar study again? </legend>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="yes" required>Ja
+                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="yes" required>Yes
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="maybe" required>Vielleicht
+                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="maybe" required>Perhaps
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="no" required>Nein
+                    <input ng-model="page.would_participate_again" type="radio" name="would_participate_again" value="no" required>No
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.how_did_you_find_us.$pristine, 'form-group has-success': questionForm.how_did_you_find_us.$touched && questionForm.how_did_you_find_us.$valid, 'form-group has-error': !questionForm.how_did_you_find_us.$pristine && questionForm.how_did_you_find_us.$invalid }">
-                <legend for="how_did_you_find_us">20. Wie oder wo haben Sie von dieser Studie erfahren? (optional)</legend>
-                <span class="help-block">eg. "Twitter", "Email", "Empfehlung eines Kollegen", etc.</span>
+                <legend for="how_did_you_find_us">20. How or where did you learn about this study? (optional question)</legend>
+                <span class="help-block">e.g. "Twitter", "Email", "Recommendation from a colleague", etc.</span>
                 <div class="form-control-wrapper">
                   <input ng-model="page.how_did_you_find_us" class="form-control" type="text" name="how_did_you_find_us" placeholder="Info" >
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.is_twitter_follower.$pristine, 'form-group has-success': questionForm.is_twitter_follower.$touched && questionForm.is_twitter_follower.$valid, 'form-group has-error': !questionForm.is_twitter_follower.$pristine && questionForm.is_twitter_follower.$invalid }">
-                <legend for="is_twitter_follower">21. Folgen Sie dem Account @pro_cessor auf Twitter? </legend>
+                <legend for="is_twitter_follower">21. Do you follow the account @pro_cessor on Twitter? </legend>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.is_twitter_follower" type="radio" name="is_twitter_follower" value="yes" required>Ja
+                    <input ng-model="page.is_twitter_follower" type="radio" name="is_twitter_follower" value="yes" required>Yes
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.is_twitter_follower" type="radio" name="is_twitter_follower" value="no" required>Nein
+                    <input ng-model="page.is_twitter_follower" type="radio" name="is_twitter_follower" value="no" required>No
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.has_heard_presentation.$pristine, 'form-group has-success': questionForm.has_heard_presentation.$touched && questionForm.has_heard_presentation.$valid, 'form-group has-error': !questionForm.has_heard_presentation.$pristine && questionForm.has_heard_presentation.$invalid }">
-                <legend for="has_heard_presentation">22. Haben Sie schonmal einen Vortrag von mir (Johannes Hofmeister) gesehen? </legend>
-                <span class="help-block">bspw. auf einer Konferenz, OpenSpace, etc.</span>
+                <legend for="has_heard_presentation">22. Have you ever seen a lecture by me (Johannes Hofmeister)? </legend>
+                <span class="help-block">e.g. At a conference, OpenSpace, etc.</span>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.has_heard_presentation" type="radio" name="has_heard_presentation" value="yes" required>Ja
+                    <input ng-model="page.has_heard_presentation" type="radio" name="has_heard_presentation" value="yes" required>Yes
                   </label>
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input ng-model="page.has_heard_presentation" type="radio" name="has_heard_presentation" value="no" required>Nein
+                    <input ng-model="page.has_heard_presentation" type="radio" name="has_heard_presentation" value="no" required>No
                   </label>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.guess_hypothesis.$pristine, 'form-group has-success': questionForm.guess_hypothesis.$touched && questionForm.guess_hypothesis.$valid, 'form-group has-error': !questionForm.guess_hypothesis.$pristine && questionForm.guess_hypothesis.$invalid }">
-                <legend for="guess_hypothesis">23. Was glauben Sie, wurde hier untersucht? </legend>
+                <legend for="guess_hypothesis">23. What do you think was investigated here? </legend>
                 <div class="form-control-wrapper">
-                  <textarea ng-model="page.guess_hypothesis" class="form-control" name="guess_hypothesis" placeholder="Ihre Hypothese" rows="3" required></textarea>
+                  <textarea ng-model="page.guess_hypothesis" class="form-control" name="guess_hypothesis" placeholder="Your hypothesis" rows="3" required></textarea>
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.issues.$pristine, 'form-group has-success': questionForm.issues.$touched && questionForm.issues.$valid, 'form-group has-error': !questionForm.issues.$pristine && questionForm.issues.$invalid }">
@@ -186,9 +186,9 @@
                 </div>
               </div>
               <div ng-class="{ 'form-group': questionForm.kotzbox.$pristine, 'form-group has-success': questionForm.kotzbox.$touched && questionForm.kotzbox.$valid, 'form-group has-error': !questionForm.kotzbox.$pristine && questionForm.kotzbox.$invalid }">
-                <legend for="kotzbox">25. Haben Sie Kommentare, Anregungen oder Kritik, die Sie gerne mitteilen würden? (optional)</legend>
+                <legend for="kotzbox">25. Did you encounter any technical difficulties during the process? (optional questions)</legend>
                 <div class="form-control-wrapper">
-                  <textarea ng-model="page.kotzbox" class="form-control" name="kotzbox" placeholder="Kommentare" rows="5" ></textarea>
+                  <textarea ng-model="page.kotzbox" class="form-control" name="kotzbox" placeholder="Comments" rows="5" ></textarea>
                 </div>
               </div>
             </fieldset>
