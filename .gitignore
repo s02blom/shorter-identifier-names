@@ -13,3 +13,4 @@ data/*
 venv/
 database_root_password.txt
 get-pip.py
+/figures/*.png
